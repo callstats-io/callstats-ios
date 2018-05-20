@@ -10,16 +10,30 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    @IBOutlet weak var roomNameTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func joinButtonPressed(_ sender: Any) {
+        if (roomNameTextField.text ?? "").isEmpty {
+            let alert = UIAlertController(
+                title: nil,
+                message: "Please choose room",
+                preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alert.addAction(okAction)
+            present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        performSegue(withIdentifier: "CallSegue", sender: nil)
     }
-
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let callVC = segue.destination as! CallViewController
+        callVC.room = roomNameTextField.text ?? ""
+    }
 }
 
