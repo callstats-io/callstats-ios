@@ -20,21 +20,20 @@ class CsioRTC: CsioSignalingDelegate {
     private let localAudioTrackLabel = "ARDAMSa0"
     private let localVideoTrackLabel = "ARDAMSv0"
     
-    private let videoWidth: Int32 = 800
-    private let videoHeight: Int32 = 600
-    private let videoFps: Int32 = 30
-    
     private let signaling: CsioSignaling
     private let peerConnectionFactory = RTCPeerConnectionFactory()
     private var localMediaStream: RTCMediaStream?
     private var localAudioTrack: RTCAudioTrack?
     private var localVideoTrack: RTCVideoTrack?
+    private var localVideoCapturer: CsioRTCCameraCapturer?
     
     private var peerConnections: [String: RTCPeerConnection] = [:]
+    private var peerDelegates: [String: PeerDelegate] = [:]
+    private var peerVideoTracks: [String: RTCVideoTrack] = [:]
     
     init(room: String, alias: String? = nil) {
         signaling = CsioSignaling(room: room)
-        signaling.delegate = self
+        signaling.delegate = self        
     }
     
     func join() {
@@ -45,9 +44,9 @@ class CsioRTC: CsioSignalingDelegate {
         localMediaStream?.addAudioTrack(localAudioTrack!)
         
         // video
-        let source = peerConnectionFactory.avFoundationVideoSource(with: nil)
-        source.adaptOutputFormat(toWidth: videoWidth, height: videoHeight, fps: videoFps)
-        localVideoTrack = peerConnectionFactory.videoTrack(with: source, trackId: localAudioTrackLabel)
+        let source = peerConnectionFactory.videoSource()
+        localVideoCapturer = CsioRTCCameraCapturer(delegate: source)
+        localVideoTrack = peerConnectionFactory.videoTrack(with: source, trackId: localVideoTrackLabel)
         localMediaStream?.addVideoTrack(localVideoTrack!)
         
         signaling.start()
@@ -55,21 +54,64 @@ class CsioRTC: CsioSignalingDelegate {
     
     func leave() {
         signaling.stop()
+        localVideoCapturer?.stopCapture()
         
+        peerConnections.keys.forEach { disconnectPeer(peerId: $0) }
+        
+        localVideoCapturer = nil
+        localVideoTrack = nil
+        localAudioTrack = nil
+        localMediaStream = nil
+    }
+    
+    func setMute(_ mute: Bool) {
+        localAudioTrack?.isEnabled = !mute
+    }
+    
+    func setVideoEnable(_ enable: Bool) {
+        localVideoTrack?.isEnabled = enable
+    }
+    
+    // MARK:- Video Rendering
+    
+    func renderLocalVideo(view: CsioRTCVideoView) {
+        if let capturer = localVideoCapturer {
+            view.setLocalCaptureSession(session: capturer.captureSession)
+            capturer.startCapture()
+        }
+    }
+    
+    func addRemoteVideoRenderer(peerId: String, view: CsioRTCVideoView) {
+        peerVideoTracks[peerId]?.add(view.remoteVideoView)
+    }
+    
+    func removeRemoteVideoRenderer(peerId: String, view: CsioRTCVideoView) {
+        peerVideoTracks[peerId]?.remove(view.remoteVideoView)
+    }
+    
+    // MARK:- Peers
+ 
+    func getPeerIds() -> [String] {
+        return Array(peerConnections.keys)
+    }
+    
+    func getAvailableVideoPeerIds() -> [String] {
+        return Array(peerVideoTracks.keys)
     }
     
     // MARK:- Peer Connection
     
     private func offer(peerId: String) {
+        let peerDelegate = PeerDelegate(peerId: peerId, outer: self)
         let connection = peerConnectionFactory.peerConnection(
             with: RTCConfiguration(),
             constraints: RTCMediaConstraints(mandatoryConstraints: nil, optionalConstraints: nil),
-            delegate: PeerDelegate(peerId: peerId, outer: self))
+            delegate: peerDelegate)
         
         connection.add(localMediaStream!)
         connection.offer(for: RTCMediaConstraints(mandatoryConstraints: nil, optionalConstraints: nil)) { sdp, err in
             guard let localSdp = sdp else { return }
-            connection.setLocalDescription(localSdp)
+            connection.setLocalDescription(localSdp) { err in print(err ?? "set local success") }
             
             let dict = [
                 kMessageOfferKey: [
@@ -81,20 +123,24 @@ class CsioRTC: CsioSignalingDelegate {
         }
         
         peerConnections[peerId] = connection
+        peerDelegates[peerId] = peerDelegate
         delegate?.onCsioRTCPeerUpdate()
     }
     
     private func answer(peerId: String, offerSdp: RTCSessionDescription) {
+        let peerDelegate = PeerDelegate(peerId: peerId, outer: self)
         let connection = peerConnectionFactory.peerConnection(
             with: RTCConfiguration(),
             constraints: RTCMediaConstraints(mandatoryConstraints: nil, optionalConstraints: nil),
-            delegate: PeerDelegate(peerId: peerId, outer: self))
+            delegate: peerDelegate)
         
         connection.add(localMediaStream!)
-        connection.setRemoteDescription(offerSdp)
+        connection.setRemoteDescription(offerSdp) { err in print(err ?? "set remote success") }
         connection.answer(for: RTCMediaConstraints(mandatoryConstraints: nil, optionalConstraints: nil)) { sdp, err in
             guard let localSdp = sdp else { return }
-            connection.setLocalDescription(localSdp)
+            connection.setLocalDescription(localSdp) { err in
+                print(err ?? "set local success")
+            }
             
             let dict = [
                 kMessageOfferKey: [
@@ -106,6 +152,7 @@ class CsioRTC: CsioSignalingDelegate {
         }
         
         peerConnections[peerId] = connection
+        peerDelegates[peerId] = peerDelegate
         delegate?.onCsioRTCPeerUpdate()
     }
     
@@ -114,6 +161,8 @@ class CsioRTC: CsioSignalingDelegate {
             con.remove(localMediaStream!)
             con.close()
             peerConnections.removeValue(forKey: peerId)
+            peerDelegates.removeValue(forKey: peerId)
+            peerVideoTracks.removeValue(forKey: peerId)
             delegate?.onCsioRTCPeerUpdate()
         }
     }
@@ -140,7 +189,10 @@ class CsioRTC: CsioSignalingDelegate {
         }
         
         func peerConnection(_ peerConnection: RTCPeerConnection, didAdd stream: RTCMediaStream) {
-            
+            if let track = stream.videoTracks.first {
+                outer?.peerVideoTracks[peerId] = track
+                outer?.delegate?.onCsioRTCPeerVideoAvailable()
+            }
         }
         
         func peerConnection(_ peerConnection: RTCPeerConnection, didOpen dataChannel: RTCDataChannel) {
@@ -191,7 +243,7 @@ class CsioRTC: CsioSignalingDelegate {
             if sdp.type == .offer {
                 answer(peerId: fromId, offerSdp: sdp)
             } else if sdp.type == .answer {
-                peerConnections[fromId]?.setRemoteDescription(sdp)
+                peerConnections[fromId]?.setRemoteDescription(sdp) { err in print(err ?? "set remote success") }
             }
         }
     }

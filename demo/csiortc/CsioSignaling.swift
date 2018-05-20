@@ -19,12 +19,12 @@ class CsioSignaling {
     private let eventLeave = "leave"
     private let eventMessage = "message"
     
-    private let socket: SocketIOClient = {
-        let manager = SocketManager(socketURL: URL(string: kSignalingUrl)!)
-        return manager.defaultSocket
-    }()
+    private let manager = SocketManager(socketURL: URL(string: kSignalingUrl)!, config: [.log(true)])
+    private let socket: SocketIOClient
     
     init(room: String) {
+        socket = manager.defaultSocket
+        
         socket.on(clientEvent: .connect) { _, _ in
             print("connected")
             self.socket.emit(self.eventJoin, room)
@@ -52,7 +52,7 @@ class CsioSignaling {
         socket.on(eventMessage) { data, _ in
             let user = data[0] as! String
             let msg = data[1] as! String
-            print("receive message from \(user) : \(msg)")
+            print("receive message from \(user)")
             self.delegate?.onMessage(fromId: user, message: msg)
         }
     }
@@ -63,7 +63,7 @@ class CsioSignaling {
     
     func stop() {
         socket.emit(eventLeave)
-        socket.disconnect()
+        manager.disconnect()
     }
     
     func send(toId: String, message: String) {
