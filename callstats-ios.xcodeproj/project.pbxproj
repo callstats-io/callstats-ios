@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DC3BA41420A86305004C2F77 /* CsioUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3BA41320A86305004C2F77 /* CsioUtils.swift */; };
+		DC3BA41620AFE087004C2F77 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3BA41520AFE087004C2F77 /* CallViewController.swift */; };
+		DC3BA41720B01093004C2F77 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D4E0220A7E83600EDD5D7 /* MainViewController.swift */; };
 		DC5D4E0120A7E83600EDD5D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D4E0020A7E83600EDD5D7 /* AppDelegate.swift */; };
-		DC5D4E0320A7E83600EDD5D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D4E0220A7E83600EDD5D7 /* ViewController.swift */; };
 		DC5D4E0620A7E83600EDD5D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC5D4E0420A7E83600EDD5D7 /* Main.storyboard */; };
 		DC5D4E0820A7E83800EDD5D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC5D4E0720A7E83800EDD5D7 /* Assets.xcassets */; };
 		DC5D4E0B20A7E83800EDD5D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC5D4E0920A7E83800EDD5D7 /* LaunchScreen.storyboard */; };
@@ -18,6 +19,8 @@
 		DC5D4E2420A7EFE900EDD5D7 /* CsioSignalingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D4E2320A7EFE900EDD5D7 /* CsioSignalingDelegate.swift */; };
 		DC5D4E2620A7F9A500EDD5D7 /* CsioRTC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D4E2520A7F9A500EDD5D7 /* CsioRTC.swift */; };
 		DC5D4E2820A800E100EDD5D7 /* CsioRTCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D4E2720A800E100EDD5D7 /* CsioRTCDelegate.swift */; };
+		DCF52D2320B1A42B00B2C6DE /* CsioRTCCameraCapturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF52D2220B1A42B00B2C6DE /* CsioRTCCameraCapturer.swift */; };
+		DCF52D2520B1C63900B2C6DE /* CsioRTCVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF52D2420B1C63900B2C6DE /* CsioRTCVideoView.swift */; };
 		FD1F6860233DE597CFC001F4 /* Pods_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1696047E7DC3EFDA56299A /* Pods_demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,9 +38,10 @@
 		2E1696047E7DC3EFDA56299A /* Pods_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31DCC6DA845E727677657F33 /* Pods-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.release.xcconfig"; sourceTree = "<group>"; };
 		DC3BA41320A86305004C2F77 /* CsioUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsioUtils.swift; sourceTree = "<group>"; };
+		DC3BA41520AFE087004C2F77 /* CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
 		DC5D4DFD20A7E83600EDD5D7 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC5D4E0020A7E83600EDD5D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DC5D4E0220A7E83600EDD5D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DC5D4E0220A7E83600EDD5D7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DC5D4E0520A7E83600EDD5D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC5D4E0720A7E83800EDD5D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC5D4E0A20A7E83800EDD5D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,8 @@
 		DC5D4E2320A7EFE900EDD5D7 /* CsioSignalingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsioSignalingDelegate.swift; sourceTree = "<group>"; };
 		DC5D4E2520A7F9A500EDD5D7 /* CsioRTC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsioRTC.swift; sourceTree = "<group>"; };
 		DC5D4E2720A800E100EDD5D7 /* CsioRTCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsioRTCDelegate.swift; sourceTree = "<group>"; };
+		DCF52D2220B1A42B00B2C6DE /* CsioRTCCameraCapturer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsioRTCCameraCapturer.swift; sourceTree = "<group>"; };
+		DCF52D2420B1C63900B2C6DE /* CsioRTCVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsioRTCVideoView.swift; sourceTree = "<group>"; };
 		F04780226D8E57AF557D2DFA /* Pods-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,11 +110,12 @@
 			children = (
 				DC5D4E2020A7E9C900EDD5D7 /* csiortc */,
 				DC5D4E0020A7E83600EDD5D7 /* AppDelegate.swift */,
-				DC5D4E0220A7E83600EDD5D7 /* ViewController.swift */,
-				DC5D4E0420A7E83600EDD5D7 /* Main.storyboard */,
 				DC5D4E0720A7E83800EDD5D7 /* Assets.xcassets */,
 				DC5D4E0920A7E83800EDD5D7 /* LaunchScreen.storyboard */,
+				DC5D4E0420A7E83600EDD5D7 /* Main.storyboard */,
 				DC5D4E0C20A7E83800EDD5D7 /* Info.plist */,
+				DC5D4E0220A7E83600EDD5D7 /* MainViewController.swift */,
+				DC3BA41520AFE087004C2F77 /* CallViewController.swift */,
 			);
 			path = demo;
 			sourceTree = "<group>";
@@ -129,6 +136,8 @@
 				DC5D4E2320A7EFE900EDD5D7 /* CsioSignalingDelegate.swift */,
 				DC5D4E2520A7F9A500EDD5D7 /* CsioRTC.swift */,
 				DC5D4E2720A800E100EDD5D7 /* CsioRTCDelegate.swift */,
+				DCF52D2220B1A42B00B2C6DE /* CsioRTCCameraCapturer.swift */,
+				DCF52D2420B1C63900B2C6DE /* CsioRTCVideoView.swift */,
 				DC3BA41320A86305004C2F77 /* CsioUtils.swift */,
 			);
 			path = csiortc;
@@ -289,13 +298,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCF52D2520B1C63900B2C6DE /* CsioRTCVideoView.swift in Sources */,
 				DC5D4E2220A7E9E000EDD5D7 /* CsioSignaling.swift in Sources */,
-				DC5D4E0320A7E83600EDD5D7 /* ViewController.swift in Sources */,
 				DC3BA41420A86305004C2F77 /* CsioUtils.swift in Sources */,
 				DC5D4E2820A800E100EDD5D7 /* CsioRTCDelegate.swift in Sources */,
 				DC5D4E0120A7E83600EDD5D7 /* AppDelegate.swift in Sources */,
 				DC5D4E2620A7F9A500EDD5D7 /* CsioRTC.swift in Sources */,
+				DC3BA41620AFE087004C2F77 /* CallViewController.swift in Sources */,
 				DC5D4E2420A7EFE900EDD5D7 /* CsioSignalingDelegate.swift in Sources */,
+				DC3BA41720B01093004C2F77 /* MainViewController.swift in Sources */,
+				DCF52D2320B1A42B00B2C6DE /* CsioRTCCameraCapturer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
