@@ -12,24 +12,44 @@ import WebRTC
 class CallViewController: UIViewController, CsioRTCDelegate {
     
     var room = ""
+    var name = "ios_murdock"
     
     @IBOutlet weak var aliasLabel: UILabel!
     @IBOutlet weak var participantCountLabel: UILabel!
     @IBOutlet weak var localVideoView: CsioRTCVideoView!
     @IBOutlet weak var remoteVideoView: CsioRTCVideoView!
+    @IBOutlet weak var chatBackgroundView: UIView!
+    @IBOutlet var chatView: UIView!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var chatTextField: UITextField!
     
     private var csioRTC: CsioRTC!
     private var peerIds: [String] = []
+    private var messages: [String] = []
     
     // current renderer
     private var showingVideoFromPeer: String?
+    
+    private let chatDrawerWidth: CGFloat = 260
+    private var chatDrawerConstraint: NSLayoutConstraint!
+    @IBOutlet weak var chatInputBottomConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if room == "" { return }
+        UIApplication.shared.isIdleTimerDisabled = true
         
-        aliasLabel.text = "Your name : ios_murdock"
+        // views
+        chatView.translatesAutoresizingMaskIntoConstraints = false
+        view.insertSubview(chatView, at: 0)
+        chatDrawerConstraint = chatView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: chatDrawerWidth)
+        chatDrawerConstraint.isActive = true
+        chatView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        chatView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        chatView.widthAnchor.constraint(equalToConstant: chatDrawerWidth).isActive = true
+        
+        aliasLabel.text = "Your name : \(name)"
         
         csioRTC = CsioRTC(room: room)
         csioRTC.delegate = self
@@ -37,10 +57,35 @@ class CallViewController: UIViewController, CsioRTCDelegate {
         csioRTC.renderLocalVideo(view: localVideoView)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillShow(noti:)),
+            name: .UIKeyboardWillShow,
+            object: nil)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillBeHidden),
+            name: .UIKeyboardWillHide,
+            object: nil)
+    }
+    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+        
+        NotificationCenter.default.removeObserver(
+            self,
+            name: .UIKeyboardWillShow,
+            object: nil)
+        NotificationCenter.default.removeObserver(
+            self,
+            name: .UIKeyboardWillHide,
+            object: nil)
+        
         csioRTC.leave()
         presentingViewController?.dismiss(animated: false, completion: nil)
+        UIApplication.shared.isIdleTimerDisabled = false
     }
     
     private func showVideo(peerId: String) {
@@ -53,7 +98,65 @@ class CallViewController: UIViewController, CsioRTCDelegate {
         csioRTC.addRemoteVideoRenderer(peerId: peerId, view: remoteVideoView)
     }
     
-    // actions
+    private func showMessage(name: String, message: String) {
+        messages.append("\(name) : \(message)")
+        tableView.reloadData()
+        tableView.scrollToRow(
+            at: IndexPath(row: messages.count - 1, section: 0),
+            at: .bottom,
+            animated: true)
+    }
+    
+    // MARK:- Keyboard
+    
+    @objc private func keyboardWillShow(noti: Notification) {
+        guard let value = noti.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue else { return }
+        let height = value.cgRectValue.height
+        chatInputBottomConstraint.constant = -height
+        UIView.animate(withDuration: 0.5) {
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    @objc private func keyboardWillBeHidden() {
+        chatInputBottomConstraint.constant = 0
+        UIView.animate(withDuration: 0.5) {
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    // MARK:- Actions
+    
+    @IBAction func chatButtonPressed(_ sender: Any) {
+        chatBackgroundView.isHidden = false
+        chatBackgroundView.alpha = 0
+        view.bringSubview(toFront: chatBackgroundView)
+        view.bringSubview(toFront: chatView)
+        
+        chatDrawerConstraint.constant = 0
+        UIView.animate(withDuration: 0.5) {
+            self.chatBackgroundView.alpha = 1
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    @IBAction func chatBackgroundPressed(_ sender: Any) {
+        view.endEditing(true)
+        chatDrawerConstraint.constant = chatDrawerWidth
+        UIView.animate(withDuration: 0.5, animations: {
+            self.chatBackgroundView.alpha = 0
+            self.view.layoutIfNeeded()
+        }) { _ in self.chatBackgroundView.isHidden = true }
+    }
+    
+    @IBAction func chatSendButtonPressed(_ sender: Any) {
+        let text = chatTextField.text ?? ""
+        if !text.isEmpty {
+            csioRTC.sendMessage(message: text)
+            showMessage(name: name, message: text)
+            chatTextField.text = ""
+        }
+    }
     
     @IBAction func hangButtonPressed(_ sender: Any) {
         presentingViewController?.dismiss(animated: true, completion: nil)
@@ -87,7 +190,7 @@ class CallViewController: UIViewController, CsioRTCDelegate {
         }
     }
     
-    // CsioRTC delegate
+    //MARK:- CsioRTC delegate
     
     func onCsioRTCConnect() {
         
@@ -113,6 +216,21 @@ class CallViewController: UIViewController, CsioRTCDelegate {
     }
     
     func onCsioRTCPeerMessage(peerId: String, message: String) {
-        
+        DispatchQueue.main.async {
+            self.showMessage(name: peerId, message: message)
+        }
+    }
+}
+
+extension CallViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messages.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.textLabel?.text = messages[indexPath.row]
+        return cell
     }
 }

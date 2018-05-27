@@ -11,8 +11,11 @@ import WebRTC
 
 private let kMessageIceKey = "ice"
 private let kMessageOfferKey = "offer"
+private let kDataChannelLabel = "chat"
+private let kDataChannelNameKey = "aliseName"
+private let kDataChannelMessageKey = "message"
 
-class CsioRTC: CsioSignalingDelegate {
+class CsioRTC: NSObject, CsioSignalingDelegate {
     
     weak var delegate: CsioRTCDelegate?
     
@@ -30,9 +33,14 @@ class CsioRTC: CsioSignalingDelegate {
     private var peerConnections: [String: RTCPeerConnection] = [:]
     private var peerDelegates: [String: PeerDelegate] = [:]
     private var peerVideoTracks: [String: RTCVideoTrack] = [:]
+    private var peerDataChannels: [String: RTCDataChannel] = [:]
+    
+    private let alias: String?
     
     init(room: String, alias: String? = nil) {
+        self.alias = alias
         signaling = CsioSignaling(room: room)
+        super.init()
         signaling.delegate = self        
     }
     
@@ -99,6 +107,18 @@ class CsioRTC: CsioSignalingDelegate {
         return Array(peerVideoTracks.keys)
     }
     
+    // MARK:- Data Channel
+    
+    func sendMessage(message: String) {
+        var dict = [ kDataChannelMessageKey: message ]
+        if let aliasName = alias {
+            dict[kDataChannelNameKey] = aliasName
+        }
+        guard let data = toJson(dict).data(using: .utf8) else { return }
+        let buffer = RTCDataBuffer(data: data, isBinary: false)
+        peerDataChannels.forEach { _, v in v.sendData(buffer) }
+    }
+    
     // MARK:- Peer Connection
     
     private func offer(peerId: String) {
@@ -122,6 +142,12 @@ class CsioRTC: CsioSignalingDelegate {
             self.signaling.send(toId: peerId, message: toJson(dict))
         }
         
+        let dataChannel = connection.dataChannel(
+            forLabel: kDataChannelLabel,
+            configuration: RTCDataChannelConfiguration.init())
+        dataChannel?.delegate = self
+        
+        peerDataChannels[peerId] = dataChannel
         peerConnections[peerId] = connection
         peerDelegates[peerId] = peerDelegate
         delegate?.onCsioRTCPeerUpdate()
@@ -157,9 +183,11 @@ class CsioRTC: CsioSignalingDelegate {
     }
     
     private func disconnectPeer(peerId: String) {
+        peerDataChannels[peerId]?.close()
         if let con = peerConnections[peerId] {
             con.remove(localMediaStream!)
             con.close()
+            peerDataChannels.removeValue(forKey: peerId)
             peerConnections.removeValue(forKey: peerId)
             peerDelegates.removeValue(forKey: peerId)
             peerVideoTracks.removeValue(forKey: peerId)
@@ -196,7 +224,8 @@ class CsioRTC: CsioSignalingDelegate {
         }
         
         func peerConnection(_ peerConnection: RTCPeerConnection, didOpen dataChannel: RTCDataChannel) {
-            
+            dataChannel.delegate = outer
+            outer?.peerDataChannels[peerId] = dataChannel
         }
         
         func peerConnectionShouldNegotiate(_ peerConnection: RTCPeerConnection) {}
@@ -245,6 +274,23 @@ class CsioRTC: CsioSignalingDelegate {
             } else if sdp.type == .answer {
                 peerConnections[fromId]?.setRemoteDescription(sdp) { err in print(err ?? "set remote success") }
             }
+        }
+    }
+}
+
+extension CsioRTC: RTCDataChannelDelegate {
+    
+    func dataChannelDidChangeState(_ dataChannel: RTCDataChannel) {}
+    
+    func dataChannel(_ dataChannel: RTCDataChannel, didReceiveMessageWith buffer: RTCDataBuffer) {
+        let peerId = peerDataChannels.first { $0.value == dataChannel }?.key
+        if let p = peerId {
+            print("receive data message from \(p)")
+            guard let string = String(data: buffer.data, encoding: .utf8) else { return }
+            let json = fromJson(string) as! [String: String]
+            delegate?.onCsioRTCPeerMessage(
+                peerId: json[kDataChannelNameKey] ?? p,
+                message: json[kDataChannelMessageKey] ?? "")
         }
     }
 }
