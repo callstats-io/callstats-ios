@@ -121,12 +121,28 @@ class CsioRTC: NSObject, CsioSignalingDelegate {
     
     // MARK:- Peer Connection
     
+    private func createConnection(delegate: PeerDelegate) -> RTCPeerConnection {
+        let iceServers = [
+            RTCIceServer(
+                urlStrings: [
+                    "turn:turn-server-1.dialogue.io:3478",
+                    "turn:turn-server-1.dialogue.io:5349"
+                ],
+                username: "test",
+                credential: "1234"
+            )
+        ]
+        let config = RTCConfiguration()
+        config.iceServers = iceServers
+        return peerConnectionFactory.peerConnection(
+            with: config,
+            constraints: RTCMediaConstraints(mandatoryConstraints: nil, optionalConstraints: nil),
+            delegate: delegate)
+    }
+    
     private func offer(peerId: String) {
         let peerDelegate = PeerDelegate(peerId: peerId, outer: self)
-        let connection = peerConnectionFactory.peerConnection(
-            with: RTCConfiguration(),
-            constraints: RTCMediaConstraints(mandatoryConstraints: nil, optionalConstraints: nil),
-            delegate: peerDelegate)
+        let connection = createConnection(delegate: peerDelegate)
         
         connection.add(localMediaStream!)
         connection.offer(for: RTCMediaConstraints(mandatoryConstraints: nil, optionalConstraints: nil)) { sdp, err in
@@ -155,10 +171,7 @@ class CsioRTC: NSObject, CsioSignalingDelegate {
     
     private func answer(peerId: String, offerSdp: RTCSessionDescription) {
         let peerDelegate = PeerDelegate(peerId: peerId, outer: self)
-        let connection = peerConnectionFactory.peerConnection(
-            with: RTCConfiguration(),
-            constraints: RTCMediaConstraints(mandatoryConstraints: nil, optionalConstraints: nil),
-            delegate: peerDelegate)
+        let connection = createConnection(delegate: peerDelegate)
         
         connection.add(localMediaStream!)
         connection.setRemoteDescription(offerSdp) { err in print(err ?? "set remote success") }
