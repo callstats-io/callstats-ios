@@ -10,7 +10,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import <WebRTC/RTCMacros.h>
+#import "RTCMacros.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -32,6 +32,8 @@ RTC_EXPORT
 @property(nonatomic, assign) BOOL ignoreEthernetNetworkAdapter;
 
 @property(nonatomic, assign) BOOL enableAes128Sha1_32CryptoCipher;
+
+@property(nonatomic, assign) BOOL enableGcmCryptoSuites;
 
 - (instancetype)init NS_DESIGNATED_INITIALIZER;
 

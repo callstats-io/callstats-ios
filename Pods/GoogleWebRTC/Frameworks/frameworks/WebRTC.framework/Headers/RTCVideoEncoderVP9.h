@@ -10,8 +10,8 @@
 
 #import <Foundation/Foundation.h>
 
-#import <WebRTC/RTCMacros.h>
-#import <WebRTC/RTCVideoCodec.h>
+#import "RTCMacros.h"
+#import "RTCVideoEncoder.h"
 
 RTC_EXPORT
 @interface RTCVideoEncoderVP9 : NSObject

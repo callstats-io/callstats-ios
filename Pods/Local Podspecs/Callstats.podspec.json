@@ -1,0 +1,25 @@
+{
+  "name": "Callstats",
+  "version": "0.1.0",
+  "platforms": {
+    "ios": "9.0"
+  },
+  "license": {
+    "type": "Apache 2.0"
+  },
+  "authors": {
+    "Amornchai Kanokpullwad": "zoon@callstats.io"
+  },
+  "homepage": "https://www.callstats.io",
+  "summary": "Callstats WebRTC Analytic Library",
+  "source": {
+    "git": "https://github.com/callstats-io/callstats-ios-demoapp.git",
+    "tag": "0.1.0"
+  },
+  "source_files": "**/*.{swift}",
+  "dependencies": {
+    "GoogleWebRTC": [
+      "~> 1.0"
+    ]
+  }
+}

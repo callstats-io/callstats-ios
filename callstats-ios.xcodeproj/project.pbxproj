@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D16B94D32D6F96045AC1A5E0 /* Pods_Callstats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4284182C7892A053DD5A3A45 /* Pods_Callstats.framework */; };
 		DC3BA41420A86305004C2F77 /* CsioUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3BA41320A86305004C2F77 /* CsioUtils.swift */; };
 		DC3BA41620AFE087004C2F77 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3BA41520AFE087004C2F77 /* CallViewController.swift */; };
 		DC3BA41720B01093004C2F77 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D4E0220A7E83600EDD5D7 /* MainViewController.swift */; };
@@ -19,6 +20,12 @@
 		DC5D4E2420A7EFE900EDD5D7 /* CsioSignalingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D4E2320A7EFE900EDD5D7 /* CsioSignalingDelegate.swift */; };
 		DC5D4E2620A7F9A500EDD5D7 /* CsioRTC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D4E2520A7F9A500EDD5D7 /* CsioRTC.swift */; };
 		DC5D4E2820A800E100EDD5D7 /* CsioRTCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D4E2720A800E100EDD5D7 /* CsioRTCDelegate.swift */; };
+		DCC9A01621551D4800A279CA /* Callstats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC9A00D21551D4800A279CA /* Callstats.framework */; };
+		DCC9A01D21551D4800A279CA /* CallstatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC9A01C21551D4800A279CA /* CallstatsTests.swift */; };
+		DCC9A01F21551D4800A279CA /* Callstats.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9A00F21551D4800A279CA /* Callstats.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DCC9A02B21551E4700A279CA /* Callstats.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC9A02A21551E4700A279CA /* Callstats.swift */; };
+		DCC9A02E21553D3100A279CA /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC9A02D21553D3100A279CA /* Interceptor.swift */; };
+		DCC9A0302155410000A279CA /* CallstatsEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC9A02F2155410000A279CA /* CallstatsEvents.swift */; };
 		DCF52D2320B1A42B00B2C6DE /* CsioRTCCameraCapturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF52D2220B1A42B00B2C6DE /* CsioRTCCameraCapturer.swift */; };
 		DCF52D2520B1C63900B2C6DE /* CsioRTCVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF52D2420B1C63900B2C6DE /* CsioRTCVideoView.swift */; };
 		FD1F6860233DE597CFC001F4 /* Pods_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1696047E7DC3EFDA56299A /* Pods_demo.framework */; };
@@ -32,11 +39,28 @@
 			remoteGlobalIDString = DC5D4DFC20A7E83600EDD5D7;
 			remoteInfo = demo;
 		};
+		DCC9A01721551D4800A279CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC5D4DF520A7E83600EDD5D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCC9A00C21551D4800A279CA;
+			remoteInfo = Callstats;
+		};
+		DCC9A01921551D4800A279CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC5D4DF520A7E83600EDD5D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC5D4DFC20A7E83600EDD5D7;
+			remoteInfo = demo;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B1A7D711B11EA5468B76160 /* Pods-Callstats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Callstats.release.xcconfig"; path = "Pods/Target Support Files/Pods-Callstats/Pods-Callstats.release.xcconfig"; sourceTree = "<group>"; };
 		2E1696047E7DC3EFDA56299A /* Pods_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31DCC6DA845E727677657F33 /* Pods-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.release.xcconfig"; sourceTree = "<group>"; };
+		4284182C7892A053DD5A3A45 /* Pods_Callstats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Callstats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88AF036F70D971D019000EF4 /* Pods-Callstats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Callstats.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Callstats/Pods-Callstats.debug.xcconfig"; sourceTree = "<group>"; };
 		DC3BA41320A86305004C2F77 /* CsioUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsioUtils.swift; sourceTree = "<group>"; };
 		DC3BA41520AFE087004C2F77 /* CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
 		DC5D4DFD20A7E83600EDD5D7 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +77,15 @@
 		DC5D4E2320A7EFE900EDD5D7 /* CsioSignalingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsioSignalingDelegate.swift; sourceTree = "<group>"; };
 		DC5D4E2520A7F9A500EDD5D7 /* CsioRTC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsioRTC.swift; sourceTree = "<group>"; };
 		DC5D4E2720A800E100EDD5D7 /* CsioRTCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsioRTCDelegate.swift; sourceTree = "<group>"; };
+		DCC9A00D21551D4800A279CA /* Callstats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Callstats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCC9A00F21551D4800A279CA /* Callstats.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Callstats.h; sourceTree = "<group>"; };
+		DCC9A01021551D4800A279CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCC9A01521551D4800A279CA /* CallstatsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CallstatsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCC9A01C21551D4800A279CA /* CallstatsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallstatsTests.swift; sourceTree = "<group>"; };
+		DCC9A01E21551D4800A279CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCC9A02A21551E4700A279CA /* Callstats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Callstats.swift; sourceTree = "<group>"; };
+		DCC9A02D21553D3100A279CA /* Interceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interceptor.swift; sourceTree = "<group>"; };
+		DCC9A02F2155410000A279CA /* CallstatsEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallstatsEvents.swift; sourceTree = "<group>"; };
 		DCF52D2220B1A42B00B2C6DE /* CsioRTCCameraCapturer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsioRTCCameraCapturer.swift; sourceTree = "<group>"; };
 		DCF52D2420B1C63900B2C6DE /* CsioRTCVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsioRTCVideoView.swift; sourceTree = "<group>"; };
 		F04780226D8E57AF557D2DFA /* Pods-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +107,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DCC9A00A21551D4800A279CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D16B94D32D6F96045AC1A5E0 /* Pods_Callstats.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCC9A01221551D4800A279CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCC9A01621551D4800A279CA /* Callstats.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				2E1696047E7DC3EFDA56299A /* Pods_demo.framework */,
+				4284182C7892A053DD5A3A45 /* Pods_Callstats.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -90,6 +140,8 @@
 			children = (
 				DC5D4DFF20A7E83600EDD5D7 /* demo */,
 				DC5D4E1420A7E83800EDD5D7 /* demoTests */,
+				DCC9A00E21551D4800A279CA /* Callstats */,
+				DCC9A01B21551D4800A279CA /* CallstatsTests */,
 				DC5D4DFE20A7E83600EDD5D7 /* Products */,
 				EE5D2CEA3763AB69E6971521 /* Pods */,
 				29327B77F1D4C47739BCF199 /* Frameworks */,
@@ -101,6 +153,8 @@
 			children = (
 				DC5D4DFD20A7E83600EDD5D7 /* demo.app */,
 				DC5D4E1120A7E83800EDD5D7 /* demoTests.xctest */,
+				DCC9A00D21551D4800A279CA /* Callstats.framework */,
+				DCC9A01521551D4800A279CA /* CallstatsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,16 +197,58 @@
 			path = csiortc;
 			sourceTree = "<group>";
 		};
+		DCC9A00E21551D4800A279CA /* Callstats */ = {
+			isa = PBXGroup;
+			children = (
+				DCC9A02C21553D1300A279CA /* Interceptor */,
+				DCC9A00F21551D4800A279CA /* Callstats.h */,
+				DCC9A01021551D4800A279CA /* Info.plist */,
+				DCC9A02A21551E4700A279CA /* Callstats.swift */,
+				DCC9A02F2155410000A279CA /* CallstatsEvents.swift */,
+			);
+			path = Callstats;
+			sourceTree = "<group>";
+		};
+		DCC9A01B21551D4800A279CA /* CallstatsTests */ = {
+			isa = PBXGroup;
+			children = (
+				DCC9A01C21551D4800A279CA /* CallstatsTests.swift */,
+				DCC9A01E21551D4800A279CA /* Info.plist */,
+			);
+			path = CallstatsTests;
+			sourceTree = "<group>";
+		};
+		DCC9A02C21553D1300A279CA /* Interceptor */ = {
+			isa = PBXGroup;
+			children = (
+				DCC9A02D21553D3100A279CA /* Interceptor.swift */,
+			);
+			path = Interceptor;
+			sourceTree = "<group>";
+		};
 		EE5D2CEA3763AB69E6971521 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				F04780226D8E57AF557D2DFA /* Pods-demo.debug.xcconfig */,
 				31DCC6DA845E727677657F33 /* Pods-demo.release.xcconfig */,
+				88AF036F70D971D019000EF4 /* Pods-Callstats.debug.xcconfig */,
+				1B1A7D711B11EA5468B76160 /* Pods-Callstats.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DCC9A00821551D4800A279CA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCC9A01F21551D4800A279CA /* Callstats.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		DC5D4DFC20A7E83600EDD5D7 /* demo */ = {
@@ -192,13 +288,51 @@
 			productReference = DC5D4E1120A7E83800EDD5D7 /* demoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		DCC9A00C21551D4800A279CA /* Callstats */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCC9A02421551D4800A279CA /* Build configuration list for PBXNativeTarget "Callstats" */;
+			buildPhases = (
+				819585072727B10AED942BF8 /* [CP] Check Pods Manifest.lock */,
+				DCC9A00821551D4800A279CA /* Headers */,
+				DCC9A00921551D4800A279CA /* Sources */,
+				DCC9A00A21551D4800A279CA /* Frameworks */,
+				DCC9A00B21551D4800A279CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Callstats;
+			productName = Callstats;
+			productReference = DCC9A00D21551D4800A279CA /* Callstats.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DCC9A01421551D4800A279CA /* CallstatsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCC9A02721551D4800A279CA /* Build configuration list for PBXNativeTarget "CallstatsTests" */;
+			buildPhases = (
+				DCC9A01121551D4800A279CA /* Sources */,
+				DCC9A01221551D4800A279CA /* Frameworks */,
+				DCC9A01321551D4800A279CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DCC9A01821551D4800A279CA /* PBXTargetDependency */,
+				DCC9A01A21551D4800A279CA /* PBXTargetDependency */,
+			);
+			name = CallstatsTests;
+			productName = CallstatsTests;
+			productReference = DCC9A01521551D4800A279CA /* CallstatsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		DC5D4DF520A7E83600EDD5D7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = callstats;
 				TargetAttributes = {
@@ -207,6 +341,14 @@
 					};
 					DC5D4E1020A7E83800EDD5D7 = {
 						CreatedOnToolsVersion = 9.3.1;
+						TestTargetID = DC5D4DFC20A7E83600EDD5D7;
+					};
+					DCC9A00C21551D4800A279CA = {
+						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
+					};
+					DCC9A01421551D4800A279CA = {
+						CreatedOnToolsVersion = 10.0;
 						TestTargetID = DC5D4DFC20A7E83600EDD5D7;
 					};
 				};
@@ -226,6 +368,8 @@
 			targets = (
 				DC5D4DFC20A7E83600EDD5D7 /* demo */,
 				DC5D4E1020A7E83800EDD5D7 /* demoTests */,
+				DCC9A00C21551D4800A279CA /* Callstats */,
+				DCC9A01421551D4800A279CA /* CallstatsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -248,9 +392,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DCC9A00B21551D4800A279CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCC9A01321551D4800A279CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		819585072727B10AED942BF8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Callstats-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D3EA582DAB029EEE1DA4B036 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -258,12 +434,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-demo/Pods-demo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Callstats/Callstats.framework",
 				"${PODS_ROOT}/GoogleWebRTC/Frameworks/frameworks/WebRTC.framework",
 				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Callstats.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WebRTC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
@@ -319,6 +497,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DCC9A00921551D4800A279CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCC9A02B21551E4700A279CA /* Callstats.swift in Sources */,
+				DCC9A0302155410000A279CA /* CallstatsEvents.swift in Sources */,
+				DCC9A02E21553D3100A279CA /* Interceptor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCC9A01121551D4800A279CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCC9A01D21551D4800A279CA /* CallstatsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -326,6 +522,16 @@
 			isa = PBXTargetDependency;
 			target = DC5D4DFC20A7E83600EDD5D7 /* demo */;
 			targetProxy = DC5D4E1220A7E83800EDD5D7 /* PBXContainerItemProxy */;
+		};
+		DCC9A01821551D4800A279CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DCC9A00C21551D4800A279CA /* Callstats */;
+			targetProxy = DCC9A01721551D4800A279CA /* PBXContainerItemProxy */;
+		};
+		DCC9A01A21551D4800A279CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC5D4DFC20A7E83600EDD5D7 /* demo */;
+			targetProxy = DCC9A01921551D4800A279CA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -468,7 +674,9 @@
 			baseConfigurationReference = F04780226D8E57AF557D2DFA /* Pods-demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2VGCQTD9NR;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -477,6 +685,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.callstats.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -487,7 +696,9 @@
 			baseConfigurationReference = 31DCC6DA845E727677657F33 /* Pods-demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2VGCQTD9NR;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -496,6 +707,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.callstats.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -541,6 +753,115 @@
 			};
 			name = Release;
 		};
+		DCC9A02521551D4800A279CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88AF036F70D971D019000EF4 /* Pods-Callstats.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 2VGCQTD9NR;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Callstats/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = io.callstats.Callstats;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DCC9A02621551D4800A279CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B1A7D711B11EA5468B76160 /* Pods-Callstats.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 2VGCQTD9NR;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Callstats/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = io.callstats.Callstats;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DCC9A02821551D4800A279CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CallstatsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = io.callstats.CallstatsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/demo.app/demo";
+			};
+			name = Debug;
+		};
+		DCC9A02921551D4800A279CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CallstatsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = io.callstats.CallstatsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/demo.app/demo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -567,6 +888,24 @@
 			buildConfigurations = (
 				DC5D4E1E20A7E83800EDD5D7 /* Debug */,
 				DC5D4E1F20A7E83800EDD5D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCC9A02421551D4800A279CA /* Build configuration list for PBXNativeTarget "Callstats" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCC9A02521551D4800A279CA /* Debug */,
+				DCC9A02621551D4800A279CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCC9A02721551D4800A279CA /* Build configuration list for PBXNativeTarget "CallstatsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCC9A02821551D4800A279CA /* Debug */,
+				DCC9A02921551D4800A279CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
