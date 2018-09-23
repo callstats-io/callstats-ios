@@ -20,12 +20,19 @@
 		DC5D4E2420A7EFE900EDD5D7 /* CsioSignalingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D4E2320A7EFE900EDD5D7 /* CsioSignalingDelegate.swift */; };
 		DC5D4E2620A7F9A500EDD5D7 /* CsioRTC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D4E2520A7F9A500EDD5D7 /* CsioRTC.swift */; };
 		DC5D4E2820A800E100EDD5D7 /* CsioRTCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D4E2720A800E100EDD5D7 /* CsioRTCDelegate.swift */; };
+		DC9D191221577EEF00E95EFE /* EventSendingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9D191121577EEF00E95EFE /* EventSendingOperation.swift */; };
+		DC9D191521578C7200E95EFE /* EventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9D191421578C7200E95EFE /* EventTests.swift */; };
 		DCC9A01621551D4800A279CA /* Callstats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC9A00D21551D4800A279CA /* Callstats.framework */; };
 		DCC9A01D21551D4800A279CA /* CallstatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC9A01C21551D4800A279CA /* CallstatsTests.swift */; };
 		DCC9A01F21551D4800A279CA /* Callstats.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9A00F21551D4800A279CA /* Callstats.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DCC9A02B21551E4700A279CA /* Callstats.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC9A02A21551E4700A279CA /* Callstats.swift */; };
 		DCC9A02E21553D3100A279CA /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC9A02D21553D3100A279CA /* Interceptor.swift */; };
 		DCC9A0302155410000A279CA /* CallstatsEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC9A02F2155410000A279CA /* CallstatsEvents.swift */; };
+		DCC9A03221554D8900A279CA /* CallstatsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC9A03121554D8900A279CA /* CallstatsConfig.swift */; };
+		DCC9A03521562C0D00A279CA /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC9A03421562C0D00A279CA /* Event.swift */; };
+		DCC9A03721562C3300A279CA /* EventSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC9A03621562C3300A279CA /* EventSender.swift */; };
+		DCC9A03921562DA700A279CA /* CallstatsInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC9A03821562DA700A279CA /* CallstatsInjector.swift */; };
+		DCC9A03C2156313500A279CA /* TokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC9A03B2156313500A279CA /* TokenRequest.swift */; };
 		DCF52D2320B1A42B00B2C6DE /* CsioRTCCameraCapturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF52D2220B1A42B00B2C6DE /* CsioRTCCameraCapturer.swift */; };
 		DCF52D2520B1C63900B2C6DE /* CsioRTCVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF52D2420B1C63900B2C6DE /* CsioRTCVideoView.swift */; };
 		FD1F6860233DE597CFC001F4 /* Pods_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1696047E7DC3EFDA56299A /* Pods_demo.framework */; };
@@ -45,13 +52,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = DCC9A00C21551D4800A279CA;
 			remoteInfo = Callstats;
-		};
-		DCC9A01921551D4800A279CA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DC5D4DF520A7E83600EDD5D7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DC5D4DFC20A7E83600EDD5D7;
-			remoteInfo = demo;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -77,6 +77,8 @@
 		DC5D4E2320A7EFE900EDD5D7 /* CsioSignalingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsioSignalingDelegate.swift; sourceTree = "<group>"; };
 		DC5D4E2520A7F9A500EDD5D7 /* CsioRTC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsioRTC.swift; sourceTree = "<group>"; };
 		DC5D4E2720A800E100EDD5D7 /* CsioRTCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsioRTCDelegate.swift; sourceTree = "<group>"; };
+		DC9D191121577EEF00E95EFE /* EventSendingOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSendingOperation.swift; sourceTree = "<group>"; };
+		DC9D191421578C7200E95EFE /* EventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTests.swift; sourceTree = "<group>"; };
 		DCC9A00D21551D4800A279CA /* Callstats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Callstats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC9A00F21551D4800A279CA /* Callstats.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Callstats.h; sourceTree = "<group>"; };
 		DCC9A01021551D4800A279CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,6 +88,11 @@
 		DCC9A02A21551E4700A279CA /* Callstats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Callstats.swift; sourceTree = "<group>"; };
 		DCC9A02D21553D3100A279CA /* Interceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interceptor.swift; sourceTree = "<group>"; };
 		DCC9A02F2155410000A279CA /* CallstatsEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallstatsEvents.swift; sourceTree = "<group>"; };
+		DCC9A03121554D8900A279CA /* CallstatsConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallstatsConfig.swift; sourceTree = "<group>"; };
+		DCC9A03421562C0D00A279CA /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		DCC9A03621562C3300A279CA /* EventSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSender.swift; sourceTree = "<group>"; };
+		DCC9A03821562DA700A279CA /* CallstatsInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallstatsInjector.swift; sourceTree = "<group>"; };
+		DCC9A03B2156313500A279CA /* TokenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRequest.swift; sourceTree = "<group>"; };
 		DCF52D2220B1A42B00B2C6DE /* CsioRTCCameraCapturer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsioRTCCameraCapturer.swift; sourceTree = "<group>"; };
 		DCF52D2420B1C63900B2C6DE /* CsioRTCVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsioRTCVideoView.swift; sourceTree = "<group>"; };
 		F04780226D8E57AF557D2DFA /* Pods-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -197,14 +204,26 @@
 			path = csiortc;
 			sourceTree = "<group>";
 		};
+		DC9D191321578C4F00E95EFE /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				DC9D191421578C7200E95EFE /* EventTests.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
 		DCC9A00E21551D4800A279CA /* Callstats */ = {
 			isa = PBXGroup;
 			children = (
+				DCC9A03321562BE600A279CA /* Event */,
 				DCC9A02C21553D1300A279CA /* Interceptor */,
+				DCC9A03D21563DD500A279CA /* Utils */,
 				DCC9A00F21551D4800A279CA /* Callstats.h */,
 				DCC9A01021551D4800A279CA /* Info.plist */,
 				DCC9A02A21551E4700A279CA /* Callstats.swift */,
 				DCC9A02F2155410000A279CA /* CallstatsEvents.swift */,
+				DCC9A03121554D8900A279CA /* CallstatsConfig.swift */,
+				DCC9A03821562DA700A279CA /* CallstatsInjector.swift */,
 			);
 			path = Callstats;
 			sourceTree = "<group>";
@@ -212,6 +231,7 @@
 		DCC9A01B21551D4800A279CA /* CallstatsTests */ = {
 			isa = PBXGroup;
 			children = (
+				DC9D191321578C4F00E95EFE /* Event */,
 				DCC9A01C21551D4800A279CA /* CallstatsTests.swift */,
 				DCC9A01E21551D4800A279CA /* Info.plist */,
 			);
@@ -224,6 +244,32 @@
 				DCC9A02D21553D3100A279CA /* Interceptor.swift */,
 			);
 			path = Interceptor;
+			sourceTree = "<group>";
+		};
+		DCC9A03321562BE600A279CA /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				DCC9A03A2156312000A279CA /* Auth */,
+				DCC9A03421562C0D00A279CA /* Event.swift */,
+				DCC9A03621562C3300A279CA /* EventSender.swift */,
+				DC9D191121577EEF00E95EFE /* EventSendingOperation.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		DCC9A03A2156312000A279CA /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				DCC9A03B2156313500A279CA /* TokenRequest.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		DCC9A03D21563DD500A279CA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		EE5D2CEA3763AB69E6971521 /* Pods */ = {
@@ -319,7 +365,6 @@
 			);
 			dependencies = (
 				DCC9A01821551D4800A279CA /* PBXTargetDependency */,
-				DCC9A01A21551D4800A279CA /* PBXTargetDependency */,
 			);
 			name = CallstatsTests;
 			productName = CallstatsTests;
@@ -502,8 +547,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCC9A02B21551E4700A279CA /* Callstats.swift in Sources */,
+				DC9D191221577EEF00E95EFE /* EventSendingOperation.swift in Sources */,
+				DCC9A03721562C3300A279CA /* EventSender.swift in Sources */,
+				DCC9A03221554D8900A279CA /* CallstatsConfig.swift in Sources */,
 				DCC9A0302155410000A279CA /* CallstatsEvents.swift in Sources */,
 				DCC9A02E21553D3100A279CA /* Interceptor.swift in Sources */,
+				DCC9A03521562C0D00A279CA /* Event.swift in Sources */,
+				DCC9A03921562DA700A279CA /* CallstatsInjector.swift in Sources */,
+				DCC9A03C2156313500A279CA /* TokenRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +562,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC9D191521578C7200E95EFE /* EventTests.swift in Sources */,
 				DCC9A01D21551D4800A279CA /* CallstatsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,11 +579,6 @@
 			isa = PBXTargetDependency;
 			target = DCC9A00C21551D4800A279CA /* Callstats */;
 			targetProxy = DCC9A01721551D4800A279CA /* PBXContainerItemProxy */;
-		};
-		DCC9A01A21551D4800A279CA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DC5D4DFC20A7E83600EDD5D7 /* demo */;
-			targetProxy = DCC9A01921551D4800A279CA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -768,7 +815,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Callstats/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -802,7 +849,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Callstats/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -825,7 +872,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CallstatsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -847,7 +894,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CallstatsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -10,25 +10,34 @@ import XCTest
 @testable import Callstats
 
 class CallstatsTests: XCTestCase {
+    
+    var sender: MockEventSender!
+    var callstats: Callstats!
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        sender = MockEventSender()
+        Callstats.dependency = TestInjector(sender: sender)
+        callstats = Callstats(appID: "app", localID: "local", deviceID: "device", jwt: "code")
     }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func testCreateObjectWillDoAuthentication() {
+        XCTAssertTrue(sender.lastSendEvent is TokenRequest)
     }
+}
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+class TestInjector: CallstatsInjector {
+    let sender: EventSender
+    init(sender: EventSender) {
+        self.sender = sender
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    override func eventSender(appID: String, localID: String, deviceID: String) -> EventSender {
+        return sender
     }
+}
 
+class MockEventSender: EventSender {
+    var lastSendEvent: Event?
+    func send(event: Event) {
+        lastSendEvent = event
+    }
 }

@@ -8,6 +8,7 @@
 
 import Foundation
 import WebRTC
+import Callstats
 
 private let kMessageIceKey = "ice"
 private let kMessageOfferKey = "offer"
@@ -37,11 +38,14 @@ class CsioRTC: NSObject, CsioSignalingDelegate {
     
     private let alias: String?
     
+    private var callstats: Callstats?
+    
     init(room: String, alias: String? = nil) {
         self.alias = alias
         signaling = CsioSignaling(room: room)
         super.init()
-        signaling.delegate = self        
+        signaling.delegate = self
+        initCallstats()
     }
     
     func join() {
@@ -305,5 +309,48 @@ extension CsioRTC: RTCDataChannelDelegate {
                 peerId: json[kDataChannelNameKey] ?? p,
                 message: json[kDataChannelMessageKey] ?? "")
         }
+    }
+}
+
+
+extension CsioRTC {
+    
+    private func initCallstats() {
+        // all of this Jwt creation should be done at server for security
+        // this is just for demo only
+        let appID = "710194177"
+        let localID = String(Int64(Date().timeIntervalSince1970 * 1000))
+        let keyID = "e70cfbfaa67a60ad50"
+        let key = """
+        MIIDGgIBAzCCAuAGCSqGSIb3DQEHAaCCAtEEggLNMIICyTCCAb8GCSqGSIb3DQEHBqCCAbAwggGsAgEAMIIBpQY
+        JKoZIhvcNAQcBMBwGCiqGSIb3DQEMAQYwDgQIaK0+NouBI2MCAggAgIIBeAtdFqr57xSHuMhf/50fIQJvJlRVa8
+        G2EPPjIiHu8V3BLClqXhimajgaBvIZ76hDOrpZ1jGjrQKhnjRnCHYe32041odlUqCdCE4ap0Zvxw1rvSJFzcyLf
+        bRWZc92bSEhDZA7Q3oy45InOFXqJQxQqejwilveqEgvSBeIC3Qq/A8W4ivlVQn7rHvWMwqu2xDKI73ZHVLKNzqo
+        wKgG4qL7uxiB7yF3fBUuo14OQb/xD8ZZ+opBmu0yP2N/5hQrzVFU+fe8EL7yikTKZaIH0YDvGtdGTflTlPgwkmI
+        7uoho8p1qO6z0sl8/BUUk+LkERGHP84gqaUU1SA0BgvbmwoJoDwbHQTtzMxscyp8E+9cAxXOAWIBkN78nykj1SU
+        NEzm074Dz+1SXDin0O9tzdPXsQepJpXplPdeqWc8eyMJ+FOeNvlQCN8Qet+P7Jnq3v6x5T8XxeaKlOQOvRp/Pgb
+        A7RnJ4KYjTpKr1vheOYwep28b5OetfFngELQOkwggECBgkqhkiG9w0BBwGggfQEgfEwge4wgesGCyqGSIb3DQEM
+        CgECoIG0MIGxMBwGCiqGSIb3DQEMAQMwDgQIj/ksNjB2EFMCAggABIGQHjS8LNOZdAKrTkdLGyJ827077PUATTw
+        /z0p5Lhy51a32HuF+SxPzthvdGVKsqy4FgoutWzpyKoIHxwoKtFQCalzExZuGR9iRi28NPbk2TVyISOmTEbBvBh
+        5qkueA2Eh6U5YfdIXkxl8Qjvdd5J7KUgf8rwh0DEhb3E3HRX+r9euFGJVjOrP/GXM7mDXagogAMSUwIwYJKoZIh
+        vcNAQkVMRYEFH1AwBvLJbVCpjtqCylFLmnDQN3NMDEwITAJBgUrDgMCGgUABBSkYIdojEK/zEMpbMT8r1g4+xlS
+        MwQIgxxKgkNKr4oCAggA
+        """
+        let claims = [
+            "userID": localID,
+            "appID": appID,
+            "keyID": keyID
+        ]
+        guard let jwt = createJwt(dict: claims, key: key, password: "") else { return }
+        let deviceID = UIDevice.current.identifierForVendor!.uuidString
+        callstats = Callstats(appID: appID, localID: localID, deviceID: deviceID, jwt: jwt)
+    }
+    
+    private func startCallstats(room: String) {
+        
+    }
+    
+    private func stopCallstats() {
+        
     }
 }
