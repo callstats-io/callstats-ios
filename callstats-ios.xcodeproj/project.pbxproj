@@ -22,6 +22,9 @@
 		DC5D4E2820A800E100EDD5D7 /* CsioRTCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D4E2720A800E100EDD5D7 /* CsioRTCDelegate.swift */; };
 		DC9D191221577EEF00E95EFE /* EventSendingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9D191121577EEF00E95EFE /* EventSendingOperation.swift */; };
 		DC9D191521578C7200E95EFE /* EventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9D191421578C7200E95EFE /* EventTests.swift */; };
+		DC9D19172157DBAB00E95EFE /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9D19162157DBAB00E95EFE /* HttpClient.swift */; };
+		DC9D19192157EAE800E95EFE /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9D19182157EAE800E95EFE /* Date.swift */; };
+		DC9D191B21592E1100E95EFE /* EventSendingOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9D191A21592E1100E95EFE /* EventSendingOperationTests.swift */; };
 		DCC9A01621551D4800A279CA /* Callstats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC9A00D21551D4800A279CA /* Callstats.framework */; };
 		DCC9A01D21551D4800A279CA /* CallstatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC9A01C21551D4800A279CA /* CallstatsTests.swift */; };
 		DCC9A01F21551D4800A279CA /* Callstats.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC9A00F21551D4800A279CA /* Callstats.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -79,6 +82,9 @@
 		DC5D4E2720A800E100EDD5D7 /* CsioRTCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsioRTCDelegate.swift; sourceTree = "<group>"; };
 		DC9D191121577EEF00E95EFE /* EventSendingOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSendingOperation.swift; sourceTree = "<group>"; };
 		DC9D191421578C7200E95EFE /* EventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTests.swift; sourceTree = "<group>"; };
+		DC9D19162157DBAB00E95EFE /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		DC9D19182157EAE800E95EFE /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		DC9D191A21592E1100E95EFE /* EventSendingOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSendingOperationTests.swift; sourceTree = "<group>"; };
 		DCC9A00D21551D4800A279CA /* Callstats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Callstats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC9A00F21551D4800A279CA /* Callstats.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Callstats.h; sourceTree = "<group>"; };
 		DCC9A01021551D4800A279CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -208,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				DC9D191421578C7200E95EFE /* EventTests.swift */,
+				DC9D191A21592E1100E95EFE /* EventSendingOperationTests.swift */,
 			);
 			path = Event;
 			sourceTree = "<group>";
@@ -268,6 +275,8 @@
 		DCC9A03D21563DD500A279CA /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				DC9D19162157DBAB00E95EFE /* HttpClient.swift */,
+				DC9D19182157EAE800E95EFE /* Date.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -546,6 +555,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC9D19172157DBAB00E95EFE /* HttpClient.swift in Sources */,
 				DCC9A02B21551E4700A279CA /* Callstats.swift in Sources */,
 				DC9D191221577EEF00E95EFE /* EventSendingOperation.swift in Sources */,
 				DCC9A03721562C3300A279CA /* EventSender.swift in Sources */,
@@ -553,6 +563,7 @@
 				DCC9A0302155410000A279CA /* CallstatsEvents.swift in Sources */,
 				DCC9A02E21553D3100A279CA /* Interceptor.swift in Sources */,
 				DCC9A03521562C0D00A279CA /* Event.swift in Sources */,
+				DC9D19192157EAE800E95EFE /* Date.swift in Sources */,
 				DCC9A03921562DA700A279CA /* CallstatsInjector.swift in Sources */,
 				DCC9A03C2156313500A279CA /* TokenRequest.swift in Sources */,
 			);
@@ -564,6 +575,7 @@
 			files = (
 				DC9D191521578C7200E95EFE /* EventTests.swift in Sources */,
 				DCC9A01D21551D4800A279CA /* CallstatsTests.swift in Sources */,
+				DC9D191B21592E1100E95EFE /* EventSendingOperationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
