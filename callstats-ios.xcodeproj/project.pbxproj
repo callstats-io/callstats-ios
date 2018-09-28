@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D16B94D32D6F96045AC1A5E0 /* Pods_Callstats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4284182C7892A053DD5A3A45 /* Pods_Callstats.framework */; };
+		DC1E6777215E49A100AE7E35 /* EventSenderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E6776215E49A100AE7E35 /* EventSenderTests.swift */; };
 		DC3BA41420A86305004C2F77 /* CsioUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3BA41320A86305004C2F77 /* CsioUtils.swift */; };
 		DC3BA41620AFE087004C2F77 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3BA41520AFE087004C2F77 /* CallViewController.swift */; };
 		DC3BA41720B01093004C2F77 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D4E0220A7E83600EDD5D7 /* MainViewController.swift */; };
@@ -64,6 +65,7 @@
 		31DCC6DA845E727677657F33 /* Pods-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.release.xcconfig"; sourceTree = "<group>"; };
 		4284182C7892A053DD5A3A45 /* Pods_Callstats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Callstats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88AF036F70D971D019000EF4 /* Pods-Callstats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Callstats.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Callstats/Pods-Callstats.debug.xcconfig"; sourceTree = "<group>"; };
+		DC1E6776215E49A100AE7E35 /* EventSenderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSenderTests.swift; sourceTree = "<group>"; };
 		DC3BA41320A86305004C2F77 /* CsioUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsioUtils.swift; sourceTree = "<group>"; };
 		DC3BA41520AFE087004C2F77 /* CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
 		DC5D4DFD20A7E83600EDD5D7 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -215,6 +217,7 @@
 			children = (
 				DC9D191421578C7200E95EFE /* EventTests.swift */,
 				DC9D191A21592E1100E95EFE /* EventSendingOperationTests.swift */,
+				DC1E6776215E49A100AE7E35 /* EventSenderTests.swift */,
 			);
 			path = Event;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 				DC9D191521578C7200E95EFE /* EventTests.swift in Sources */,
 				DCC9A01D21551D4800A279CA /* CallstatsTests.swift in Sources */,
 				DC9D191B21592E1100E95EFE /* EventSendingOperationTests.swift in Sources */,
+				DC1E6777215E49A100AE7E35 /* EventSenderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

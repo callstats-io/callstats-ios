@@ -10,7 +10,22 @@ import Foundation
 
 class CallstatsInjector {
     
+    func httpClient() -> HttpClient {
+        return HttpClientImpl()
+    }
+    
+    func operationQueue() -> OperationQueue {
+        let queue = OperationQueue()
+        queue.maxConcurrentOperationCount = 1
+        return queue
+    }
+    
     func eventSender(appID: String, localID: String, deviceID: String) -> EventSender {
-        return EventSenderImpl(appID: appID, localID: localID, deviceID: deviceID)
+        return EventSenderImpl(
+            httpClient: httpClient(),
+            operationQueue: operationQueue(),
+            appID: appID,
+            localID: localID,
+            deviceID: deviceID)
     }
 }

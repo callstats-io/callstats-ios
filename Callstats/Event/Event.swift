@@ -39,7 +39,7 @@ extension Event {
         let path: String
         switch self {
         case let e as SessionEvent: path = "v1/apps/\(e.appID!)/conferences/\(e.confID!)/\(e.ucID!)/\(e.path())"
-        case let e as CreateSessionEvent: path = "v1/apps/\(e.appID)/conferences/\(e.confID)"
+        case let e as CreateSessionEvent: path = "v1/apps/\(e.appID!)/conferences/\(e.confID)"
         case let e as AuthenticatedEvent: path = "v1/apps/\(e.appID!)/\(e.path())"
         default: path = self.path()
         }
@@ -84,7 +84,7 @@ protocol AuthenticationEvent {
  */
 protocol CreateSessionEvent {
     var confID: String { get }
-    var appID: String { get }
+    var appID: String? { get }
 }
 
 /**
@@ -104,3 +104,8 @@ class SessionEvent: AuthenticatedEvent {
     var confID: String?
     enum CodingKeys: CodingKey {}
 }
+
+/**
+ Event to keep the session alive
+ */
+class KeepAliveEvent: SessionEvent {}
