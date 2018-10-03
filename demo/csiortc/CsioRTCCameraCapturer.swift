@@ -13,7 +13,7 @@ class CsioRTCCameraCapturer: RTCCameraVideoCapturer {
     
     func startCapture() {
         let position = AVCaptureDevice.Position.front
-        let device = findDeviceForPosition(position: position)
+        guard let device = findDeviceForPosition(position: position) else { return }
         let format = selectFormatForDevice(device: device)
         let fps = selectFpsForFormat(format: format)
         startCapture(with: device, format: format, fps: Int(fps))
@@ -21,14 +21,14 @@ class CsioRTCCameraCapturer: RTCCameraVideoCapturer {
     
     // Mark: -
     
-    private func findDeviceForPosition(position: AVCaptureDevice.Position) -> AVCaptureDevice {
+    private func findDeviceForPosition(position: AVCaptureDevice.Position) -> AVCaptureDevice? {
         let devices = RTCCameraVideoCapturer.captureDevices()
         for device in devices {
             if device.position == position {
                 return device
             }
         }
-        return devices[0]
+        return devices.first
     }
     
     private func selectFormatForDevice(device: AVCaptureDevice) -> AVCaptureDevice.Format {

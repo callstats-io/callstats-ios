@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		D16B94D32D6F96045AC1A5E0 /* Pods_Callstats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4284182C7892A053DD5A3A45 /* Pods_Callstats.framework */; };
 		DC1E6777215E49A100AE7E35 /* EventSenderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E6776215E49A100AE7E35 /* EventSenderTests.swift */; };
+		DC1E677D215E58E000AE7E35 /* MediaDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E677C215E58E000AE7E35 /* MediaDevice.swift */; };
+		DC1E6782215E5E1900AE7E35 /* IceCandidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E6781215E5E1900AE7E35 /* IceCandidate.swift */; };
+		DC1E67842163E5EC00AE7E35 /* EndpointInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67832163E5EC00AE7E35 /* EndpointInfo.swift */; };
+		DC1E67862163E6B600AE7E35 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67852163E6B600AE7E35 /* Feedback.swift */; };
+		DC1E67882164F09800AE7E35 /* Ssrc.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67872164F09800AE7E35 /* Ssrc.swift */; };
+		DC1E678A2164F68C00AE7E35 /* RTCSessionDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67892164F68C00AE7E35 /* RTCSessionDescription.swift */; };
 		DC3BA41420A86305004C2F77 /* CsioUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3BA41320A86305004C2F77 /* CsioUtils.swift */; };
 		DC3BA41620AFE087004C2F77 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3BA41520AFE087004C2F77 /* CallViewController.swift */; };
 		DC3BA41720B01093004C2F77 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D4E0220A7E83600EDD5D7 /* MainViewController.swift */; };
@@ -66,6 +72,12 @@
 		4284182C7892A053DD5A3A45 /* Pods_Callstats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Callstats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88AF036F70D971D019000EF4 /* Pods-Callstats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Callstats.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Callstats/Pods-Callstats.debug.xcconfig"; sourceTree = "<group>"; };
 		DC1E6776215E49A100AE7E35 /* EventSenderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSenderTests.swift; sourceTree = "<group>"; };
+		DC1E677C215E58E000AE7E35 /* MediaDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDevice.swift; sourceTree = "<group>"; };
+		DC1E6781215E5E1900AE7E35 /* IceCandidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceCandidate.swift; sourceTree = "<group>"; };
+		DC1E67832163E5EC00AE7E35 /* EndpointInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointInfo.swift; sourceTree = "<group>"; };
+		DC1E67852163E6B600AE7E35 /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
+		DC1E67872164F09800AE7E35 /* Ssrc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ssrc.swift; sourceTree = "<group>"; };
+		DC1E67892164F68C00AE7E35 /* RTCSessionDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCSessionDescription.swift; sourceTree = "<group>"; };
 		DC3BA41320A86305004C2F77 /* CsioUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsioUtils.swift; sourceTree = "<group>"; };
 		DC3BA41520AFE087004C2F77 /* CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
 		DC5D4DFD20A7E83600EDD5D7 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +160,18 @@
 				4284182C7892A053DD5A3A45 /* Pods_Callstats.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC1E677B215E58D600AE7E35 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				DC1E67832163E5EC00AE7E35 /* EndpointInfo.swift */,
+				DC1E67852163E6B600AE7E35 /* Feedback.swift */,
+				DC1E6781215E5E1900AE7E35 /* IceCandidate.swift */,
+				DC1E677C215E58E000AE7E35 /* MediaDevice.swift */,
+				DC1E67872164F09800AE7E35 /* Ssrc.swift */,
+			);
+			path = Info;
 			sourceTree = "<group>";
 		};
 		DC5D4DF420A7E83600EDD5D7 = {
@@ -259,6 +283,7 @@
 		DCC9A03321562BE600A279CA /* Event */ = {
 			isa = PBXGroup;
 			children = (
+				DC1E677B215E58D600AE7E35 /* Info */,
 				DCC9A03A2156312000A279CA /* Auth */,
 				DCC9A03421562C0D00A279CA /* Event.swift */,
 				DCC9A03621562C3300A279CA /* EventSender.swift */,
@@ -280,6 +305,7 @@
 			children = (
 				DC9D19162157DBAB00E95EFE /* HttpClient.swift */,
 				DC9D19182157EAE800E95EFE /* Date.swift */,
+				DC1E67892164F68C00AE7E35 /* RTCSessionDescription.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -563,12 +589,18 @@
 				DC9D191221577EEF00E95EFE /* EventSendingOperation.swift in Sources */,
 				DCC9A03721562C3300A279CA /* EventSender.swift in Sources */,
 				DCC9A03221554D8900A279CA /* CallstatsConfig.swift in Sources */,
+				DC1E67862163E6B600AE7E35 /* Feedback.swift in Sources */,
+				DC1E67882164F09800AE7E35 /* Ssrc.swift in Sources */,
 				DCC9A0302155410000A279CA /* CallstatsEvents.swift in Sources */,
+				DC1E678A2164F68C00AE7E35 /* RTCSessionDescription.swift in Sources */,
 				DCC9A02E21553D3100A279CA /* Interceptor.swift in Sources */,
 				DCC9A03521562C0D00A279CA /* Event.swift in Sources */,
 				DC9D19192157EAE800E95EFE /* Date.swift in Sources */,
 				DCC9A03921562DA700A279CA /* CallstatsInjector.swift in Sources */,
+				DC1E67842163E5EC00AE7E35 /* EndpointInfo.swift in Sources */,
+				DC1E677D215E58E000AE7E35 /* MediaDevice.swift in Sources */,
 				DCC9A03C2156313500A279CA /* TokenRequest.swift in Sources */,
+				DC1E6782215E5E1900AE7E35 /* IceCandidate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
