@@ -1,0 +1,41 @@
+//
+//  FabricDroppedEvent.swift
+//  Callstats
+//
+//  Created by Amornchai Kanokpullwad on 10/4/18.
+//  Copyright © 2018 callstats. All rights reserved.
+//
+
+import Foundation
+
+/**
+ Whenever the fabric is dropped, this should be notified.
+ */
+class FabricDroppedEvent: FabricEvent {
+    
+    let remoteID: String
+    let connectionID: String
+    let currIceCandidatePair: IceCandidatePair
+    let prevIceConnectionState: String
+    let delay: Int
+    
+    let currIceConnectionState = "failed"
+    
+    init(
+        remoteID: String,
+        connectionID: String,
+        currIceCandidatePair: IceCandidatePair,
+        prevIceConnectionState: String,
+        delay: Int)
+    {
+        self.remoteID = remoteID
+        self.connectionID = connectionID
+        self.currIceCandidatePair = currIceCandidatePair
+        self.prevIceConnectionState = prevIceConnectionState
+        self.delay = delay
+    }
+    
+    override func path() -> String {
+        return super.path() + "/status"
+    }
+}

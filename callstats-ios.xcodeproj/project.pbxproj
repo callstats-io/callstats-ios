@@ -9,12 +9,22 @@
 /* Begin PBXBuildFile section */
 		D16B94D32D6F96045AC1A5E0 /* Pods_Callstats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4284182C7892A053DD5A3A45 /* Pods_Callstats.framework */; };
 		DC1E6777215E49A100AE7E35 /* EventSenderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E6776215E49A100AE7E35 /* EventSenderTests.swift */; };
+		DC1E677A215E586400AE7E35 /* DeviceEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E6779215E586400AE7E35 /* DeviceEvent.swift */; };
 		DC1E677D215E58E000AE7E35 /* MediaDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E677C215E58E000AE7E35 /* MediaDevice.swift */; };
+		DC1E6780215E5DA600AE7E35 /* FabricEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E677F215E5DA600AE7E35 /* FabricEvent.swift */; };
 		DC1E6782215E5E1900AE7E35 /* IceCandidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E6781215E5E1900AE7E35 /* IceCandidate.swift */; };
 		DC1E67842163E5EC00AE7E35 /* EndpointInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67832163E5EC00AE7E35 /* EndpointInfo.swift */; };
 		DC1E67862163E6B600AE7E35 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67852163E6B600AE7E35 /* Feedback.swift */; };
 		DC1E67882164F09800AE7E35 /* Ssrc.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67872164F09800AE7E35 /* Ssrc.swift */; };
 		DC1E678A2164F68C00AE7E35 /* RTCSessionDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67892164F68C00AE7E35 /* RTCSessionDescription.swift */; };
+		DC1E678C2165173600AE7E35 /* FabricSetupEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E678B2165173600AE7E35 /* FabricSetupEvent.swift */; };
+		DC1E678E2165185900AE7E35 /* IceCandidatePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E678D2165185900AE7E35 /* IceCandidatePair.swift */; };
+		DC1E679021651D1F00AE7E35 /* FabricSetupFailedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E678F21651D1F00AE7E35 /* FabricSetupFailedEvent.swift */; };
+		DC1E679221651DED00AE7E35 /* FabricStateChangeEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E679121651DED00AE7E35 /* FabricStateChangeEvent.swift */; };
+		DC1E679421651E8400AE7E35 /* FabricTransportChangeEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E679321651E8400AE7E35 /* FabricTransportChangeEvent.swift */; };
+		DC1E679621651FB700AE7E35 /* FabricActionEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E679521651FB700AE7E35 /* FabricActionEvent.swift */; };
+		DC1E67982165204600AE7E35 /* FabricDroppedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67972165204600AE7E35 /* FabricDroppedEvent.swift */; };
+		DC1E679A216520FA00AE7E35 /* FabricTerminatedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E6799216520FA00AE7E35 /* FabricTerminatedEvent.swift */; };
 		DC3BA41420A86305004C2F77 /* CsioUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3BA41320A86305004C2F77 /* CsioUtils.swift */; };
 		DC3BA41620AFE087004C2F77 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3BA41520AFE087004C2F77 /* CallViewController.swift */; };
 		DC3BA41720B01093004C2F77 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D4E0220A7E83600EDD5D7 /* MainViewController.swift */; };
@@ -72,12 +82,22 @@
 		4284182C7892A053DD5A3A45 /* Pods_Callstats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Callstats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88AF036F70D971D019000EF4 /* Pods-Callstats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Callstats.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Callstats/Pods-Callstats.debug.xcconfig"; sourceTree = "<group>"; };
 		DC1E6776215E49A100AE7E35 /* EventSenderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSenderTests.swift; sourceTree = "<group>"; };
+		DC1E6779215E586400AE7E35 /* DeviceEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceEvent.swift; sourceTree = "<group>"; };
 		DC1E677C215E58E000AE7E35 /* MediaDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDevice.swift; sourceTree = "<group>"; };
+		DC1E677F215E5DA600AE7E35 /* FabricEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabricEvent.swift; sourceTree = "<group>"; };
 		DC1E6781215E5E1900AE7E35 /* IceCandidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceCandidate.swift; sourceTree = "<group>"; };
 		DC1E67832163E5EC00AE7E35 /* EndpointInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointInfo.swift; sourceTree = "<group>"; };
 		DC1E67852163E6B600AE7E35 /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
 		DC1E67872164F09800AE7E35 /* Ssrc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ssrc.swift; sourceTree = "<group>"; };
 		DC1E67892164F68C00AE7E35 /* RTCSessionDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCSessionDescription.swift; sourceTree = "<group>"; };
+		DC1E678B2165173600AE7E35 /* FabricSetupEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabricSetupEvent.swift; sourceTree = "<group>"; };
+		DC1E678D2165185900AE7E35 /* IceCandidatePair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceCandidatePair.swift; sourceTree = "<group>"; };
+		DC1E678F21651D1F00AE7E35 /* FabricSetupFailedEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabricSetupFailedEvent.swift; sourceTree = "<group>"; };
+		DC1E679121651DED00AE7E35 /* FabricStateChangeEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabricStateChangeEvent.swift; sourceTree = "<group>"; };
+		DC1E679321651E8400AE7E35 /* FabricTransportChangeEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabricTransportChangeEvent.swift; sourceTree = "<group>"; };
+		DC1E679521651FB700AE7E35 /* FabricActionEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabricActionEvent.swift; sourceTree = "<group>"; };
+		DC1E67972165204600AE7E35 /* FabricDroppedEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabricDroppedEvent.swift; sourceTree = "<group>"; };
+		DC1E6799216520FA00AE7E35 /* FabricTerminatedEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabricTerminatedEvent.swift; sourceTree = "<group>"; };
 		DC3BA41320A86305004C2F77 /* CsioUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsioUtils.swift; sourceTree = "<group>"; };
 		DC3BA41520AFE087004C2F77 /* CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
 		DC5D4DFD20A7E83600EDD5D7 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +182,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DC1E6778215E584C00AE7E35 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				DC1E6779215E586400AE7E35 /* DeviceEvent.swift */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
 		DC1E677B215E58D600AE7E35 /* Info */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,8 +198,24 @@
 				DC1E6781215E5E1900AE7E35 /* IceCandidate.swift */,
 				DC1E677C215E58E000AE7E35 /* MediaDevice.swift */,
 				DC1E67872164F09800AE7E35 /* Ssrc.swift */,
+				DC1E678D2165185900AE7E35 /* IceCandidatePair.swift */,
 			);
 			path = Info;
+			sourceTree = "<group>";
+		};
+		DC1E677E215E5D8B00AE7E35 /* Fabric */ = {
+			isa = PBXGroup;
+			children = (
+				DC1E677F215E5DA600AE7E35 /* FabricEvent.swift */,
+				DC1E678B2165173600AE7E35 /* FabricSetupEvent.swift */,
+				DC1E678F21651D1F00AE7E35 /* FabricSetupFailedEvent.swift */,
+				DC1E679121651DED00AE7E35 /* FabricStateChangeEvent.swift */,
+				DC1E679321651E8400AE7E35 /* FabricTransportChangeEvent.swift */,
+				DC1E679521651FB700AE7E35 /* FabricActionEvent.swift */,
+				DC1E67972165204600AE7E35 /* FabricDroppedEvent.swift */,
+				DC1E6799216520FA00AE7E35 /* FabricTerminatedEvent.swift */,
+			);
+			path = Fabric;
 			sourceTree = "<group>";
 		};
 		DC5D4DF420A7E83600EDD5D7 = {
@@ -283,7 +327,9 @@
 		DCC9A03321562BE600A279CA /* Event */ = {
 			isa = PBXGroup;
 			children = (
+				DC1E677E215E5D8B00AE7E35 /* Fabric */,
 				DC1E677B215E58D600AE7E35 /* Info */,
+				DC1E6778215E584C00AE7E35 /* Device */,
 				DCC9A03A2156312000A279CA /* Auth */,
 				DCC9A03421562C0D00A279CA /* Event.swift */,
 				DCC9A03621562C3300A279CA /* EventSender.swift */,
@@ -596,11 +642,21 @@
 				DCC9A02E21553D3100A279CA /* Interceptor.swift in Sources */,
 				DCC9A03521562C0D00A279CA /* Event.swift in Sources */,
 				DC9D19192157EAE800E95EFE /* Date.swift in Sources */,
+				DC1E679021651D1F00AE7E35 /* FabricSetupFailedEvent.swift in Sources */,
+				DC1E679221651DED00AE7E35 /* FabricStateChangeEvent.swift in Sources */,
 				DCC9A03921562DA700A279CA /* CallstatsInjector.swift in Sources */,
 				DC1E67842163E5EC00AE7E35 /* EndpointInfo.swift in Sources */,
 				DC1E677D215E58E000AE7E35 /* MediaDevice.swift in Sources */,
+				DC1E677A215E586400AE7E35 /* DeviceEvent.swift in Sources */,
+				DC1E679A216520FA00AE7E35 /* FabricTerminatedEvent.swift in Sources */,
+				DC1E67982165204600AE7E35 /* FabricDroppedEvent.swift in Sources */,
 				DCC9A03C2156313500A279CA /* TokenRequest.swift in Sources */,
+				DC1E679621651FB700AE7E35 /* FabricActionEvent.swift in Sources */,
+				DC1E6780215E5DA600AE7E35 /* FabricEvent.swift in Sources */,
+				DC1E678E2165185900AE7E35 /* IceCandidatePair.swift in Sources */,
 				DC1E6782215E5E1900AE7E35 /* IceCandidate.swift in Sources */,
+				DC1E679421651E8400AE7E35 /* FabricTransportChangeEvent.swift in Sources */,
+				DC1E678C2165173600AE7E35 /* FabricSetupEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
