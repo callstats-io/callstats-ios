@@ -20,9 +20,9 @@ struct IceCandidatePair: Encodable {
     let priority: Int
     let nominated: Bool
     
-    init(stats: RTCLegacyStatsReport) {
+    init(stats: WebRTCStats) {
         // Please note that this stats is not updated yet and might not be able to send correct value
-        self.id = stats.reportId
+        self.id = stats.id
         self.localCandidateId = stats.values["localCandidateId"] ?? ""
         self.remoteCandidateId = stats.values["remoteCandidateId"] ?? ""
         

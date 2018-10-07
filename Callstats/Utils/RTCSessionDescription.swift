@@ -9,14 +9,14 @@
 import Foundation
 import WebRTC
 
-extension RTCSessionDescription {
+extension String {
     
     /**
      Extract SSRC values from ID in session description
      */
     func ssrcValues(id: String) -> [String: String]? {
         var values: [String: String]?
-        let lines = description.split(separator: "\n")
+        let lines = split(separator: "\n")
         let prefix = "a=ssrc:\(id)"
         for line in lines {
             if line.starts(with: prefix) {

@@ -249,7 +249,11 @@ class CsioRTC: NSObject, CsioSignalingDelegate {
         func peerConnection(_ peerConnection: RTCPeerConnection, didRemove stream: RTCMediaStream) {}
         func peerConnection(_ peerConnection: RTCPeerConnection, didRemove candidates: [RTCIceCandidate]) {}
         func peerConnection(_ peerConnection: RTCPeerConnection, didChange newState: RTCIceGatheringState) {}
-        func peerConnection(_ peerConnection: RTCPeerConnection, didChange newState: RTCIceConnectionState) {}
+        func peerConnection(_ peerConnection: RTCPeerConnection, didChange newState: RTCIceConnectionState) {
+            peerConnection.stats(for: nil, statsOutputLevel: .standard) { (report) in
+                NSLog("%@", report)
+            }
+        }
         func peerConnection(_ peerConnection: RTCPeerConnection, didChange stateChanged: RTCSignalingState) {}
     }
     

@@ -19,7 +19,7 @@ class FabricTransportChangeEvent: FabricEvent {
     let prevIceCandidatePair: IceCandidatePair
     let currIceConnectionState: String
     let prevIceConnectionState: String
-    let delay: Int
+    let delay: Int64
     
     var localIceCandidates: [IceCandidate] = []
     var remoteIceCandidates: [IceCandidate] = []
@@ -34,7 +34,7 @@ class FabricTransportChangeEvent: FabricEvent {
         prevIceCandidatePair: IceCandidatePair,
         currIceConnectionState: String,
         prevIceConnectionState: String,
-        delay: Int)
+        delay: Int64)
     {
         self.remoteID = remoteID
         self.connectionID = connectionID

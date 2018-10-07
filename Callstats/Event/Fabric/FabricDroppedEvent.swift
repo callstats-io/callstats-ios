@@ -17,7 +17,7 @@ class FabricDroppedEvent: FabricEvent {
     let connectionID: String
     let currIceCandidatePair: IceCandidatePair
     let prevIceConnectionState: String
-    let delay: Int
+    let delay: Int64
     
     let currIceConnectionState = "failed"
     
@@ -26,7 +26,7 @@ class FabricDroppedEvent: FabricEvent {
         connectionID: String,
         currIceCandidatePair: IceCandidatePair,
         prevIceConnectionState: String,
-        delay: Int)
+        delay: Int64)
     {
         self.remoteID = remoteID
         self.connectionID = connectionID

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1DEBCEA0DC5648DFF940405 /* Pods_CallstatsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D636E581984ED68BC897F1B6 /* Pods_CallstatsTests.framework */; };
 		D16B94D32D6F96045AC1A5E0 /* Pods_Callstats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4284182C7892A053DD5A3A45 /* Pods_Callstats.framework */; };
 		DC1E6777215E49A100AE7E35 /* EventSenderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E6776215E49A100AE7E35 /* EventSenderTests.swift */; };
 		DC1E677A215E586400AE7E35 /* DeviceEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E6779215E586400AE7E35 /* DeviceEvent.swift */; };
@@ -25,6 +26,10 @@
 		DC1E679621651FB700AE7E35 /* FabricActionEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E679521651FB700AE7E35 /* FabricActionEvent.swift */; };
 		DC1E67982165204600AE7E35 /* FabricDroppedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67972165204600AE7E35 /* FabricDroppedEvent.swift */; };
 		DC1E679A216520FA00AE7E35 /* FabricTerminatedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E6799216520FA00AE7E35 /* FabricTerminatedEvent.swift */; };
+		DC1E679C21687C0300AE7E35 /* FabricInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E679B21687C0300AE7E35 /* FabricInterceptor.swift */; };
+		DC1E679E2168B8DC00AE7E35 /* RTCPeerConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E679D2168B8DC00AE7E35 /* RTCPeerConnection.swift */; };
+		DC1E67A02168C49F00AE7E35 /* RTCStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E679F2168C49F00AE7E35 /* RTCStats.swift */; };
+		DC1E67A32168E16400AE7E35 /* FabricInterceptorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67A22168E16400AE7E35 /* FabricInterceptorTests.swift */; };
 		DC3BA41420A86305004C2F77 /* CsioUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3BA41320A86305004C2F77 /* CsioUtils.swift */; };
 		DC3BA41620AFE087004C2F77 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3BA41520AFE087004C2F77 /* CallViewController.swift */; };
 		DC3BA41720B01093004C2F77 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D4E0220A7E83600EDD5D7 /* MainViewController.swift */; };
@@ -59,6 +64,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		DC1E67A42168EDF600AE7E35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC5D4DF520A7E83600EDD5D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC5D4DFC20A7E83600EDD5D7;
+			remoteInfo = demo;
+		};
 		DC5D4E1220A7E83800EDD5D7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DC5D4DF520A7E83600EDD5D7 /* Project object */;
@@ -79,8 +91,11 @@
 		1B1A7D711B11EA5468B76160 /* Pods-Callstats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Callstats.release.xcconfig"; path = "Pods/Target Support Files/Pods-Callstats/Pods-Callstats.release.xcconfig"; sourceTree = "<group>"; };
 		2E1696047E7DC3EFDA56299A /* Pods_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31DCC6DA845E727677657F33 /* Pods-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.release.xcconfig"; sourceTree = "<group>"; };
+		3ECCB7E0A68E0DBCBC7D5C04 /* Pods-CallstatsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CallstatsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CallstatsTests/Pods-CallstatsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4284182C7892A053DD5A3A45 /* Pods_Callstats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Callstats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88AF036F70D971D019000EF4 /* Pods-Callstats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Callstats.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Callstats/Pods-Callstats.debug.xcconfig"; sourceTree = "<group>"; };
+		8A9A26D1F3F8F01CC01B7206 /* Pods-CallstatsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CallstatsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CallstatsTests/Pods-CallstatsTests.release.xcconfig"; sourceTree = "<group>"; };
+		D636E581984ED68BC897F1B6 /* Pods_CallstatsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CallstatsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC1E6776215E49A100AE7E35 /* EventSenderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSenderTests.swift; sourceTree = "<group>"; };
 		DC1E6779215E586400AE7E35 /* DeviceEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceEvent.swift; sourceTree = "<group>"; };
 		DC1E677C215E58E000AE7E35 /* MediaDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDevice.swift; sourceTree = "<group>"; };
@@ -98,6 +113,10 @@
 		DC1E679521651FB700AE7E35 /* FabricActionEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabricActionEvent.swift; sourceTree = "<group>"; };
 		DC1E67972165204600AE7E35 /* FabricDroppedEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabricDroppedEvent.swift; sourceTree = "<group>"; };
 		DC1E6799216520FA00AE7E35 /* FabricTerminatedEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabricTerminatedEvent.swift; sourceTree = "<group>"; };
+		DC1E679B21687C0300AE7E35 /* FabricInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabricInterceptor.swift; sourceTree = "<group>"; };
+		DC1E679D2168B8DC00AE7E35 /* RTCPeerConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCPeerConnection.swift; sourceTree = "<group>"; };
+		DC1E679F2168C49F00AE7E35 /* RTCStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCStats.swift; sourceTree = "<group>"; };
+		DC1E67A22168E16400AE7E35 /* FabricInterceptorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabricInterceptorTests.swift; sourceTree = "<group>"; };
 		DC3BA41320A86305004C2F77 /* CsioUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsioUtils.swift; sourceTree = "<group>"; };
 		DC3BA41520AFE087004C2F77 /* CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
 		DC5D4DFD20A7E83600EDD5D7 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCC9A01621551D4800A279CA /* Callstats.framework in Frameworks */,
+				A1DEBCEA0DC5648DFF940405 /* Pods_CallstatsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +198,7 @@
 			children = (
 				2E1696047E7DC3EFDA56299A /* Pods_demo.framework */,
 				4284182C7892A053DD5A3A45 /* Pods_Callstats.framework */,
+				D636E581984ED68BC897F1B6 /* Pods_CallstatsTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -216,6 +237,14 @@
 				DC1E6799216520FA00AE7E35 /* FabricTerminatedEvent.swift */,
 			);
 			path = Fabric;
+			sourceTree = "<group>";
+		};
+		DC1E67A12168E14400AE7E35 /* Interceptor */ = {
+			isa = PBXGroup;
+			children = (
+				DC1E67A22168E16400AE7E35 /* FabricInterceptorTests.swift */,
+			);
+			path = Interceptor;
 			sourceTree = "<group>";
 		};
 		DC5D4DF420A7E83600EDD5D7 = {
@@ -310,6 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				DC9D191321578C4F00E95EFE /* Event */,
+				DC1E67A12168E14400AE7E35 /* Interceptor */,
 				DCC9A01C21551D4800A279CA /* CallstatsTests.swift */,
 				DCC9A01E21551D4800A279CA /* Info.plist */,
 			);
@@ -320,6 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				DCC9A02D21553D3100A279CA /* Interceptor.swift */,
+				DC1E679B21687C0300AE7E35 /* FabricInterceptor.swift */,
 			);
 			path = Interceptor;
 			sourceTree = "<group>";
@@ -352,6 +383,8 @@
 				DC9D19162157DBAB00E95EFE /* HttpClient.swift */,
 				DC9D19182157EAE800E95EFE /* Date.swift */,
 				DC1E67892164F68C00AE7E35 /* RTCSessionDescription.swift */,
+				DC1E679D2168B8DC00AE7E35 /* RTCPeerConnection.swift */,
+				DC1E679F2168C49F00AE7E35 /* RTCStats.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -363,6 +396,8 @@
 				31DCC6DA845E727677657F33 /* Pods-demo.release.xcconfig */,
 				88AF036F70D971D019000EF4 /* Pods-Callstats.debug.xcconfig */,
 				1B1A7D711B11EA5468B76160 /* Pods-Callstats.release.xcconfig */,
+				3ECCB7E0A68E0DBCBC7D5C04 /* Pods-CallstatsTests.debug.xcconfig */,
+				8A9A26D1F3F8F01CC01B7206 /* Pods-CallstatsTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -441,14 +476,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DCC9A02721551D4800A279CA /* Build configuration list for PBXNativeTarget "CallstatsTests" */;
 			buildPhases = (
+				750DE6F567288917DEDC52C7 /* [CP] Check Pods Manifest.lock */,
 				DCC9A01121551D4800A279CA /* Sources */,
 				DCC9A01221551D4800A279CA /* Frameworks */,
 				DCC9A01321551D4800A279CA /* Resources */,
+				08F6FCE86BF86DB08F9F69A0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				DCC9A01821551D4800A279CA /* PBXTargetDependency */,
+				DC1E67A52168EDF600AE7E35 /* PBXTargetDependency */,
 			);
 			name = CallstatsTests;
 			productName = CallstatsTests;
@@ -538,6 +576,42 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		08F6FCE86BF86DB08F9F69A0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CallstatsTests/Pods-CallstatsTests-frameworks.sh",
+				"${PODS_ROOT}/GoogleWebRTC/Frameworks/frameworks/WebRTC.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WebRTC.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CallstatsTests/Pods-CallstatsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		750DE6F567288917DEDC52C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CallstatsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		819585072727B10AED942BF8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -633,6 +707,7 @@
 				DC9D19172157DBAB00E95EFE /* HttpClient.swift in Sources */,
 				DCC9A02B21551E4700A279CA /* Callstats.swift in Sources */,
 				DC9D191221577EEF00E95EFE /* EventSendingOperation.swift in Sources */,
+				DC1E679E2168B8DC00AE7E35 /* RTCPeerConnection.swift in Sources */,
 				DCC9A03721562C3300A279CA /* EventSender.swift in Sources */,
 				DCC9A03221554D8900A279CA /* CallstatsConfig.swift in Sources */,
 				DC1E67862163E6B600AE7E35 /* Feedback.swift in Sources */,
@@ -642,6 +717,7 @@
 				DCC9A02E21553D3100A279CA /* Interceptor.swift in Sources */,
 				DCC9A03521562C0D00A279CA /* Event.swift in Sources */,
 				DC9D19192157EAE800E95EFE /* Date.swift in Sources */,
+				DC1E679C21687C0300AE7E35 /* FabricInterceptor.swift in Sources */,
 				DC1E679021651D1F00AE7E35 /* FabricSetupFailedEvent.swift in Sources */,
 				DC1E679221651DED00AE7E35 /* FabricStateChangeEvent.swift in Sources */,
 				DCC9A03921562DA700A279CA /* CallstatsInjector.swift in Sources */,
@@ -651,6 +727,7 @@
 				DC1E679A216520FA00AE7E35 /* FabricTerminatedEvent.swift in Sources */,
 				DC1E67982165204600AE7E35 /* FabricDroppedEvent.swift in Sources */,
 				DCC9A03C2156313500A279CA /* TokenRequest.swift in Sources */,
+				DC1E67A02168C49F00AE7E35 /* RTCStats.swift in Sources */,
 				DC1E679621651FB700AE7E35 /* FabricActionEvent.swift in Sources */,
 				DC1E6780215E5DA600AE7E35 /* FabricEvent.swift in Sources */,
 				DC1E678E2165185900AE7E35 /* IceCandidatePair.swift in Sources */,
@@ -665,6 +742,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC9D191521578C7200E95EFE /* EventTests.swift in Sources */,
+				DC1E67A32168E16400AE7E35 /* FabricInterceptorTests.swift in Sources */,
 				DCC9A01D21551D4800A279CA /* CallstatsTests.swift in Sources */,
 				DC9D191B21592E1100E95EFE /* EventSendingOperationTests.swift in Sources */,
 				DC1E6777215E49A100AE7E35 /* EventSenderTests.swift in Sources */,
@@ -674,6 +752,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		DC1E67A52168EDF600AE7E35 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC5D4DFC20A7E83600EDD5D7 /* demo */;
+			targetProxy = DC1E67A42168EDF600AE7E35 /* PBXContainerItemProxy */;
+		};
 		DC5D4E1320A7E83800EDD5D7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DC5D4DFC20A7E83600EDD5D7 /* demo */;
@@ -972,6 +1055,7 @@
 		};
 		DCC9A02821551D4800A279CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3ECCB7E0A68E0DBCBC7D5C04 /* Pods-CallstatsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -994,6 +1078,7 @@
 		};
 		DCC9A02921551D4800A279CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A9A26D1F3F8F01CC01B7206 /* Pods-CallstatsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

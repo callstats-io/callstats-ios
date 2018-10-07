@@ -1,0 +1,6 @@
+framework module Pods_CallstatsTests {
+  umbrella header "Pods-CallstatsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

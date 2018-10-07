@@ -16,4 +16,7 @@ end
 
 target 'Callstats' do
   pod 'GoogleWebRTC'
+  target 'CallstatsTests' do
+      inherit! :search_paths
+  end
 end

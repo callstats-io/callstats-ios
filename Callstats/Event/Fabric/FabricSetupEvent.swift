@@ -20,17 +20,17 @@ class FabricSetupEvent: FabricEvent {
      Total time to setup a conference for the participant.
      The time when the user joins until the chosen candidate pair is connected (setup/failure)
      */
-    var delay: Int?
+    var delay: Int64?
     
     /**
      The time taken for the ICE gathering to finish (ICE gathering state from new to complete)
      */
-    var iceGatheringDelay: Int?
+    var iceGatheringDelay: Int64?
     
     /**
      The time taken for the ICE to establish the connectivity (ICE connection state new to connected/completed)
      */
-    var iceConnectivityDelay: Int?
+    var iceConnectivityDelay: Int64?
     
     /**
      Stream flow direction inside the fabric.

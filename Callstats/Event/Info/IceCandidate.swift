@@ -20,8 +20,8 @@ struct IceCandidate: Encodable {
     let candidateType: String
     let transport: String
     
-    init(stats: RTCLegacyStatsReport) {
-        id = stats.reportId
+    init(stats: WebRTCStats) {
+        id = stats.id
         type = stats.type
         ip = stats.values["ipAddress"] ?? ""
         port = Int(stats.values["portNumber"] ?? "0") ?? 0
