@@ -32,6 +32,7 @@ protocol Interceptor {
 protocol Connection {
     func localSessionDescription() -> String?
     func remoteSessionDescription() -> String?
+    func getStats(_ completion: @escaping ([WebRTCStats]) -> Void)
 }
 
 /**
@@ -60,6 +61,15 @@ class CSConnection: Connection {
     
     func remoteSessionDescription() -> String? {
         return peerConnection.remoteDescription?.sdp
+    }
+    
+    func getStats(_ completion: @escaping ([WebRTCStats]) -> Void) {
+        return peerConnection.stats(
+            for: nil,
+            statsOutputLevel: .standard,
+            completionHandler: { report in
+                completion(report.map { CSWebRTCStats(stats: $0) })
+        })
     }
 }
 

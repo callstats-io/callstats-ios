@@ -11,7 +11,7 @@ import XCTest
 
 class CallstatsTests: XCTestCase {
     
-    var sender: MockEventSender!
+    private var sender: MockEventSender!
     var callstats: Callstats!
 
     override func setUp() {
@@ -35,7 +35,7 @@ class TestInjector: CallstatsInjector {
     }
 }
 
-class MockEventSender: EventSender {
+private class MockEventSender: EventSender {
     var lastSendEvent: Event?
     func send(event: Event) {
         lastSendEvent = event

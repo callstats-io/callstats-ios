@@ -11,8 +11,8 @@ import XCTest
 
 class EventSenderTests: XCTestCase {
     
-    var operationQueue: FakeOperationQueue!
-    var sender: EventSenderImpl!
+    private var operationQueue: FakeOperationQueue!
+    private var sender: EventSenderImpl!
     
     override func setUp() {
         operationQueue = FakeOperationQueue()
@@ -63,11 +63,11 @@ class EventSenderTests: XCTestCase {
     }
 }
 
-class DummyHttpClient: HttpClient {
+private class DummyHttpClient: HttpClient {
     func sendRequest(request: URLRequest, completion: @escaping (Response) -> Void) {}
 }
 
-class FakeOperationQueue: OperationQueue {
+private class FakeOperationQueue: OperationQueue {
     var sentOperations: [EventSendingOperation] = []
     override func addOperation(_ op: Operation) {
         if let operation = op as? EventSendingOperation {
@@ -83,6 +83,6 @@ class FakeOperationQueue: OperationQueue {
     }
 }
 
-class TestCreateSessionEvent: AuthenticatedEvent, CreateSessionEvent {
+private class TestCreateSessionEvent: AuthenticatedEvent, CreateSessionEvent {
     var confID: String = "conf1"
 }

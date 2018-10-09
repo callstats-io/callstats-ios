@@ -11,6 +11,8 @@ import Foundation
 /**
  Library configurations
  */
-public class CallstatsConfig {
-    public init() {}
+public class CallstatsConfig: NSObject {
+    
+    /** Stats submission period */
+    var statsSubmissionPeriod: TimeInterval = 30
 }

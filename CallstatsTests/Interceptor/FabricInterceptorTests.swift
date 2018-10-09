@@ -114,16 +114,13 @@ class FabricInterceptorTests: XCTestCase {
     }
 }
 
-struct DummyConnection: Connection {
-    func localSessionDescription() -> String? {
-        return ""
-    }
-    func remoteSessionDescription() -> String? {
-        return ""
-    }
+private struct DummyConnection: Connection {
+    func localSessionDescription() -> String? { return "" }
+    func remoteSessionDescription() -> String? { return "" }
+    func getStats(_ completion: @escaping ([WebRTCStats]) -> Void) {}
 }
 
-struct TestStats: WebRTCStats {
+private struct TestStats: WebRTCStats {
     let id: String
     let type: String
     let values: [String: String]

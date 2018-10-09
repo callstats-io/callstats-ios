@@ -11,7 +11,7 @@ import XCTest
 
 class EventSendingOperationTests: XCTestCase {
 
-    var httpClient: StubHttpClient!
+    private var httpClient: StubHttpClient!
     
     override func setUp() {
         httpClient = StubHttpClient()
@@ -41,7 +41,7 @@ class EventSendingOperationTests: XCTestCase {
     }
 }
 
-class StubHttpClient: HttpClient {
+private class StubHttpClient: HttpClient {
     var isFailed = false
     var successResponse: Response = .success(code: 200, dict: ["status": "OK"])
     var failedResponse: Response = .failed(code: 400, dict: ["status": "ERROR"])
