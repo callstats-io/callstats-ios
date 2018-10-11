@@ -32,6 +32,10 @@
 		DC1E67A32168E16400AE7E35 /* FabricInterceptorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67A22168E16400AE7E35 /* FabricInterceptorTests.swift */; };
 		DC1E67A7216A628200AE7E35 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67A6216A628200AE7E35 /* EventManager.swift */; };
 		DC1E67A9216CEF9D00AE7E35 /* EventManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67A8216CEF9D00AE7E35 /* EventManagerTests.swift */; };
+		DC1E67AE216F91F400AE7E35 /* UserAliveEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67AD216F91F400AE7E35 /* UserAliveEvent.swift */; };
+		DC1E67B0216F925C00AE7E35 /* UserDetailsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67AF216F925C00AE7E35 /* UserDetailsEvent.swift */; };
+		DC1E67B2216F939700AE7E35 /* UserJoinEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67B1216F939700AE7E35 /* UserJoinEvent.swift */; };
+		DC1E67B4216F957A00AE7E35 /* UserLeftEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67B3216F957A00AE7E35 /* UserLeftEvent.swift */; };
 		DC3BA41420A86305004C2F77 /* CsioUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3BA41320A86305004C2F77 /* CsioUtils.swift */; };
 		DC3BA41620AFE087004C2F77 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3BA41520AFE087004C2F77 /* CallViewController.swift */; };
 		DC3BA41720B01093004C2F77 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D4E0220A7E83600EDD5D7 /* MainViewController.swift */; };
@@ -121,6 +125,10 @@
 		DC1E67A22168E16400AE7E35 /* FabricInterceptorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabricInterceptorTests.swift; sourceTree = "<group>"; };
 		DC1E67A6216A628200AE7E35 /* EventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
 		DC1E67A8216CEF9D00AE7E35 /* EventManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManagerTests.swift; sourceTree = "<group>"; };
+		DC1E67AD216F91F400AE7E35 /* UserAliveEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAliveEvent.swift; sourceTree = "<group>"; };
+		DC1E67AF216F925C00AE7E35 /* UserDetailsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsEvent.swift; sourceTree = "<group>"; };
+		DC1E67B1216F939700AE7E35 /* UserJoinEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserJoinEvent.swift; sourceTree = "<group>"; };
+		DC1E67B3216F957A00AE7E35 /* UserLeftEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLeftEvent.swift; sourceTree = "<group>"; };
 		DC3BA41320A86305004C2F77 /* CsioUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsioUtils.swift; sourceTree = "<group>"; };
 		DC3BA41520AFE087004C2F77 /* CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
 		DC5D4DFD20A7E83600EDD5D7 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -251,6 +259,17 @@
 			path = Interceptor;
 			sourceTree = "<group>";
 		};
+		DC1E67AC216F91DC00AE7E35 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				DC1E67AD216F91F400AE7E35 /* UserAliveEvent.swift */,
+				DC1E67AF216F925C00AE7E35 /* UserDetailsEvent.swift */,
+				DC1E67B1216F939700AE7E35 /* UserJoinEvent.swift */,
+				DC1E67B3216F957A00AE7E35 /* UserLeftEvent.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		DC5D4DF420A7E83600EDD5D7 = {
 			isa = PBXGroup;
 			children = (
@@ -363,6 +382,7 @@
 		DCC9A03321562BE600A279CA /* Event */ = {
 			isa = PBXGroup;
 			children = (
+				DC1E67AC216F91DC00AE7E35 /* User */,
 				DC1E677E215E5D8B00AE7E35 /* Fabric */,
 				DC1E677B215E58D600AE7E35 /* Info */,
 				DC1E6778215E584C00AE7E35 /* Device */,
@@ -711,11 +731,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC9D19172157DBAB00E95EFE /* HttpClient.swift in Sources */,
+				DC1E67AE216F91F400AE7E35 /* UserAliveEvent.swift in Sources */,
 				DCC9A02B21551E4700A279CA /* Callstats.swift in Sources */,
 				DC9D191221577EEF00E95EFE /* EventSendingOperation.swift in Sources */,
 				DC1E679E2168B8DC00AE7E35 /* RTCPeerConnection.swift in Sources */,
 				DCC9A03721562C3300A279CA /* EventSender.swift in Sources */,
 				DCC9A03221554D8900A279CA /* CallstatsConfig.swift in Sources */,
+				DC1E67B2216F939700AE7E35 /* UserJoinEvent.swift in Sources */,
 				DC1E67862163E6B600AE7E35 /* Feedback.swift in Sources */,
 				DC1E67882164F09800AE7E35 /* Ssrc.swift in Sources */,
 				DCC9A0302155410000A279CA /* CallstatsEvents.swift in Sources */,
@@ -729,9 +751,11 @@
 				DCC9A03921562DA700A279CA /* CallstatsInjector.swift in Sources */,
 				DC1E67842163E5EC00AE7E35 /* EndpointInfo.swift in Sources */,
 				DC1E677D215E58E000AE7E35 /* MediaDevice.swift in Sources */,
+				DC1E67B0216F925C00AE7E35 /* UserDetailsEvent.swift in Sources */,
 				DC1E677A215E586400AE7E35 /* DeviceEvent.swift in Sources */,
 				DC1E679A216520FA00AE7E35 /* FabricTerminatedEvent.swift in Sources */,
 				DC1E67982165204600AE7E35 /* FabricDroppedEvent.swift in Sources */,
+				DC1E67B4216F957A00AE7E35 /* UserLeftEvent.swift in Sources */,
 				DCC9A03C2156313500A279CA /* TokenRequest.swift in Sources */,
 				DC1E67A02168C49F00AE7E35 /* RTCStats.swift in Sources */,
 				DC1E67A7216A628200AE7E35 /* EventManager.swift in Sources */,

@@ -9,7 +9,7 @@
 import Foundation
 
 struct EndpointInfo: Encodable {
-    let appVersion: String
+    let appVersion: String?
     let type = "native"
     let os = "iOS"
     let osVersion = UIDevice.current.systemVersion
