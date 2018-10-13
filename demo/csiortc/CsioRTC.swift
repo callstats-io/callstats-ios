@@ -36,11 +36,13 @@ class CsioRTC: NSObject, CsioSignalingDelegate {
     private var peerVideoTracks: [String: RTCVideoTrack] = [:]
     private var peerDataChannels: [String: RTCDataChannel] = [:]
     
+    private let room: String
     private let alias: String?
     
     private var callstats: Callstats?
     
     init(room: String, alias: String? = nil) {
+        self.room = room
         self.alias = alias
         signaling = CsioSignaling(room: room)
         super.init()
@@ -49,31 +51,28 @@ class CsioRTC: NSObject, CsioSignalingDelegate {
     }
     
     func join() {
+        startCallstats(room: room)
         localMediaStream = peerConnectionFactory.mediaStream(withStreamId: localMediaLabel)
-        
         // audio
         localAudioTrack = peerConnectionFactory.audioTrack(withTrackId: localAudioTrackLabel)
         localMediaStream?.addAudioTrack(localAudioTrack!)
-        
         // video
         let source = peerConnectionFactory.videoSource()
         localVideoCapturer = CsioRTCCameraCapturer(delegate: source)
         localVideoTrack = peerConnectionFactory.videoTrack(with: source, trackId: localVideoTrackLabel)
         localMediaStream?.addVideoTrack(localVideoTrack!)
-        
         signaling.start()
     }
     
     func leave() {
         signaling.stop()
         localVideoCapturer?.stopCapture()
-        
         peerConnections.keys.forEach { disconnectPeer(peerId: $0) }
-        
         localVideoCapturer = nil
         localVideoTrack = nil
         localAudioTrack = nil
         localMediaStream = nil
+        stopCallstats()
     }
     
     func setMute(_ mute: Bool) {
@@ -351,10 +350,10 @@ extension CsioRTC {
     }
     
     private func startCallstats(room: String) {
-        
+        callstats?.startSession(confID: room)
     }
     
     private func stopCallstats() {
-        
+        callstats?.stopSession()
     }
 }

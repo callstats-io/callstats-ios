@@ -21,6 +21,10 @@ public class Callstats: NSObject {
     private let configuration: CallstatsConfig
     private let sender: EventSender
     
+    // timers
+    private var aliveTimer: Timer?
+    private var systemStatsTimer: Timer?
+    
     public init(
         appID: String,
         localID: String,
@@ -37,5 +41,68 @@ public class Callstats: NSObject {
         
         sender = Callstats.dependency.eventSender(appID: appID, localID: localID, deviceID: deviceID)
         sender.send(event: TokenRequest(code: jwt, clientID: "\(localID)@\(appID)"))
+    }
+    
+    /**
+     Start the user session when creating conference call.
+     This will start sending keep alive as well.
+     - Parameter confID: local conference identifier for this call session
+     */
+    public func startSession(confID: String) {
+        sender.send(event: UserJoinEvent(confID: confID, appVersion: clientVersion))
+        if let u = username { sender.send(event: UserDetailsEvent(userName: u)) }
+        startKeepAlive()
+        startSendingSystemStats()
+    }
+    
+    /**
+     Stop the current session and stop the keep alive.
+     */
+    public func stopSession() {
+        stopSendingSystemStats()
+        stopKeepAlive()
+        sender.send(event: UserLeftEvent())
+    }
+    
+    // MARK:- Timers
+    
+    private func startKeepAlive() {
+        stopKeepAlive()
+        let period = configuration.keepAlivePeriod
+        aliveTimer = Timer.scheduledTimer(
+            timeInterval: period,
+            target: self,
+            selector: #selector(self.sendKeepAlive),
+            userInfo: nil,
+            repeats: true)
+    }
+    
+    @objc private func sendKeepAlive() {
+        sender.send(event: UserAliveEvent())
+    }
+    
+    private func stopKeepAlive() {
+        aliveTimer?.invalidate()
+        aliveTimer = nil
+    }
+    
+    private func startSendingSystemStats() {
+        stopSendingSystemStats()
+        let period = configuration.systemStatsSubmissionPeriod
+        systemStatsTimer = Timer.scheduledTimer(
+            timeInterval: period,
+            target: self,
+            selector: #selector(self.sendSystemStats),
+            userInfo: nil,
+            repeats: true)
+    }
+    
+    @objc private func sendSystemStats() {
+        
+    }
+    
+    private func stopSendingSystemStats() {
+        systemStatsTimer?.invalidate()
+        systemStatsTimer = nil
     }
 }

@@ -36,6 +36,7 @@
 		DC1E67B0216F925C00AE7E35 /* UserDetailsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67AF216F925C00AE7E35 /* UserDetailsEvent.swift */; };
 		DC1E67B2216F939700AE7E35 /* UserJoinEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67B1216F939700AE7E35 /* UserJoinEvent.swift */; };
 		DC1E67B4216F957A00AE7E35 /* UserLeftEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67B3216F957A00AE7E35 /* UserLeftEvent.swift */; };
+		DC1E67B7216FA2D800AE7E35 /* SystemStatusStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67B6216FA2D800AE7E35 /* SystemStatusStats.swift */; };
 		DC3BA41420A86305004C2F77 /* CsioUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3BA41320A86305004C2F77 /* CsioUtils.swift */; };
 		DC3BA41620AFE087004C2F77 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3BA41520AFE087004C2F77 /* CallViewController.swift */; };
 		DC3BA41720B01093004C2F77 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D4E0220A7E83600EDD5D7 /* MainViewController.swift */; };
@@ -129,6 +130,7 @@
 		DC1E67AF216F925C00AE7E35 /* UserDetailsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsEvent.swift; sourceTree = "<group>"; };
 		DC1E67B1216F939700AE7E35 /* UserJoinEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserJoinEvent.swift; sourceTree = "<group>"; };
 		DC1E67B3216F957A00AE7E35 /* UserLeftEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLeftEvent.swift; sourceTree = "<group>"; };
+		DC1E67B6216FA2D800AE7E35 /* SystemStatusStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemStatusStats.swift; sourceTree = "<group>"; };
 		DC3BA41320A86305004C2F77 /* CsioUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsioUtils.swift; sourceTree = "<group>"; };
 		DC3BA41520AFE087004C2F77 /* CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
 		DC5D4DFD20A7E83600EDD5D7 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -270,6 +272,14 @@
 			path = User;
 			sourceTree = "<group>";
 		};
+		DC1E67B5216FA2C200AE7E35 /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				DC1E67B6216FA2D800AE7E35 /* SystemStatusStats.swift */,
+			);
+			path = Stats;
+			sourceTree = "<group>";
+		};
 		DC5D4DF420A7E83600EDD5D7 = {
 			isa = PBXGroup;
 			children = (
@@ -386,6 +396,7 @@
 				DC1E677E215E5D8B00AE7E35 /* Fabric */,
 				DC1E677B215E58D600AE7E35 /* Info */,
 				DC1E6778215E584C00AE7E35 /* Device */,
+				DC1E67B5216FA2C200AE7E35 /* Stats */,
 				DCC9A03A2156312000A279CA /* Auth */,
 				DCC9A03421562C0D00A279CA /* Event.swift */,
 				DCC9A03621562C3300A279CA /* EventSender.swift */,
@@ -752,6 +763,7 @@
 				DC1E67842163E5EC00AE7E35 /* EndpointInfo.swift in Sources */,
 				DC1E677D215E58E000AE7E35 /* MediaDevice.swift in Sources */,
 				DC1E67B0216F925C00AE7E35 /* UserDetailsEvent.swift in Sources */,
+				DC1E67B7216FA2D800AE7E35 /* SystemStatusStats.swift in Sources */,
 				DC1E677A215E586400AE7E35 /* DeviceEvent.swift in Sources */,
 				DC1E679A216520FA00AE7E35 /* FabricTerminatedEvent.swift in Sources */,
 				DC1E67982165204600AE7E35 /* FabricDroppedEvent.swift in Sources */,
