@@ -146,7 +146,7 @@ class CsioRTC: NSObject, CsioSignalingDelegate {
     private func offer(peerId: String) {
         let peerDelegate = PeerDelegate(peerId: peerId, outer: self)
         let connection = createConnection(delegate: peerDelegate)
-        
+        callstats?.addNewFabric(connection: connection, remoteUserID: peerId)
         connection.add(localMediaStream!)
         connection.offer(for: RTCMediaConstraints(mandatoryConstraints: nil, optionalConstraints: nil)) { sdp, err in
             guard let localSdp = sdp else { return }
@@ -244,16 +244,21 @@ class CsioRTC: NSObject, CsioSignalingDelegate {
             outer?.peerDataChannels[peerId] = dataChannel
         }
         
+        func peerConnection(_ peerConnection: RTCPeerConnection, didChange newState: RTCIceGatheringState) {
+            outer?.callstats?.reportEvent(remoteUserID: peerId, event: CSIceGatheringChangeEvent(state: newState))
+        }
+        
+        func peerConnection(_ peerConnection: RTCPeerConnection, didChange newState: RTCIceConnectionState) {
+            outer?.callstats?.reportEvent(remoteUserID: peerId, event: CSIceConnectionChangeEvent(state: newState))
+        }
+        
+        func peerConnection(_ peerConnection: RTCPeerConnection, didChange stateChanged: RTCSignalingState) {
+            outer?.callstats?.reportEvent(remoteUserID: peerId, event: CSSignalingChangeEvent(state: stateChanged))
+        }
+        
         func peerConnectionShouldNegotiate(_ peerConnection: RTCPeerConnection) {}
         func peerConnection(_ peerConnection: RTCPeerConnection, didRemove stream: RTCMediaStream) {}
         func peerConnection(_ peerConnection: RTCPeerConnection, didRemove candidates: [RTCIceCandidate]) {}
-        func peerConnection(_ peerConnection: RTCPeerConnection, didChange newState: RTCIceGatheringState) {}
-        func peerConnection(_ peerConnection: RTCPeerConnection, didChange newState: RTCIceConnectionState) {
-            peerConnection.stats(for: nil, statsOutputLevel: .standard) { (report) in
-                NSLog("%@", report)
-            }
-        }
-        func peerConnection(_ peerConnection: RTCPeerConnection, didChange stateChanged: RTCSignalingState) {}
     }
     
     // MARK:- Signaling delegate

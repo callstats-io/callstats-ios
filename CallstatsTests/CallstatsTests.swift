@@ -12,6 +12,7 @@ import XCTest
 class CallstatsTests: XCTestCase {
     
     private var sender: MockEventSender!
+    private var manager: MockEventManager!
     private var config: CallstatsConfig!
     var callstats: Callstats!
 
@@ -19,7 +20,8 @@ class CallstatsTests: XCTestCase {
         config = CallstatsConfig()
         config.keepAlivePeriod = 1
         sender = MockEventSender()
-        Callstats.dependency = TestInjector(sender: sender)
+        manager = MockEventManager()
+        Callstats.dependency = TestInjector(sender: sender, manager: manager)
         callstats = Callstats(
             appID: "app",
             localID: "local",
@@ -54,15 +56,35 @@ class CallstatsTests: XCTestCase {
         callstats.stopSession()
         XCTAssertTrue(sender.lastSendEvent is UserLeftEvent)
     }
+    
+    func testAddNewFabricCreateManager() {
+        callstats.addNewFabric(connection: DummyConnection(), remoteID: "remote1")
+        callstats.addNewFabric(connection: DummyConnection(), remoteID: "remote1")
+        XCTAssertEqual(callstats.eventManagers.count, 1)
+    }
+    
+    func testReportPeerEvent() {
+        callstats.addNewFabric(connection: DummyConnection(), remoteID: "remote1")
+        callstats.reportEvent(remoteUserID: "remote1", event: CSIceConnectionChangeEvent(state: .completed))
+        XCTAssertTrue(manager.lastProcessEvent is CSIceConnectionChangeEvent)
+    }
 }
 
 class TestInjector: CallstatsInjector {
     let sender: EventSender
-    init(sender: EventSender) {
+    let manager: EventManager
+    
+    init(sender: EventSender, manager: EventManager) {
         self.sender = sender
+        self.manager = manager
     }
+    
     override func eventSender(appID: String, localID: String, deviceID: String) -> EventSender {
         return sender
+    }
+    
+    override func eventManager(sender: EventSender, localID: String, remoteID: String, connection: Connection, config: CallstatsConfig) -> EventManager {
+        return manager
     }
 }
 
@@ -71,4 +93,17 @@ private class MockEventSender: EventSender {
     func send(event: Event) {
         lastSendEvent = event
     }
+}
+
+private class MockEventManager: EventManager {
+    var lastProcessEvent: PeerEvent?
+    func process(event: PeerEvent) {
+        lastProcessEvent = event
+    }
+}
+
+private struct DummyConnection: Connection {
+    func localSessionDescription() -> String? { return "" }
+    func remoteSessionDescription() -> String? { return "" }
+    func getStats(_ completion: @escaping ([WebRTCStats]) -> Void) {}
 }

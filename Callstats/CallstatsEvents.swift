@@ -19,21 +19,21 @@ public class CSAppEvent: NSObject {}
 
 public final class CSIceConnectionChangeEvent: CSPeerEvent {
     let state: RTCIceConnectionState
-    init(state: RTCIceConnectionState) {
+    public init(state: RTCIceConnectionState) {
         self.state = state
     }
 }
 
 public final class CSIceGatheringChangeEvent: CSPeerEvent {
     let state: RTCIceGatheringState
-    init(state: RTCIceGatheringState) {
+    public init(state: RTCIceGatheringState) {
         self.state = state
     }
 }
 
 public final class CSSignalingChangeEvent: CSPeerEvent {
     let state: RTCSignalingState
-    init(state: RTCSignalingState) {
+    public init(state: RTCSignalingState) {
         self.state = state
     }
 }

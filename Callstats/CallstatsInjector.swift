@@ -28,4 +28,21 @@ class CallstatsInjector {
             localID: localID,
             deviceID: deviceID)
     }
+    
+    func eventManager(
+        sender: EventSender,
+        localID: String,
+        remoteID: String,
+        connection: Connection,
+        config: CallstatsConfig) -> EventManager
+    {
+        let interceptors = [FabricInterceptor()]
+        return EventManagerImpl(
+            sender: sender,
+            localID: localID,
+            remoteID: remoteID,
+            connection: connection,
+            config: config,
+            interceptors: interceptors)
+    }
 }

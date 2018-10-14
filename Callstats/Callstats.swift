@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import WebRTC
 
 /**
  Entry point for sending WebRTC stats to callstats.io
@@ -24,6 +25,9 @@ public class Callstats: NSObject {
     // timers
     private var aliveTimer: Timer?
     private var systemStatsTimer: Timer?
+    
+    // event manager for each connection
+    internal var eventManagers: [String: EventManager] = [:]
     
     public init(
         appID: String,
@@ -62,6 +66,35 @@ public class Callstats: NSObject {
         stopSendingSystemStats()
         stopKeepAlive()
         sender.send(event: UserLeftEvent())
+    }
+    
+    /**
+     Create new connection. Call this before [reportEvent]
+     - Parameter connection: reporting PeerConnection object
+     - Parameter remoteUserID: recipient's userID
+     */
+    public func addNewFabric(connection: RTCPeerConnection, remoteUserID: String) {
+        let csConnection = CSConnection(peerConnection: connection)
+        addNewFabric(connection: csConnection, remoteID: remoteUserID)
+    }
+    
+    internal func addNewFabric(connection: Connection, remoteID: String) {
+        if eventManagers.keys.contains(remoteID) { return }
+        eventManagers[remoteID] = Callstats.dependency.eventManager(
+            sender: sender,
+            localID: localID,
+            remoteID: remoteID,
+            connection: connection,
+            config: configuration)
+    }
+    
+    /**
+     Report event for specific peer
+     - Parameter remoteUserID: recipient's userID
+     - Parameter event: event to be sent
+     */
+    public func reportEvent(remoteUserID: String, event: CSPeerEvent) {
+        eventManagers[remoteUserID]?.process(event: event)
     }
     
     // MARK:- Timers
