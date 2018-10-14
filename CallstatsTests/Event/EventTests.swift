@@ -18,14 +18,14 @@ class EventTests: XCTestCase {
     }
     
     func testConvertInvalidAuthenticatedEventToRequest() {
-        let event = AuthenticatedEvent()
+        let event = UserJoinEvent(confID: "conf1")
         XCTAssertNil(event.toRequest())
         event.appID = "app1"
         XCTAssertNil(event.toRequest())
     }
     
     func testConvertValidAuthenticatedEventToRequest() {
-        let event = AuthenticatedEvent()
+        let event = UserJoinEvent(confID: "conf1")
         event.appID = "app1"
         event.token = "1234"
         let request = event.toRequest()
@@ -35,7 +35,7 @@ class EventTests: XCTestCase {
     }
     
     func testConvertInvalidSessionEventToRequest() {
-        let event = SessionEvent()
+        let event = FabricTerminatedEvent(remoteID: "remote1", connectionID: "con1")
         XCTAssertNil(event.toRequest())
         event.appID = "app1"
         XCTAssertNil(event.toRequest())
@@ -44,7 +44,7 @@ class EventTests: XCTestCase {
     }
     
     func testConvertValidSessionEventToRequest() {
-        let event = SessionEvent()
+        let event = FabricTerminatedEvent(remoteID: "remote1", connectionID: "con1")
         event.appID = "app1"
         event.token = "1234"
         event.confID = "conf1"

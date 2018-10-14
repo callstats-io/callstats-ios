@@ -11,7 +11,10 @@ import Foundation
 /**
  This should be sent when fabric is terminated. This means connection has ended and you cannot send data
  */
-class FabricTerminatedEvent: FabricEvent {
+class FabricTerminatedEvent: FabricEvent, Event, Encodable {
+    var localID: String = ""
+    var deviceID: String = ""
+    var timestamp: Int64 = 0
     
     let remoteID: String
     let connectionID: String

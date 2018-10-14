@@ -25,14 +25,14 @@ class EventSenderTests: XCTestCase {
     }
     
     func testEventHasCorrectInfo() {
-        let event = Event()
+        let event = TestEvent()
         sender.send(event: event)
         XCTAssertEqual(event.localID, "local1")
         XCTAssertEqual(event.deviceID, "device1")
     }
     
     func testEventWillNotOverrideTimeStamp() {
-        let event = Event()
+        let event = TestEvent()
         event.timestamp = 123
         sender.send(event: event)
         XCTAssertEqual(event.timestamp, 123)
@@ -42,14 +42,14 @@ class EventSenderTests: XCTestCase {
     }
     
     func testSendEventBeforeNeededState() {
-        sender.send(event: AuthenticatedEvent())
-        sender.send(event: SessionEvent())
+        sender.send(event: UserJoinEvent(confID: "conf1"))
+        sender.send(event: FabricTerminatedEvent(remoteID: "remote1", connectionID: "con1"))
         XCTAssertEqual(sender.authenticatedQueue.count, 1)
         XCTAssertEqual(sender.sessionQueue.count, 1)
     }
     
     func testSendEventInCorrectOrder() {
-        sender.send(event: SessionEvent())
+        sender.send(event: TestSessionEvent())
         sender.send(event: TestCreateSessionEvent())
         sender.send(event: TokenRequest(code: "code", clientID: "client"))
         XCTAssertTrue(operationQueue.sentOperations[0].event is TokenRequest)
@@ -58,7 +58,7 @@ class EventSenderTests: XCTestCase {
     }
     
     func testNotSaveKeepAliveEvent() {
-        sender.send(event: KeepAliveEvent())
+        sender.send(event: UserAliveEvent())
         XCTAssertEqual(sender.sessionQueue.count, 0)
     }
 }
@@ -83,6 +83,23 @@ private class FakeOperationQueue: OperationQueue {
     }
 }
 
-private class TestCreateSessionEvent: AuthenticatedEvent, CreateSessionEvent {
+private class TestEvent: Event {
+    var localID: String = ""
+    var deviceID: String = ""
+    var timestamp: Int64 = 0
+    func url() -> String { return "" }
+    func path() -> String { return "" }
+}
+
+private class TestCreateSessionEvent: AuthenticatedEvent, CreateSessionEvent, Event {
+    var localID: String = ""
+    var deviceID: String = ""
+    var timestamp: Int64 = 0
     var confID: String = "conf1"
+}
+
+private class TestSessionEvent: SessionEvent, Event {
+    var localID: String = ""
+    var deviceID: String = ""
+    var timestamp: Int64 = 0
 }

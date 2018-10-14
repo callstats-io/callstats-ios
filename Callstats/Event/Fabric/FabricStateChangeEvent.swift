@@ -11,7 +11,10 @@ import Foundation
 /**
  Whenever the ICE connection state changes or ICE gathering state changes or signaling state changes then this event should be sent.
  */
-class FabricStateChangeEvent: FabricEvent {
+class FabricStateChangeEvent: FabricEvent, Event, Encodable {
+    var localID: String = ""
+    var deviceID: String = ""
+    var timestamp: Int64 = 0
     
     let remoteID: String
     let connectionID: String

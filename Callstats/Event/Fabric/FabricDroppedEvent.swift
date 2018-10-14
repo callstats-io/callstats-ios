@@ -11,7 +11,10 @@ import Foundation
 /**
  Whenever the fabric is dropped, this should be notified.
  */
-class FabricDroppedEvent: FabricEvent {
+class FabricDroppedEvent: FabricEvent, Event, Encodable {
+    var localID: String = ""
+    var deviceID: String = ""
+    var timestamp: Int64 = 0
     
     let remoteID: String
     let connectionID: String

@@ -9,7 +9,10 @@
 
 import Foundation
 
-class SystemStatusStats: AuthenticatedEvent {
+class SystemStatusStats: AuthenticatedEvent, Event, Encodable {
+    var localID: String = ""
+    var deviceID: String = ""
+    var timestamp: Int64 = 0
     
     /// CPU level in percentage
     var cpuLevel: Int?
@@ -36,6 +39,6 @@ class SystemStatusStats: AuthenticatedEvent {
     }
     
     override func path() -> String {
-        return "stats/system"
+        return super.path() + "stats/system"
     }
 }

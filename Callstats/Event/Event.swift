@@ -13,18 +13,65 @@ private let kHeaderContentType = "Content-Type"
 private let kContentTypeJson = "application/json; charset=utf-8"
 private let kContentTypeFormUrl = "application/x-www-form-urlencoded"
 
+protocol Requestable {
+    func url() -> String
+    func path() -> String
+}
+
 /**
  Base event
  */
-class Event: Encodable {
-    var localID = ""
-    var deviceID = ""
-    var timestamp: Int64 = 0
-    func url() -> String { return "https://events.callstats.io" }
-    func path() -> String { return "" }
+protocol Event: class, Requestable {
+    var localID: String { get set }
+    var deviceID: String { get set }
+    var timestamp: Int64 { get set }
 }
 
-extension Event {
+/**
+ Event that do authentication
+ */
+protocol AuthenticationEvent {
+    var code: String { get }
+    var clientID: String { get }
+    var grantType: String { get }
+}
+
+/**
+ Event to create session
+ */
+protocol CreateSessionEvent {
+    var confID: String { get }
+    var appID: String? { get }
+}
+
+/**
+ Event that can be sent only after authenticated
+ */
+class AuthenticatedEvent: Requestable {
+    var appID: String?
+    var token: String?
+    func url() -> String { return "https://events.callstats.io" }
+    func path() -> String { return "v1/apps/\(appID!)/" }
+}
+
+/**
+ Event that can be sent after session created
+ */
+class SessionEvent: AuthenticatedEvent {
+    var ucID: String?
+    var confID: String?
+    override func path() -> String { return "v1/apps/\(appID!)/conferences/\(confID!)/\(ucID!)/" }
+}
+
+/**
+ Event to keep the session alive
+ */
+class KeepAliveEvent: SessionEvent {}
+
+
+// MARK:- Utils
+
+extension Event where Self: Encodable {
     func toRequest() -> URLRequest? {
         if let e = self as? AuthenticatedEvent {
             guard e.appID != nil else { return nil }
@@ -38,9 +85,7 @@ extension Event {
         // url
         let path: String
         switch self {
-        case let e as SessionEvent: path = "v1/apps/\(e.appID!)/conferences/\(e.confID!)/\(e.ucID!)/\(e.path())"
         case let e as CreateSessionEvent: path = "v1/apps/\(e.appID!)/conferences/\(e.confID)"
-        case let e as AuthenticatedEvent: path = "v1/apps/\(e.appID!)/\(e.path())"
         default: path = self.path()
         }
         let url = "\(self.url())/\(path)"
@@ -69,43 +114,3 @@ extension Event {
         return request
     }
 }
-
-/**
- Event that do authentication
- */
-protocol AuthenticationEvent {
-    var code: String { get }
-    var clientID: String { get }
-    var grantType: String { get }
-}
-
-/**
- Event to create session
- */
-protocol CreateSessionEvent {
-    var confID: String { get }
-    var appID: String? { get }
-}
-
-/**
- Event that can be sent only after authenticated
- */
-class AuthenticatedEvent: Event {
-    var appID: String?
-    var token: String?
-    enum CodingKeys: CodingKey {}
-}
-
-/**
- Event that can be sent after session created
- */
-class SessionEvent: AuthenticatedEvent {
-    var ucID: String?
-    var confID: String?
-    enum CodingKeys: CodingKey {}
-}
-
-/**
- Event to keep the session alive
- */
-class KeepAliveEvent: SessionEvent {}

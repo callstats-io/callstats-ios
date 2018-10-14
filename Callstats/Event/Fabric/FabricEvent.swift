@@ -13,6 +13,6 @@ import Foundation
  */
 class FabricEvent: SessionEvent {
     override func path() -> String {
-        return "events/fabric"
+        return super.path() + "events/fabric"
     }
 }

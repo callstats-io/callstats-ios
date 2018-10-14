@@ -19,7 +19,7 @@ class EventSendingOperationTests: XCTestCase {
     
     func testSuccessResponse() {
         let exp = expectation(description: "call http client")
-        let operation = EventSendingOperation(httpClient: httpClient, event: Event()) { e, s, r in
+        let operation = EventSendingOperation(httpClient: httpClient, event: TestEvent()) { e, s, r in
             XCTAssertTrue(s)
             XCTAssertEqual(r?["status"] as? String, "OK")
             exp.fulfill()
@@ -31,7 +31,7 @@ class EventSendingOperationTests: XCTestCase {
     func testFailedResponse() {
         httpClient.isFailed = true
         let exp = expectation(description: "call http client")
-        let operation = EventSendingOperation(httpClient: httpClient, event: Event()) { e, s, r in
+        let operation = EventSendingOperation(httpClient: httpClient, event: TestEvent()) { e, s, r in
             XCTAssertFalse(s)
             XCTAssertEqual(r?["status"] as? String, "ERROR")
             exp.fulfill()
@@ -48,4 +48,12 @@ private class StubHttpClient: HttpClient {
     func sendRequest(request: URLRequest, completion: @escaping (Response) -> Void) {
         completion(isFailed ? failedResponse : successResponse)
     }
+}
+
+private class TestEvent: Event, Encodable {
+    var localID: String = ""
+    var deviceID: String = ""
+    var timestamp: Int64 = 0
+    func url() -> String { return "" }
+    func path() -> String { return "" }
 }

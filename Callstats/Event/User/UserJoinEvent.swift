@@ -13,7 +13,10 @@ import Foundation
  or start a new conference. If there are no participants in the given conference then
  a new conference will be created with the conferenceID provided.
  */
-class UserJoinEvent: AuthenticatedEvent, CreateSessionEvent {
+class UserJoinEvent: AuthenticatedEvent, CreateSessionEvent, Event, Encodable {
+    var localID: String = ""
+    var deviceID: String = ""
+    var timestamp: Int64 = 0
     
     let confID: String
     let endpointInfo: EndpointInfo

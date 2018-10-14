@@ -11,7 +11,10 @@ import Foundation
 /**
  This should be sent when fabric setup fails. This means connection has failed and you cannot send data
  */
-class FabricSetupFailedEvent: FabricEvent {
+class FabricSetupFailedEvent: FabricEvent, Event, Encodable {
+    var localID: String = ""
+    var deviceID: String = ""
+    var timestamp: Int64 = 0
     
     let reason: String
     

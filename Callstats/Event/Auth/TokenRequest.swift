@@ -8,7 +8,10 @@
 
 import Foundation
 
-class TokenRequest: Event, AuthenticationEvent {
+class TokenRequest: AuthenticationEvent, Event, Encodable {
+    var localID: String = ""
+    var deviceID: String = ""
+    var timestamp: Int64 = 0
     
     let code: String
     let clientID: String
@@ -20,6 +23,6 @@ class TokenRequest: Event, AuthenticationEvent {
         self.clientID = clientID
     }
     
-    override func url() -> String { return "https://auth.callstats.io" }
-    override func path() -> String { return "authenticate" }
+    func url() -> String { return "https://auth.callstats.io" }
+    func path() -> String { return "authenticate" }
 }

@@ -11,7 +11,10 @@ import Foundation
 /**
  You can submit the user details such as username using this event.
  */
-class UserDetailsEvent: SessionEvent {
+class UserDetailsEvent: SessionEvent, Event, Encodable {
+    var localID: String = ""
+    var deviceID: String = ""
+    var timestamp: Int64 = 0
     
     let userName: String
     

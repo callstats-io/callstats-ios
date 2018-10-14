@@ -11,7 +11,10 @@ import Foundation
 /**
  When the fabric hold or resume events happen, this event can be submitted
  */
-class FabricActionEvent: FabricEvent {
+class FabricActionEvent: FabricEvent, Event, Encodable {
+    var localID: String = ""
+    var deviceID: String = ""
+    var timestamp: Int64 = 0
     
     let remoteID: String
     let connectionID: String

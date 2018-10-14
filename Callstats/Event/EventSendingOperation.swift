@@ -29,6 +29,7 @@ class EventSendingOperation: Operation {
     }
     
     override func start() {
+        guard let event = event as? Event & Encodable else { return }
         guard let request = event.toRequest() else {
             completion?(event, false, nil)
             return

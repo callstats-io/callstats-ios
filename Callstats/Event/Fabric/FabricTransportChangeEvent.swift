@@ -11,7 +11,10 @@ import Foundation
 /**
  Whenever the fabric transport changes this event should be called.
  */
-class FabricTransportChangeEvent: FabricEvent {
+class FabricTransportChangeEvent: FabricEvent, Event, Encodable {
+    var localID: String = ""
+    var deviceID: String = ""
+    var timestamp: Int64 = 0
     
     let remoteID: String
     let connectionID: String

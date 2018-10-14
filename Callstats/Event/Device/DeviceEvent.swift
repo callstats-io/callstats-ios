@@ -11,7 +11,10 @@ import Foundation
 /**
  Information about the connected and/or active media devices.
  */
-class DeviceEvent: SessionEvent {
+class DeviceEvent: SessionEvent, Event, Encodable {
+    var localID: String = ""
+    var deviceID: String = ""
+    var timestamp: Int64 = 0
     
     let eventType: String
     let mediaDeviceList: [MediaDevice]
