@@ -45,4 +45,8 @@ class CallstatsInjector {
             config: config,
             interceptors: interceptors)
     }
+    
+    func systemStatusProvider() -> SystemStatusProvider {
+        return SystemStatusProviderImpl()
+    }
 }

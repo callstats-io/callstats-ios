@@ -21,6 +21,7 @@ public class Callstats: NSObject {
     private let clientVersion: String?
     private let configuration: CallstatsConfig
     private let sender: EventSender
+    private let systemStatus: SystemStatusProvider
     
     // timers
     private var aliveTimer: Timer?
@@ -44,6 +45,8 @@ public class Callstats: NSObject {
         self.configuration = configuration
         
         sender = Callstats.dependency.eventSender(appID: appID, localID: localID, deviceID: deviceID)
+        systemStatus = Callstats.dependency.systemStatusProvider()
+        
         sender.send(event: TokenRequest(code: jwt, clientID: "\(localID)@\(appID)"))
     }
     
@@ -131,7 +134,15 @@ public class Callstats: NSObject {
     }
     
     @objc private func sendSystemStats() {
-        
+        let stats = SystemStatusStats()
+        stats.cpuLevel = systemStatus.cpuLevel()
+        stats.batteryLevel = systemStatus.batteryLevel()
+        stats.memoryAvailable = systemStatus.availableMemory()
+        stats.memoryUsage = systemStatus.usageMemory()
+        stats.threadCount = systemStatus.threadCount()
+        if stats.isValid() {
+            sender.send(event: stats)
+        }
     }
     
     private func stopSendingSystemStats() {

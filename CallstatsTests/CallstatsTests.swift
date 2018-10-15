@@ -18,7 +18,6 @@ class CallstatsTests: XCTestCase {
 
     override func setUp() {
         config = CallstatsConfig()
-        config.keepAlivePeriod = 1
         sender = MockEventSender()
         manager = MockEventManager()
         Callstats.dependency = TestInjector(sender: sender, manager: manager)
@@ -42,6 +41,8 @@ class CallstatsTests: XCTestCase {
     }
     
     func testStartSessionSendKeepAliveEvent() {
+        config.keepAlivePeriod = 1
+        config.systemStatsSubmissionPeriod = 1000
         callstats.startSession(confID: "conf1")
         let exp = expectation(description: "send ping")
         let result = XCTWaiter.wait(for: [exp], timeout: config.keepAlivePeriod + 3)
@@ -55,6 +56,19 @@ class CallstatsTests: XCTestCase {
     func testStopSessionSendUserLeftEvent() {
         callstats.stopSession()
         XCTAssertTrue(sender.lastSendEvent is UserLeftEvent)
+    }
+    
+    func testStartSessionSendSystemStats() {
+        config.keepAlivePeriod = 1000
+        config.systemStatsSubmissionPeriod = 1
+        callstats.startSession(confID: "conf1")
+        let exp = expectation(description: "send system stats")
+        let result = XCTWaiter.wait(for: [exp], timeout: config.systemStatsSubmissionPeriod + 3)
+        if result == XCTWaiter.Result.timedOut {
+            XCTAssertTrue(self.sender.lastSendEvent is SystemStatusStats)
+        } else {
+            XCTFail()
+        }
     }
     
     func testAddNewFabricCreateManager() {
