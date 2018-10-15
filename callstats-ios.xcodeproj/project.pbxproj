@@ -38,6 +38,9 @@
 		DC1E67B4216F957A00AE7E35 /* UserLeftEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67B3216F957A00AE7E35 /* UserLeftEvent.swift */; };
 		DC1E67B7216FA2D800AE7E35 /* SystemStatusStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67B6216FA2D800AE7E35 /* SystemStatusStats.swift */; };
 		DC1E67B92174D2F000AE7E35 /* SystemStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67B82174D2F000AE7E35 /* SystemStatus.swift */; };
+		DC1E67BB2174EFE500AE7E35 /* SdpInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67BA2174EFE500AE7E35 /* SdpInterceptor.swift */; };
+		DC1E67BE2174F0E500AE7E35 /* SdpEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67BD2174F0E500AE7E35 /* SdpEvent.swift */; };
+		DC1E67C02174F38300AE7E35 /* SdpInterceptorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67BF2174F38300AE7E35 /* SdpInterceptorTests.swift */; };
 		DC3BA41420A86305004C2F77 /* CsioUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3BA41320A86305004C2F77 /* CsioUtils.swift */; };
 		DC3BA41620AFE087004C2F77 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3BA41520AFE087004C2F77 /* CallViewController.swift */; };
 		DC3BA41720B01093004C2F77 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D4E0220A7E83600EDD5D7 /* MainViewController.swift */; };
@@ -133,6 +136,9 @@
 		DC1E67B3216F957A00AE7E35 /* UserLeftEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLeftEvent.swift; sourceTree = "<group>"; };
 		DC1E67B6216FA2D800AE7E35 /* SystemStatusStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemStatusStats.swift; sourceTree = "<group>"; };
 		DC1E67B82174D2F000AE7E35 /* SystemStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemStatus.swift; sourceTree = "<group>"; };
+		DC1E67BA2174EFE500AE7E35 /* SdpInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SdpInterceptor.swift; sourceTree = "<group>"; };
+		DC1E67BD2174F0E500AE7E35 /* SdpEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SdpEvent.swift; sourceTree = "<group>"; };
+		DC1E67BF2174F38300AE7E35 /* SdpInterceptorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SdpInterceptorTests.swift; sourceTree = "<group>"; };
 		DC3BA41320A86305004C2F77 /* CsioUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsioUtils.swift; sourceTree = "<group>"; };
 		DC3BA41520AFE087004C2F77 /* CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
 		DC5D4DFD20A7E83600EDD5D7 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -259,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				DC1E67A22168E16400AE7E35 /* FabricInterceptorTests.swift */,
+				DC1E67BF2174F38300AE7E35 /* SdpInterceptorTests.swift */,
 			);
 			path = Interceptor;
 			sourceTree = "<group>";
@@ -280,6 +287,14 @@
 				DC1E67B6216FA2D800AE7E35 /* SystemStatusStats.swift */,
 			);
 			path = Stats;
+			sourceTree = "<group>";
+		};
+		DC1E67BC2174F0D300AE7E35 /* Special */ = {
+			isa = PBXGroup;
+			children = (
+				DC1E67BD2174F0E500AE7E35 /* SdpEvent.swift */,
+			);
+			path = Special;
 			sourceTree = "<group>";
 		};
 		DC5D4DF420A7E83600EDD5D7 = {
@@ -387,6 +402,7 @@
 			children = (
 				DCC9A02D21553D3100A279CA /* Interceptor.swift */,
 				DC1E679B21687C0300AE7E35 /* FabricInterceptor.swift */,
+				DC1E67BA2174EFE500AE7E35 /* SdpInterceptor.swift */,
 			);
 			path = Interceptor;
 			sourceTree = "<group>";
@@ -400,6 +416,7 @@
 				DC1E6778215E584C00AE7E35 /* Device */,
 				DC1E67B5216FA2C200AE7E35 /* Stats */,
 				DCC9A03A2156312000A279CA /* Auth */,
+				DC1E67BC2174F0D300AE7E35 /* Special */,
 				DCC9A03421562C0D00A279CA /* Event.swift */,
 				DCC9A03621562C3300A279CA /* EventSender.swift */,
 				DC9D191121577EEF00E95EFE /* EventSendingOperation.swift */,
@@ -745,7 +762,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC9D19172157DBAB00E95EFE /* HttpClient.swift in Sources */,
+				DC1E67BB2174EFE500AE7E35 /* SdpInterceptor.swift in Sources */,
 				DC1E67AE216F91F400AE7E35 /* UserAliveEvent.swift in Sources */,
+				DC1E67BE2174F0E500AE7E35 /* SdpEvent.swift in Sources */,
 				DCC9A02B21551E4700A279CA /* Callstats.swift in Sources */,
 				DC9D191221577EEF00E95EFE /* EventSendingOperation.swift in Sources */,
 				DC1E679E2168B8DC00AE7E35 /* RTCPeerConnection.swift in Sources */,
@@ -790,6 +809,7 @@
 			files = (
 				DC9D191521578C7200E95EFE /* EventTests.swift in Sources */,
 				DC1E67A32168E16400AE7E35 /* FabricInterceptorTests.swift in Sources */,
+				DC1E67C02174F38300AE7E35 /* SdpInterceptorTests.swift in Sources */,
 				DCC9A01D21551D4800A279CA /* CallstatsTests.swift in Sources */,
 				DC9D191B21592E1100E95EFE /* EventSendingOperationTests.swift in Sources */,
 				DC1E67A9216CEF9D00AE7E35 /* EventManagerTests.swift in Sources */,

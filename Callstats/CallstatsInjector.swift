@@ -36,7 +36,10 @@ class CallstatsInjector {
         connection: Connection,
         config: CallstatsConfig) -> EventManager
     {
-        let interceptors = [FabricInterceptor()]
+        let interceptors: [Interceptor] = [
+            FabricInterceptor(),
+            SdpInterceptor()
+        ]
         return EventManagerImpl(
             sender: sender,
             localID: localID,

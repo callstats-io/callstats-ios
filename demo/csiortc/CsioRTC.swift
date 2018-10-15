@@ -175,7 +175,7 @@ class CsioRTC: NSObject, CsioSignalingDelegate {
     private func answer(peerId: String, offerSdp: RTCSessionDescription) {
         let peerDelegate = PeerDelegate(peerId: peerId, outer: self)
         let connection = createConnection(delegate: peerDelegate)
-        
+        callstats?.addNewFabric(connection: connection, remoteUserID: peerId)
         connection.add(localMediaStream!)
         connection.setRemoteDescription(offerSdp) { err in print(err ?? "set remote success") }
         connection.answer(for: RTCMediaConstraints(mandatoryConstraints: nil, optionalConstraints: nil)) { sdp, err in
