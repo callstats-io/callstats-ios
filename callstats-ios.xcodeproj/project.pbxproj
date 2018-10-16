@@ -41,6 +41,15 @@
 		DC1E67BB2174EFE500AE7E35 /* SdpInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67BA2174EFE500AE7E35 /* SdpInterceptor.swift */; };
 		DC1E67BE2174F0E500AE7E35 /* SdpEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67BD2174F0E500AE7E35 /* SdpEvent.swift */; };
 		DC1E67C02174F38300AE7E35 /* SdpInterceptorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67BF2174F38300AE7E35 /* SdpInterceptorTests.swift */; };
+		DC1E67C5217637F300AE7E35 /* IceEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67C4217637F300AE7E35 /* IceEvent.swift */; };
+		DC1E67C721763C4800AE7E35 /* IceRestartEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67C621763C4800AE7E35 /* IceRestartEvent.swift */; };
+		DC1E67C921763D7B00AE7E35 /* IceFailedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67C821763D7B00AE7E35 /* IceFailedEvent.swift */; };
+		DC1E67CB21763F0D00AE7E35 /* IceAbortedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67CA21763F0D00AE7E35 /* IceAbortedEvent.swift */; };
+		DC1E67CD21763F6D00AE7E35 /* IceTerminatedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67CC21763F6D00AE7E35 /* IceTerminatedEvent.swift */; };
+		DC1E67CF2176401700AE7E35 /* IceDisruptStartEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67CE2176401700AE7E35 /* IceDisruptStartEvent.swift */; };
+		DC1E67D1217640A100AE7E35 /* IceDisruptEndEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67D0217640A100AE7E35 /* IceDisruptEndEvent.swift */; };
+		DC1E67D32176419100AE7E35 /* IceConnectionDisruptStartEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67D22176419100AE7E35 /* IceConnectionDisruptStartEvent.swift */; };
+		DC1E67D52176420400AE7E35 /* IceConnectionDisruptEndEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67D42176420400AE7E35 /* IceConnectionDisruptEndEvent.swift */; };
 		DC3BA41420A86305004C2F77 /* CsioUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3BA41320A86305004C2F77 /* CsioUtils.swift */; };
 		DC3BA41620AFE087004C2F77 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3BA41520AFE087004C2F77 /* CallViewController.swift */; };
 		DC3BA41720B01093004C2F77 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D4E0220A7E83600EDD5D7 /* MainViewController.swift */; };
@@ -139,6 +148,15 @@
 		DC1E67BA2174EFE500AE7E35 /* SdpInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SdpInterceptor.swift; sourceTree = "<group>"; };
 		DC1E67BD2174F0E500AE7E35 /* SdpEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SdpEvent.swift; sourceTree = "<group>"; };
 		DC1E67BF2174F38300AE7E35 /* SdpInterceptorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SdpInterceptorTests.swift; sourceTree = "<group>"; };
+		DC1E67C4217637F300AE7E35 /* IceEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceEvent.swift; sourceTree = "<group>"; };
+		DC1E67C621763C4800AE7E35 /* IceRestartEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceRestartEvent.swift; sourceTree = "<group>"; };
+		DC1E67C821763D7B00AE7E35 /* IceFailedEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceFailedEvent.swift; sourceTree = "<group>"; };
+		DC1E67CA21763F0D00AE7E35 /* IceAbortedEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceAbortedEvent.swift; sourceTree = "<group>"; };
+		DC1E67CC21763F6D00AE7E35 /* IceTerminatedEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceTerminatedEvent.swift; sourceTree = "<group>"; };
+		DC1E67CE2176401700AE7E35 /* IceDisruptStartEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceDisruptStartEvent.swift; sourceTree = "<group>"; };
+		DC1E67D0217640A100AE7E35 /* IceDisruptEndEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceDisruptEndEvent.swift; sourceTree = "<group>"; };
+		DC1E67D22176419100AE7E35 /* IceConnectionDisruptStartEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceConnectionDisruptStartEvent.swift; sourceTree = "<group>"; };
+		DC1E67D42176420400AE7E35 /* IceConnectionDisruptEndEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceConnectionDisruptEndEvent.swift; sourceTree = "<group>"; };
 		DC3BA41320A86305004C2F77 /* CsioUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsioUtils.swift; sourceTree = "<group>"; };
 		DC3BA41520AFE087004C2F77 /* CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
 		DC5D4DFD20A7E83600EDD5D7 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -297,6 +315,22 @@
 			path = Special;
 			sourceTree = "<group>";
 		};
+		DC1E67C1217636DF00AE7E35 /* Ice */ = {
+			isa = PBXGroup;
+			children = (
+				DC1E67C4217637F300AE7E35 /* IceEvent.swift */,
+				DC1E67C621763C4800AE7E35 /* IceRestartEvent.swift */,
+				DC1E67C821763D7B00AE7E35 /* IceFailedEvent.swift */,
+				DC1E67CA21763F0D00AE7E35 /* IceAbortedEvent.swift */,
+				DC1E67CC21763F6D00AE7E35 /* IceTerminatedEvent.swift */,
+				DC1E67CE2176401700AE7E35 /* IceDisruptStartEvent.swift */,
+				DC1E67D0217640A100AE7E35 /* IceDisruptEndEvent.swift */,
+				DC1E67D22176419100AE7E35 /* IceConnectionDisruptStartEvent.swift */,
+				DC1E67D42176420400AE7E35 /* IceConnectionDisruptEndEvent.swift */,
+			);
+			path = Ice;
+			sourceTree = "<group>";
+		};
 		DC5D4DF420A7E83600EDD5D7 = {
 			isa = PBXGroup;
 			children = (
@@ -412,6 +446,7 @@
 			children = (
 				DC1E67AC216F91DC00AE7E35 /* User */,
 				DC1E677E215E5D8B00AE7E35 /* Fabric */,
+				DC1E67C1217636DF00AE7E35 /* Ice */,
 				DC1E677B215E58D600AE7E35 /* Info */,
 				DC1E6778215E584C00AE7E35 /* Device */,
 				DC1E67B5216FA2C200AE7E35 /* Stats */,
@@ -763,23 +798,31 @@
 			files = (
 				DC9D19172157DBAB00E95EFE /* HttpClient.swift in Sources */,
 				DC1E67BB2174EFE500AE7E35 /* SdpInterceptor.swift in Sources */,
+				DC1E67D1217640A100AE7E35 /* IceDisruptEndEvent.swift in Sources */,
 				DC1E67AE216F91F400AE7E35 /* UserAliveEvent.swift in Sources */,
 				DC1E67BE2174F0E500AE7E35 /* SdpEvent.swift in Sources */,
 				DCC9A02B21551E4700A279CA /* Callstats.swift in Sources */,
 				DC9D191221577EEF00E95EFE /* EventSendingOperation.swift in Sources */,
+				DC1E67D32176419100AE7E35 /* IceConnectionDisruptStartEvent.swift in Sources */,
 				DC1E679E2168B8DC00AE7E35 /* RTCPeerConnection.swift in Sources */,
+				DC1E67CD21763F6D00AE7E35 /* IceTerminatedEvent.swift in Sources */,
 				DCC9A03721562C3300A279CA /* EventSender.swift in Sources */,
 				DCC9A03221554D8900A279CA /* CallstatsConfig.swift in Sources */,
 				DC1E67B2216F939700AE7E35 /* UserJoinEvent.swift in Sources */,
+				DC1E67C721763C4800AE7E35 /* IceRestartEvent.swift in Sources */,
 				DC1E67862163E6B600AE7E35 /* Feedback.swift in Sources */,
+				DC1E67CB21763F0D00AE7E35 /* IceAbortedEvent.swift in Sources */,
 				DC1E67882164F09800AE7E35 /* Ssrc.swift in Sources */,
+				DC1E67C5217637F300AE7E35 /* IceEvent.swift in Sources */,
 				DCC9A0302155410000A279CA /* CallstatsEvents.swift in Sources */,
 				DC1E678A2164F68C00AE7E35 /* RTCSessionDescription.swift in Sources */,
 				DCC9A02E21553D3100A279CA /* Interceptor.swift in Sources */,
 				DCC9A03521562C0D00A279CA /* Event.swift in Sources */,
 				DC9D19192157EAE800E95EFE /* Date.swift in Sources */,
+				DC1E67CF2176401700AE7E35 /* IceDisruptStartEvent.swift in Sources */,
 				DC1E679C21687C0300AE7E35 /* FabricInterceptor.swift in Sources */,
 				DC1E679021651D1F00AE7E35 /* FabricSetupFailedEvent.swift in Sources */,
+				DC1E67D52176420400AE7E35 /* IceConnectionDisruptEndEvent.swift in Sources */,
 				DC1E679221651DED00AE7E35 /* FabricStateChangeEvent.swift in Sources */,
 				DCC9A03921562DA700A279CA /* CallstatsInjector.swift in Sources */,
 				DC1E67842163E5EC00AE7E35 /* EndpointInfo.swift in Sources */,
@@ -788,6 +831,7 @@
 				DC1E67B7216FA2D800AE7E35 /* SystemStatusStats.swift in Sources */,
 				DC1E677A215E586400AE7E35 /* DeviceEvent.swift in Sources */,
 				DC1E67B92174D2F000AE7E35 /* SystemStatus.swift in Sources */,
+				DC1E67C921763D7B00AE7E35 /* IceFailedEvent.swift in Sources */,
 				DC1E679A216520FA00AE7E35 /* FabricTerminatedEvent.swift in Sources */,
 				DC1E67982165204600AE7E35 /* FabricDroppedEvent.swift in Sources */,
 				DC1E67B4216F957A00AE7E35 /* UserLeftEvent.swift in Sources */,
