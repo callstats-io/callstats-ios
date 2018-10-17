@@ -50,6 +50,8 @@
 		DC1E67D1217640A100AE7E35 /* IceDisruptEndEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67D0217640A100AE7E35 /* IceDisruptEndEvent.swift */; };
 		DC1E67D32176419100AE7E35 /* IceConnectionDisruptStartEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67D22176419100AE7E35 /* IceConnectionDisruptStartEvent.swift */; };
 		DC1E67D52176420400AE7E35 /* IceConnectionDisruptEndEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67D42176420400AE7E35 /* IceConnectionDisruptEndEvent.swift */; };
+		DC1E67D7217643AA00AE7E35 /* IceInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67D6217643AA00AE7E35 /* IceInterceptor.swift */; };
+		DC1E67D92177951B00AE7E35 /* IceInterceptorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67D82177951B00AE7E35 /* IceInterceptorTests.swift */; };
 		DC3BA41420A86305004C2F77 /* CsioUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3BA41320A86305004C2F77 /* CsioUtils.swift */; };
 		DC3BA41620AFE087004C2F77 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3BA41520AFE087004C2F77 /* CallViewController.swift */; };
 		DC3BA41720B01093004C2F77 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D4E0220A7E83600EDD5D7 /* MainViewController.swift */; };
@@ -157,6 +159,8 @@
 		DC1E67D0217640A100AE7E35 /* IceDisruptEndEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceDisruptEndEvent.swift; sourceTree = "<group>"; };
 		DC1E67D22176419100AE7E35 /* IceConnectionDisruptStartEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceConnectionDisruptStartEvent.swift; sourceTree = "<group>"; };
 		DC1E67D42176420400AE7E35 /* IceConnectionDisruptEndEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceConnectionDisruptEndEvent.swift; sourceTree = "<group>"; };
+		DC1E67D6217643AA00AE7E35 /* IceInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceInterceptor.swift; sourceTree = "<group>"; };
+		DC1E67D82177951B00AE7E35 /* IceInterceptorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceInterceptorTests.swift; sourceTree = "<group>"; };
 		DC3BA41320A86305004C2F77 /* CsioUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsioUtils.swift; sourceTree = "<group>"; };
 		DC3BA41520AFE087004C2F77 /* CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
 		DC5D4DFD20A7E83600EDD5D7 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -284,6 +288,7 @@
 			children = (
 				DC1E67A22168E16400AE7E35 /* FabricInterceptorTests.swift */,
 				DC1E67BF2174F38300AE7E35 /* SdpInterceptorTests.swift */,
+				DC1E67D82177951B00AE7E35 /* IceInterceptorTests.swift */,
 			);
 			path = Interceptor;
 			sourceTree = "<group>";
@@ -437,6 +442,7 @@
 				DCC9A02D21553D3100A279CA /* Interceptor.swift */,
 				DC1E679B21687C0300AE7E35 /* FabricInterceptor.swift */,
 				DC1E67BA2174EFE500AE7E35 /* SdpInterceptor.swift */,
+				DC1E67D6217643AA00AE7E35 /* IceInterceptor.swift */,
 			);
 			path = Interceptor;
 			sourceTree = "<group>";
@@ -807,6 +813,7 @@
 				DC1E679E2168B8DC00AE7E35 /* RTCPeerConnection.swift in Sources */,
 				DC1E67CD21763F6D00AE7E35 /* IceTerminatedEvent.swift in Sources */,
 				DCC9A03721562C3300A279CA /* EventSender.swift in Sources */,
+				DC1E67D7217643AA00AE7E35 /* IceInterceptor.swift in Sources */,
 				DCC9A03221554D8900A279CA /* CallstatsConfig.swift in Sources */,
 				DC1E67B2216F939700AE7E35 /* UserJoinEvent.swift in Sources */,
 				DC1E67C721763C4800AE7E35 /* IceRestartEvent.swift in Sources */,
@@ -858,6 +865,7 @@
 				DC9D191B21592E1100E95EFE /* EventSendingOperationTests.swift in Sources */,
 				DC1E67A9216CEF9D00AE7E35 /* EventManagerTests.swift in Sources */,
 				DC1E6777215E49A100AE7E35 /* EventSenderTests.swift in Sources */,
+				DC1E67D92177951B00AE7E35 /* IceInterceptorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
