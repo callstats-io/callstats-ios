@@ -39,7 +39,8 @@ class CallstatsInjector {
         let interceptors: [Interceptor] = [
             FabricInterceptor(),
             IceInterceptor(),
-            SdpInterceptor()
+            SdpInterceptor(),
+            StatsInterceptor()
         ]
         return EventManagerImpl(
             sender: sender,

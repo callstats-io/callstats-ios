@@ -52,6 +52,9 @@
 		DC1E67D52176420400AE7E35 /* IceConnectionDisruptEndEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67D42176420400AE7E35 /* IceConnectionDisruptEndEvent.swift */; };
 		DC1E67D7217643AA00AE7E35 /* IceInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67D6217643AA00AE7E35 /* IceInterceptor.swift */; };
 		DC1E67D92177951B00AE7E35 /* IceInterceptorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67D82177951B00AE7E35 /* IceInterceptorTests.swift */; };
+		DC1E67DB217B958300AE7E35 /* ConferenceStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67DA217B958300AE7E35 /* ConferenceStats.swift */; };
+		DC1E67DD217B967800AE7E35 /* StatsInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67DC217B967800AE7E35 /* StatsInterceptor.swift */; };
+		DC1E67E1217CD52200AE7E35 /* StatsInterceptorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67E0217CD52200AE7E35 /* StatsInterceptorTests.swift */; };
 		DC3BA41420A86305004C2F77 /* CsioUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3BA41320A86305004C2F77 /* CsioUtils.swift */; };
 		DC3BA41620AFE087004C2F77 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3BA41520AFE087004C2F77 /* CallViewController.swift */; };
 		DC3BA41720B01093004C2F77 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D4E0220A7E83600EDD5D7 /* MainViewController.swift */; };
@@ -161,6 +164,9 @@
 		DC1E67D42176420400AE7E35 /* IceConnectionDisruptEndEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceConnectionDisruptEndEvent.swift; sourceTree = "<group>"; };
 		DC1E67D6217643AA00AE7E35 /* IceInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceInterceptor.swift; sourceTree = "<group>"; };
 		DC1E67D82177951B00AE7E35 /* IceInterceptorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceInterceptorTests.swift; sourceTree = "<group>"; };
+		DC1E67DA217B958300AE7E35 /* ConferenceStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceStats.swift; sourceTree = "<group>"; };
+		DC1E67DC217B967800AE7E35 /* StatsInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsInterceptor.swift; sourceTree = "<group>"; };
+		DC1E67E0217CD52200AE7E35 /* StatsInterceptorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsInterceptorTests.swift; sourceTree = "<group>"; };
 		DC3BA41320A86305004C2F77 /* CsioUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsioUtils.swift; sourceTree = "<group>"; };
 		DC3BA41520AFE087004C2F77 /* CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
 		DC5D4DFD20A7E83600EDD5D7 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -289,6 +295,7 @@
 				DC1E67A22168E16400AE7E35 /* FabricInterceptorTests.swift */,
 				DC1E67BF2174F38300AE7E35 /* SdpInterceptorTests.swift */,
 				DC1E67D82177951B00AE7E35 /* IceInterceptorTests.swift */,
+				DC1E67E0217CD52200AE7E35 /* StatsInterceptorTests.swift */,
 			);
 			path = Interceptor;
 			sourceTree = "<group>";
@@ -308,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				DC1E67B6216FA2D800AE7E35 /* SystemStatusStats.swift */,
+				DC1E67DA217B958300AE7E35 /* ConferenceStats.swift */,
 			);
 			path = Stats;
 			sourceTree = "<group>";
@@ -443,6 +451,7 @@
 				DC1E679B21687C0300AE7E35 /* FabricInterceptor.swift */,
 				DC1E67BA2174EFE500AE7E35 /* SdpInterceptor.swift */,
 				DC1E67D6217643AA00AE7E35 /* IceInterceptor.swift */,
+				DC1E67DC217B967800AE7E35 /* StatsInterceptor.swift */,
 			);
 			path = Interceptor;
 			sourceTree = "<group>";
@@ -825,6 +834,7 @@
 				DC1E678A2164F68C00AE7E35 /* RTCSessionDescription.swift in Sources */,
 				DCC9A02E21553D3100A279CA /* Interceptor.swift in Sources */,
 				DCC9A03521562C0D00A279CA /* Event.swift in Sources */,
+				DC1E67DB217B958300AE7E35 /* ConferenceStats.swift in Sources */,
 				DC9D19192157EAE800E95EFE /* Date.swift in Sources */,
 				DC1E67CF2176401700AE7E35 /* IceDisruptStartEvent.swift in Sources */,
 				DC1E679C21687C0300AE7E35 /* FabricInterceptor.swift in Sources */,
@@ -849,6 +859,7 @@
 				DC1E6780215E5DA600AE7E35 /* FabricEvent.swift in Sources */,
 				DC1E678E2165185900AE7E35 /* IceCandidatePair.swift in Sources */,
 				DC1E6782215E5E1900AE7E35 /* IceCandidate.swift in Sources */,
+				DC1E67DD217B967800AE7E35 /* StatsInterceptor.swift in Sources */,
 				DC1E679421651E8400AE7E35 /* FabricTransportChangeEvent.swift in Sources */,
 				DC1E678C2165173600AE7E35 /* FabricSetupEvent.swift in Sources */,
 			);
@@ -862,6 +873,7 @@
 				DC1E67A32168E16400AE7E35 /* FabricInterceptorTests.swift in Sources */,
 				DC1E67C02174F38300AE7E35 /* SdpInterceptorTests.swift in Sources */,
 				DCC9A01D21551D4800A279CA /* CallstatsTests.swift in Sources */,
+				DC1E67E1217CD52200AE7E35 /* StatsInterceptorTests.swift in Sources */,
 				DC9D191B21592E1100E95EFE /* EventSendingOperationTests.swift in Sources */,
 				DC1E67A9216CEF9D00AE7E35 /* EventManagerTests.swift in Sources */,
 				DC1E6777215E49A100AE7E35 /* EventSenderTests.swift in Sources */,

@@ -67,14 +67,16 @@ final class EventManagerImpl: EventManager {
     // MARK: - Timer
     
     private func startStatsTimer() {
-        stopStatsTimer()
-        let period = config.statsSubmissionPeriod
-        statsTimer = Timer.scheduledTimer(
-            timeInterval: period,
-            target: self,
-            selector: #selector(self.statsTimerRun),
-            userInfo: nil,
-            repeats: true)
+        DispatchQueue.main.async {
+            self.stopStatsTimer()
+            let period = self.config.statsSubmissionPeriod
+            self.statsTimer = Timer.scheduledTimer(
+                timeInterval: period,
+                target: self,
+                selector: #selector(self.statsTimerRun),
+                userInfo: nil,
+                repeats: true)
+        }
     }
     
     @objc func statsTimerRun() {
