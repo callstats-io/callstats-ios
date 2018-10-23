@@ -17,7 +17,7 @@ extension String {
     func ssrcValues(id: String) -> [String: String]? {
         var values: [String: String]?
         let lines = split(separator: "\n")
-        let prefix = "a=ssrc:\(id)"
+        let prefix = "a=ssrc:\(id) "
         for line in lines {
             if line.starts(with: prefix) {
                 if values == nil { values = [:] }

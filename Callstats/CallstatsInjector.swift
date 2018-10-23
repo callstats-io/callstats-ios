@@ -40,7 +40,8 @@ class CallstatsInjector {
             FabricInterceptor(),
             IceInterceptor(),
             SdpInterceptor(),
-            StatsInterceptor()
+            StatsInterceptor(),
+            SsrcInterceptor()
         ]
         return EventManagerImpl(
             sender: sender,

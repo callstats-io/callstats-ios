@@ -38,6 +38,8 @@ public final class CSSignalingChangeEvent: CSPeerEvent {
     }
 }
 
+public final class CSAddStreamEvent: CSPeerEvent {}
+
 public final class CSHoldEvent: CSPeerEvent {}
 public final class CSResumeEvent: CSPeerEvent {}
 

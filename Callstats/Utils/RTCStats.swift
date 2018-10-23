@@ -47,4 +47,12 @@ extension Array where Element == WebRTCStats {
         return filter { $0.type == "remotecandidate" }
             .map { IceCandidate.init(stats: $0) }
     }
+    
+    /**
+     Extract all SSRC details from stats and PeerConnection
+     */
+    func ssrcs(connection: Connection, localID: String, remoteID: String) -> [Ssrc] {
+        return filter { $0.type == "ssrc" }
+            .compactMap { Ssrc(stats: $0, connection: connection, localId: localID, remoteId: remoteID) }
+    }
 }
