@@ -237,6 +237,7 @@ class CsioRTC: NSObject, CsioSignalingDelegate {
                 outer?.peerVideoTracks[peerId] = track
                 outer?.delegate?.onCsioRTCPeerVideoAvailable()
             }
+            outer?.callstats?.reportEvent(remoteUserID: peerId, event: CSAddStreamEvent())
         }
         
         func peerConnection(_ peerConnection: RTCPeerConnection, didOpen dataChannel: RTCDataChannel) {
