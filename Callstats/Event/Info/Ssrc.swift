@@ -45,4 +45,8 @@ struct Ssrc: Encodable {
         self.label = label
         self.localStartTime = stats.timestamp
     }
+    
+    func isLocal() -> Bool {
+        return reportType == "local"
+    }
 }

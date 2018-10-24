@@ -41,7 +41,8 @@ class CallstatsInjector {
             IceInterceptor(),
             SdpInterceptor(),
             StatsInterceptor(),
-            SsrcInterceptor()
+            SsrcInterceptor(),
+            MediaInterceptor()
         ]
         return EventManagerImpl(
             sender: sender,

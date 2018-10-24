@@ -58,6 +58,11 @@
 		DC1E67E3217EFF8000AE7E35 /* SsrcEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67E2217EFF8000AE7E35 /* SsrcEvent.swift */; };
 		DC1E67E5217F00E700AE7E35 /* SsrcInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67E4217F00E700AE7E35 /* SsrcInterceptor.swift */; };
 		DC1E67E7217F084900AE7E35 /* SsrcInterceptorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67E6217F084900AE7E35 /* SsrcInterceptorTests.swift */; };
+		DC1E67EA2180B47C00AE7E35 /* MediaEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67E92180B47C00AE7E35 /* MediaEvent.swift */; };
+		DC1E67EC2180B4E000AE7E35 /* MediaActionEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67EB2180B4E000AE7E35 /* MediaActionEvent.swift */; };
+		DC1E67EE2180B64B00AE7E35 /* MediaPlaybackEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67ED2180B64B00AE7E35 /* MediaPlaybackEvent.swift */; };
+		DC1E67F02180BC3800AE7E35 /* MediaInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67EF2180BC3800AE7E35 /* MediaInterceptor.swift */; };
+		DC1E67F22180C4BB00AE7E35 /* MediaInterceptorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67F12180C4BB00AE7E35 /* MediaInterceptorTests.swift */; };
 		DC3BA41420A86305004C2F77 /* CsioUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3BA41320A86305004C2F77 /* CsioUtils.swift */; };
 		DC3BA41620AFE087004C2F77 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3BA41520AFE087004C2F77 /* CallViewController.swift */; };
 		DC3BA41720B01093004C2F77 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D4E0220A7E83600EDD5D7 /* MainViewController.swift */; };
@@ -173,6 +178,11 @@
 		DC1E67E2217EFF8000AE7E35 /* SsrcEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SsrcEvent.swift; sourceTree = "<group>"; };
 		DC1E67E4217F00E700AE7E35 /* SsrcInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SsrcInterceptor.swift; sourceTree = "<group>"; };
 		DC1E67E6217F084900AE7E35 /* SsrcInterceptorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SsrcInterceptorTests.swift; sourceTree = "<group>"; };
+		DC1E67E92180B47C00AE7E35 /* MediaEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaEvent.swift; sourceTree = "<group>"; };
+		DC1E67EB2180B4E000AE7E35 /* MediaActionEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaActionEvent.swift; sourceTree = "<group>"; };
+		DC1E67ED2180B64B00AE7E35 /* MediaPlaybackEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlaybackEvent.swift; sourceTree = "<group>"; };
+		DC1E67EF2180BC3800AE7E35 /* MediaInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaInterceptor.swift; sourceTree = "<group>"; };
+		DC1E67F12180C4BB00AE7E35 /* MediaInterceptorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaInterceptorTests.swift; sourceTree = "<group>"; };
 		DC3BA41320A86305004C2F77 /* CsioUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsioUtils.swift; sourceTree = "<group>"; };
 		DC3BA41520AFE087004C2F77 /* CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
 		DC5D4DFD20A7E83600EDD5D7 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -303,6 +313,7 @@
 				DC1E67D82177951B00AE7E35 /* IceInterceptorTests.swift */,
 				DC1E67E0217CD52200AE7E35 /* StatsInterceptorTests.swift */,
 				DC1E67E6217F084900AE7E35 /* SsrcInterceptorTests.swift */,
+				DC1E67F12180C4BB00AE7E35 /* MediaInterceptorTests.swift */,
 			);
 			path = Interceptor;
 			sourceTree = "<group>";
@@ -350,6 +361,16 @@
 				DC1E67D42176420400AE7E35 /* IceConnectionDisruptEndEvent.swift */,
 			);
 			path = Ice;
+			sourceTree = "<group>";
+		};
+		DC1E67E82180B45E00AE7E35 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				DC1E67E92180B47C00AE7E35 /* MediaEvent.swift */,
+				DC1E67EB2180B4E000AE7E35 /* MediaActionEvent.swift */,
+				DC1E67ED2180B64B00AE7E35 /* MediaPlaybackEvent.swift */,
+			);
+			path = Media;
 			sourceTree = "<group>";
 		};
 		DC5D4DF420A7E83600EDD5D7 = {
@@ -461,6 +482,7 @@
 				DC1E67D6217643AA00AE7E35 /* IceInterceptor.swift */,
 				DC1E67DC217B967800AE7E35 /* StatsInterceptor.swift */,
 				DC1E67E4217F00E700AE7E35 /* SsrcInterceptor.swift */,
+				DC1E67EF2180BC3800AE7E35 /* MediaInterceptor.swift */,
 			);
 			path = Interceptor;
 			sourceTree = "<group>";
@@ -473,6 +495,7 @@
 				DC1E67C1217636DF00AE7E35 /* Ice */,
 				DC1E677B215E58D600AE7E35 /* Info */,
 				DC1E6778215E584C00AE7E35 /* Device */,
+				DC1E67E82180B45E00AE7E35 /* Media */,
 				DC1E67B5216FA2C200AE7E35 /* Stats */,
 				DCC9A03A2156312000A279CA /* Auth */,
 				DC1E67BC2174F0D300AE7E35 /* Special */,
@@ -822,6 +845,7 @@
 			files = (
 				DC9D19172157DBAB00E95EFE /* HttpClient.swift in Sources */,
 				DC1E67BB2174EFE500AE7E35 /* SdpInterceptor.swift in Sources */,
+				DC1E67F02180BC3800AE7E35 /* MediaInterceptor.swift in Sources */,
 				DC1E67D1217640A100AE7E35 /* IceDisruptEndEvent.swift in Sources */,
 				DC1E67AE216F91F400AE7E35 /* UserAliveEvent.swift in Sources */,
 				DC1E67BE2174F0E500AE7E35 /* SdpEvent.swift in Sources */,
@@ -848,17 +872,20 @@
 				DC9D19192157EAE800E95EFE /* Date.swift in Sources */,
 				DC1E67CF2176401700AE7E35 /* IceDisruptStartEvent.swift in Sources */,
 				DC1E679C21687C0300AE7E35 /* FabricInterceptor.swift in Sources */,
+				DC1E67EE2180B64B00AE7E35 /* MediaPlaybackEvent.swift in Sources */,
 				DC1E679021651D1F00AE7E35 /* FabricSetupFailedEvent.swift in Sources */,
 				DC1E67D52176420400AE7E35 /* IceConnectionDisruptEndEvent.swift in Sources */,
 				DC1E679221651DED00AE7E35 /* FabricStateChangeEvent.swift in Sources */,
 				DCC9A03921562DA700A279CA /* CallstatsInjector.swift in Sources */,
 				DC1E67842163E5EC00AE7E35 /* EndpointInfo.swift in Sources */,
 				DC1E677D215E58E000AE7E35 /* MediaDevice.swift in Sources */,
+				DC1E67EC2180B4E000AE7E35 /* MediaActionEvent.swift in Sources */,
 				DC1E67B0216F925C00AE7E35 /* UserDetailsEvent.swift in Sources */,
 				DC1E67B7216FA2D800AE7E35 /* SystemStatusStats.swift in Sources */,
 				DC1E677A215E586400AE7E35 /* DeviceEvent.swift in Sources */,
 				DC1E67B92174D2F000AE7E35 /* SystemStatus.swift in Sources */,
 				DC1E67C921763D7B00AE7E35 /* IceFailedEvent.swift in Sources */,
+				DC1E67EA2180B47C00AE7E35 /* MediaEvent.swift in Sources */,
 				DC1E679A216520FA00AE7E35 /* FabricTerminatedEvent.swift in Sources */,
 				DC1E67E3217EFF8000AE7E35 /* SsrcEvent.swift in Sources */,
 				DC1E67982165204600AE7E35 /* FabricDroppedEvent.swift in Sources */,
@@ -881,6 +908,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC9D191521578C7200E95EFE /* EventTests.swift in Sources */,
+				DC1E67F22180C4BB00AE7E35 /* MediaInterceptorTests.swift in Sources */,
 				DC1E67A32168E16400AE7E35 /* FabricInterceptorTests.swift in Sources */,
 				DC1E67C02174F38300AE7E35 /* SdpInterceptorTests.swift in Sources */,
 				DCC9A01D21551D4800A279CA /* CallstatsTests.swift in Sources */,
