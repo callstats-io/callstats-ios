@@ -94,3 +94,22 @@ public class CSPlaybackEvent: CSPeerEvent {
 }
 
 // MARK:- App events
+
+/// event to report when local peer is dominant speaker
+public class CSDominantSpeakerEvent: CSAppEvent {}
+
+/// event to report when external device is connected
+public class CSDeviceConnectEvent: CSAppEvent {
+    let devices: [MediaDevice]
+    init(devices: [MediaDevice]) {
+        self.devices = devices
+    }
+}
+
+/// event to report when external device becomes active
+public class CSDeviceActiveEvent: CSAppEvent {
+    let devices: [MediaDevice]
+    init(devices: [MediaDevice]) {
+        self.devices = devices
+    }
+}

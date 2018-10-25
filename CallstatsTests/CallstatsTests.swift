@@ -83,6 +83,12 @@ class CallstatsTests: XCTestCase {
         XCTAssertTrue(manager.lastProcessEvent is CSIceConnectionChangeEvent)
     }
     
+    func testReportAppEvent() {
+        callstats.addNewFabric(connection: DummyConnection(), remoteID: "remote1")
+        callstats.reportEvent(event: CSDominantSpeakerEvent())
+        XCTAssertTrue(sender.lastSendEvent is DominantSpeakerEvent)
+    }
+    
     func testLog() {
         callstats.log(message: "msg")
         let event = sender.lastSendEvent as? LogEvent

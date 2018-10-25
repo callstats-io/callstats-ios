@@ -101,6 +101,18 @@ public class Callstats: NSObject {
     }
     
     /**
+     Report application event
+     */
+    public func reportEvent(event: CSAppEvent) {
+        switch event {
+        case is CSDominantSpeakerEvent: sender.send(event: DominantSpeakerEvent())
+        case let e as CSDeviceConnectEvent: sender.send(event: DeviceEvent(eventType: .connected, mediaDeviceList: e.devices))
+        case let e as CSDeviceActiveEvent: sender.send(event: DeviceEvent(eventType: .active, mediaDeviceList: e.devices))
+        default: ()
+        }
+    }
+    
+    /**
      Log application event
      - Parameter message: message to be logged
      - Parameter level: level of this log message
