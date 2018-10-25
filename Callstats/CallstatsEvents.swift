@@ -9,6 +9,22 @@
 import Foundation
 import WebRTC
 
+// MARK:- Enums
+
+/// CSMediaEvent and CSPlaybackEvent media type
+@objc public enum MediaEventType: Int { case audio, video, screen }
+
+/// CSPlaybackEvent type
+@objc public enum PlaybackEventType: Int { case start, suspended, stalled, oneway }
+
+/// Logging levels when report application logs
+@objc public enum LoggingLevel: Int { case debug, info, warn, error, fatal }
+
+/// Logging types when report application logs
+@objc public enum LoggingType: Int { case text, json }
+
+// MARK:- Base events
+
 typealias PeerEvent = CSPeerEvent
 typealias AppEvent = CSAppEvent
 
@@ -17,12 +33,6 @@ public class CSPeerEvent: NSObject {}
 
 /// base class for app events
 public class CSAppEvent: NSObject {}
-
-/// CSMediaEvent and CSPlaybackEvent media type
-@objc enum MediaEventType: Int { case audio, video, screen }
-
-/// CSPlaybackEvent type
-@objc enum PlaybackEventType: Int { case start, suspended, stalled, oneway }
 
 // MARK:- Peer events
 

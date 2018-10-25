@@ -82,6 +82,14 @@ class CallstatsTests: XCTestCase {
         callstats.reportEvent(remoteUserID: "remote1", event: CSIceConnectionChangeEvent(state: .completed))
         XCTAssertTrue(manager.lastProcessEvent is CSIceConnectionChangeEvent)
     }
+    
+    func testLog() {
+        callstats.log(message: "msg")
+        let event = sender.lastSendEvent as? LogEvent
+        XCTAssertNotNil(event)
+        XCTAssertTrue(event?.level == "info")
+        XCTAssertTrue(event?.messageType == "text")
+    }
 }
 
 class TestInjector: CallstatsInjector {

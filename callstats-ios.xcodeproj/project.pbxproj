@@ -63,6 +63,7 @@
 		DC1E67EE2180B64B00AE7E35 /* MediaPlaybackEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67ED2180B64B00AE7E35 /* MediaPlaybackEvent.swift */; };
 		DC1E67F02180BC3800AE7E35 /* MediaInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67EF2180BC3800AE7E35 /* MediaInterceptor.swift */; };
 		DC1E67F22180C4BB00AE7E35 /* MediaInterceptorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67F12180C4BB00AE7E35 /* MediaInterceptorTests.swift */; };
+		DC1E67F4218217BD00AE7E35 /* LogEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67F3218217BD00AE7E35 /* LogEvent.swift */; };
 		DC3BA41420A86305004C2F77 /* CsioUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3BA41320A86305004C2F77 /* CsioUtils.swift */; };
 		DC3BA41620AFE087004C2F77 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3BA41520AFE087004C2F77 /* CallViewController.swift */; };
 		DC3BA41720B01093004C2F77 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D4E0220A7E83600EDD5D7 /* MainViewController.swift */; };
@@ -183,6 +184,7 @@
 		DC1E67ED2180B64B00AE7E35 /* MediaPlaybackEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlaybackEvent.swift; sourceTree = "<group>"; };
 		DC1E67EF2180BC3800AE7E35 /* MediaInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaInterceptor.swift; sourceTree = "<group>"; };
 		DC1E67F12180C4BB00AE7E35 /* MediaInterceptorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaInterceptorTests.swift; sourceTree = "<group>"; };
+		DC1E67F3218217BD00AE7E35 /* LogEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEvent.swift; sourceTree = "<group>"; };
 		DC3BA41320A86305004C2F77 /* CsioUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsioUtils.swift; sourceTree = "<group>"; };
 		DC3BA41520AFE087004C2F77 /* CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
 		DC5D4DFD20A7E83600EDD5D7 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -343,6 +345,7 @@
 			children = (
 				DC1E67BD2174F0E500AE7E35 /* SdpEvent.swift */,
 				DC1E67E2217EFF8000AE7E35 /* SsrcEvent.swift */,
+				DC1E67F3218217BD00AE7E35 /* LogEvent.swift */,
 			);
 			path = Special;
 			sourceTree = "<group>";
@@ -846,6 +849,7 @@
 				DC9D19172157DBAB00E95EFE /* HttpClient.swift in Sources */,
 				DC1E67BB2174EFE500AE7E35 /* SdpInterceptor.swift in Sources */,
 				DC1E67F02180BC3800AE7E35 /* MediaInterceptor.swift in Sources */,
+				DC1E67F4218217BD00AE7E35 /* LogEvent.swift in Sources */,
 				DC1E67D1217640A100AE7E35 /* IceDisruptEndEvent.swift in Sources */,
 				DC1E67AE216F91F400AE7E35 /* UserAliveEvent.swift in Sources */,
 				DC1E67BE2174F0E500AE7E35 /* SdpEvent.swift in Sources */,

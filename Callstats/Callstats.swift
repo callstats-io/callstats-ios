@@ -100,6 +100,16 @@ public class Callstats: NSObject {
         eventManagers[remoteUserID]?.process(event: event)
     }
     
+    /**
+     Log application event
+     - Parameter message: message to be logged
+     - Parameter level: level of this log message
+     - Parameter type: type of message content
+     */
+    public func log(message: String, level: LoggingLevel = .info, type: LoggingType = .text) {
+        sender.send(event: LogEvent(level: level, message: message, messageType: type))
+    }
+    
     // MARK:- Timers
     
     private func startKeepAlive() {
