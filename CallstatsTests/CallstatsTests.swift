@@ -89,6 +89,15 @@ class CallstatsTests: XCTestCase {
         XCTAssertTrue(sender.lastSendEvent is DominantSpeakerEvent)
     }
     
+    func testReportError() {
+        callstats.reportError(type: .mediaPermission, message: "msg1", stack: "stack1")
+        let event = sender.lastSendEvent as? FabricSetupFailedEvent
+        XCTAssertNotNil(event)
+        XCTAssertTrue(event?.reason == "MediaPermissionError")
+        XCTAssertTrue(event?.message == "msg1")
+        XCTAssertTrue(event?.stack == "stack1")
+    }
+    
     func testLog() {
         callstats.log(message: "msg")
         let event = sender.lastSendEvent as? LogEvent

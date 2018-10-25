@@ -23,6 +23,18 @@ import WebRTC
 /// Logging types when report application logs
 @objc public enum LoggingType: Int { case text, json }
 
+/// Error type that can be reported
+@objc public enum ErrorType: Int {
+    /// The failure occurred because permission
+    case mediaPermission
+    /// The failure occurred in createOffer/createAnswer function.
+    case sdpGeneration
+    /// The failure occurred in setLocalDescription, setRemoteDescription function.
+    case negotiation
+    /// Signaling related errors in the application.
+    case signaling
+}
+
 // MARK:- Base events
 
 typealias PeerEvent = CSPeerEvent

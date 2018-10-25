@@ -113,6 +113,23 @@ public class Callstats: NSObject {
     }
     
     /**
+     Report error
+     */
+    public func reportError(type: ErrorType, message: String? = nil, stack: String? = nil) {
+        let reason: String
+        switch type {
+        case .mediaPermission: reason = "MediaPermissionError"
+        case .sdpGeneration: reason = "SDPGenerationError"
+        case .negotiation: reason = "NegotiationFailure"
+        case .signaling: reason = "SignalingError"
+        }
+        let event = FabricSetupFailedEvent(reason: reason)
+        event.message = message
+        event.stack = stack
+        sender.send(event: event)
+    }
+    
+    /**
      Log application event
      - Parameter message: message to be logged
      - Parameter level: level of this log message
