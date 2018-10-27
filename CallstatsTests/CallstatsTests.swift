@@ -105,6 +105,22 @@ class CallstatsTests: XCTestCase {
         XCTAssertTrue(event?.level == "info")
         XCTAssertTrue(event?.messageType == "text")
     }
+    
+    func testFeedback() {
+        callstats.sendUserFeedback(
+            rating: 3,
+            comment: "test",
+            audioQuality: 1,
+            videoQuality: 2,
+            remoteUserID: "remote1")
+        let event = sender.lastSendEvent as? FeedbackEvent
+        XCTAssertNotNil(event)
+        XCTAssertTrue(event?.feedback.overallRating == 3)
+        XCTAssertTrue(event?.feedback.comments == "test")
+        XCTAssertTrue(event?.feedback.audioQualityRating == 1)
+        XCTAssertTrue(event?.feedback.videoQualityRating == 2)
+        XCTAssertTrue(event?.feedback.remoteID == "remote1")
+    }
 }
 
 class TestInjector: CallstatsInjector {

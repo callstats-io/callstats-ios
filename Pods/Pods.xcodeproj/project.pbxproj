@@ -7,112 +7,113 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00C0E1E463F397990D685959EA0525AE /* LogEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4019935ED492B292672AF589F3152B3 /* LogEvent.swift */; };
-		00F40612B5627380F12FAD6DA5E93D9F /* MediaDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9E347F84E288D0241A25C3E7E009BA /* MediaDevice.swift */; };
-		014E301977E1759BF6BF40C0B37B672F /* IceCandidatePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49637470C572DC26F282CDCBF168060B /* IceCandidatePair.swift */; };
-		02BD3DEC922917123EE177F571D24256 /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF8BA8EFB6FF5C8C7E033A8AACDA380 /* Interceptor.swift */; };
-		0333DDBD307B8BAA1BC7E55BF9221873 /* CallstatsInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629EFBBA2E0310A19645B7C402D8549B /* CallstatsInjector.swift */; };
-		0BAD115C2FF4049121F9823191E65A3D /* ConferenceStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738BE5C9382F43DC8EDFB2E607F21A1B /* ConferenceStats.swift */; };
+		00E0C82B54D271BAD1853BCBAE4705FB /* UserLeftEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C34B8B9E149F66C949EEAA4FDE80C0 /* UserLeftEvent.swift */; };
+		014EFEF8090EA9983147EF421CB2E52A /* Callstats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674FF870D30CC736602F0D981F6F4184 /* Callstats.swift */; };
+		0AD39BABD3D8AF7CF8AA9D08E1C9CFEE /* IceAbortedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F22FB1D60CEF2046B14280157E071 /* IceAbortedEvent.swift */; };
+		0BD85B4EE188591268E1885E354D9611 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD601B735D06B1271A7E7C44B3DC9DE7 /* Event.swift */; };
 		0BD8D16B04C0A2F685F72ADA3B7522BE /* SocketIOClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C858B1F49AF8454EDC7AC051D806BA0 /* SocketIOClient.swift */; };
 		0C62576A5A897640E45A44FF325FE6E2 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F52249DD4D3DD3159B64A42F2E7349B /* Starscream.framework */; };
-		0CD7EAEFD19A5773A09B213BDD1D9F7D /* IceCandidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154B307EED73F1F4C93B75EC290B83B2 /* IceCandidate.swift */; };
-		0DC7762B83A1477E2FC055C8A7668334 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DF8372BF081C74F047E080E51C5A11 /* EventManager.swift */; };
 		0E0D48A3CB08614C606BB30838E65890 /* SocketIOStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B4F9FE19ADF7823C0554ADCB208315 /* SocketIOStatus.swift */; };
 		0E79EAB3DA3D95EE1639060563EAF950 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = C358B2E7AAC7F72EB06CC79CB69D7952 /* WebSocket.swift */; };
+		0EBD50C9F1954D0B865E4FB16373D376 /* CallstatsInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629EFBBA2E0310A19645B7C402D8549B /* CallstatsInjector.swift */; };
 		0ED66B792568F88E4AF0B4352AD55015 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F7B4AFB2E41A369EFF6E3E81C04691 /* Foundation.framework */; };
-		0FB9B5E49CDDA0E9C2C560C92B82C16A /* Callstats-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F2DE454A43B764B6E36C9B8A0AFC3C /* Callstats-dummy.m */; };
 		10A4D0B51E476FAE413D5C4706149937 /* SocketTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF5703938E1B0109A06B5F7A6AD88D /* SocketTypes.swift */; };
 		11A206D6F77ED59E644F56AA6FC345A3 /* SocketPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1F082E6560B8CA2089259764306BFE /* SocketPacket.swift */; };
 		1276ED700B4442D16CB9FC3757E9C281 /* SocketAckEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2934D85B956317B00CA326879C42E5DA /* SocketAckEmitter.swift */; };
-		136D2C2D386AA2691309D98F656B800B /* IceTerminatedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B9873B87FB7364F0B9BCBF41883E5 /* IceTerminatedEvent.swift */; };
 		14766EA1644576A554C6B6068CF0280E /* Starscream-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CE97062FAE2B1C842EC0C52208CB776 /* Starscream-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		18B74C719D61904C77996C907E22595E /* SsrcInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9E4509041D1433375194489FAD33F3 /* SsrcInterceptor.swift */; };
+		14999A5553C151352D3C322FBAAD679F /* SystemStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479FCE359E59B6CDB1BD9602D5F6FE9F /* SystemStatus.swift */; };
 		19489EFCF6B439350351E4A064D85776 /* Starscream-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 053509D20608A90063DBC8EED580A1FF /* Starscream-dummy.m */; };
+		1AE3788E7C2A055BA77A958F27067C1A /* MediaPlaybackEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9899FA5CD0279AC54645A80EC2EDA33A /* MediaPlaybackEvent.swift */; };
+		1B90B0D7062EDF47734A482A8FF036B4 /* IceCandidatePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0359F21AAC1B6F97E1CECB47FD22186D /* IceCandidatePair.swift */; };
 		1D73760E70CE0FBEBFA0B91CB7D02B31 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F69F4BDBA082D097EC3BCF178F5A5 /* SocketManager.swift */; };
-		1DEDBE709C1D9EE8F3E74E33BE1C10AB /* CallstatsEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CF0FA03E6E60E6C50F6004DBF6363E /* CallstatsEvents.swift */; };
+		1F4A66EE2884C9D43AD6F094E8E729C0 /* Callstats-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F2DE454A43B764B6E36C9B8A0AFC3C /* Callstats-dummy.m */; };
 		20CB9074F6645B40AFF9ABFD651DA7A9 /* Pods-CallstatsTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 181A64E2048B21D5F6263EF8E00BEFEC /* Pods-CallstatsTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		25C10E7A16AB76F53EB4E2D79B9C15D0 /* UserAliveEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF722BB10BD9F2702FB7386E4F91ECBE /* UserAliveEvent.swift */; };
+		262BFC07C4A3ED17282F5733D66DD8F1 /* IceFailedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B61D9C07141C8DEF3DEF6CE535899B /* IceFailedEvent.swift */; };
 		2735E0375ABDCE9E794DCDEE73DADAAA /* Pods-Callstats-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 762D2457B998B9885162CF6FE4094716 /* Pods-Callstats-dummy.m */; };
-		287F0E1CC6538579A22EED1CCFA46F64 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5151C9722B9335B2387DC9FFC1868627 /* HttpClient.swift */; };
 		295C621BA1BB5EBD0D4D58FA324ABE8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F7B4AFB2E41A369EFF6E3E81C04691 /* Foundation.framework */; };
+		2AC49682D49C05E93A85673BC53DA71E /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF05045C026974B74D8B467FCF4D96 /* Feedback.swift */; };
 		2BA6AFA2A51B037A7A01F6E05F8FAB35 /* SocketIOClientOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF73169F1624BBD971710205942C2D1E /* SocketIOClientOption.swift */; };
-		2D47D664D6337F01FB8C9CE095883862 /* EventSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DFB91D53F7FD04164882F0DFD98B93 /* EventSender.swift */; };
+		2C972E13560F3DE7401F157742617D37 /* UserDetailsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ECBC1C4A98135B26A7EED2DE8A16B6 /* UserDetailsEvent.swift */; };
+		2D6595D460F05750B03078E95820E447 /* IceDisruptEndEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36F8FEC8EBA5510201A74AF12A4E2CC /* IceDisruptEndEvent.swift */; };
 		2E96D674160607FD69266F74D742244B /* SocketAnyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039F4638AA2DE34FEB07E1C43A5FF170 /* SocketAnyEvent.swift */; };
-		300A0F7F109994B4C5DB7A9B2EDC5A3D /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904DF2CC3469108FCB2F3CAD4817220E /* Date.swift */; };
-		314F39F8B4BEAD6FE6AE1BF1CA20B36F /* RTCStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEFF7D6557C8B8B950CC7962051AB78 /* RTCStats.swift */; };
-		383553FEBE181A760030ED7295C0C49B /* Callstats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674FF870D30CC736602F0D981F6F4184 /* Callstats.swift */; };
-		3A8A3C7E03845CD51BB31BC58C3530CC /* FabricTransportChangeEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D8D4B56650AA08BD11D5683571A40D /* FabricTransportChangeEvent.swift */; };
+		3133BFF0F6C6C17C38E368AF7875648B /* FabricEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6EC225D7425CF8FE6011F049AB1EDD /* FabricEvent.swift */; };
+		375CCA7097B3D80DB6367641F471D930 /* IceConnectionDisruptStartEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8687D3B9315C9D29B4784D160C4C2BFD /* IceConnectionDisruptStartEvent.swift */; };
 		3B92EBF0614D58B80087254E1E3F29E4 /* SocketEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C73FC3E7BE128CF07DFC9FFF860E9 /* SocketEventHandler.swift */; };
+		3EA5BC3705BCCE5E04224F0236AA2845 /* FeedbackEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131956CA4D16C89E44FB3F95C5BF9257 /* FeedbackEvent.swift */; };
 		400BFDEB5E3B88E2E817BA121CE2FB75 /* SocketEngineSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25094F4FB43A3DB241221C2868FA65E0 /* SocketEngineSpec.swift */; };
-		43A189BA53083F3542975AA36D13AEAF /* IceAbortedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01E3D8AB48FB4D2E7457BBBFE29F470 /* IceAbortedEvent.swift */; };
 		45C1D7370EA48F9A0B952B4E16CB14F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F7B4AFB2E41A369EFF6E3E81C04691 /* Foundation.framework */; };
 		476D2345ED059FA869F4772AAA9AB3DD /* SocketExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D92C7F754BC0BA076391ADE2BC99F10 /* SocketExtensions.swift */; };
-		4947901876A5FD3F31700D34329A0D78 /* MediaPlaybackEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D078071A5418865470E487E1A8E8006 /* MediaPlaybackEvent.swift */; };
-		4959212FB5D6E64C077BFB8977C7F239 /* FabricSetupEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90420B1A25516710F83143C8FFA4095A /* FabricSetupEvent.swift */; };
-		4F3B79BFEFCD3AF229656D585A94BDEE /* MediaInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49E5CEAE818B96D3BC9E2556DF71E46 /* MediaInterceptor.swift */; };
-		5071B12EBDDDDAE2A7F8F6BA2987ED83 /* SsrcEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B70FA2D0B4D91CB773B050E8F4C097E /* SsrcEvent.swift */; };
+		4B3211CE6163EE1888F22FBB9A097FBC /* SsrcEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4606E28FD72894BCB81DE9311673E960 /* SsrcEvent.swift */; };
+		4D2077E9D761A55982A47F46F213BAE7 /* Ssrc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95509291553D19923A70E8CF940D0E8 /* Ssrc.swift */; };
+		4D92DF1F6BFC64EB4F839DB442469139 /* CallstatsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD634DD093C7B4F076B0BED3336D8BE1 /* CallstatsConfig.swift */; };
+		4F7006349318FAE7DCDB70CFF6A3385B /* MediaInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49E5CEAE818B96D3BC9E2556DF71E46 /* MediaInterceptor.swift */; };
+		518E05988248A987365CFA2AA729D568 /* EventSendingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796D7B9F68524C442E7B4E8A2B50A31C /* EventSendingOperation.swift */; };
+		535CF2964A0BAAAEEC030C564780A261 /* FabricActionEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0275B29887572957D5707F46FF6F6A2A /* FabricActionEvent.swift */; };
+		547A65EC66C5478A9A914CC6B6540CA7 /* EventSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A95F9D02C13BD7E66A98C5BDB3A2CCD /* EventSender.swift */; };
+		559C833AEDFC23E7A9E999BBCAA2C786 /* FabricInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937D2A2808DEC8923DA542491D089793 /* FabricInterceptor.swift */; };
+		57A66CF46F6D42754E6A55DCC46D855A /* DominantSpeakerEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE40E2B1E9FF99AB7BC66698EED4F861 /* DominantSpeakerEvent.swift */; };
 		5CD0672082BBB30760E099D25334BF27 /* SocketStringReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920D9577C8A995BC19A2646B4815171B /* SocketStringReader.swift */; };
-		60E5696A34D9B6484006A65C1C5670B8 /* DominantSpeakerEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF07B7A9016F9910DC09F70040B1D392 /* DominantSpeakerEvent.swift */; };
 		61169B35BED5797892769E569557F7C1 /* SocketEnginePollable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A52892D329EF6D1475D813A1B875C85 /* SocketEnginePollable.swift */; };
-		6136F2600629BFD045867BB670BE423B /* IceDisruptEndEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3595C05A533387A6CE3609D55A53C48 /* IceDisruptEndEvent.swift */; };
-		65F7C19DD928705092C0AFCBB86EE424 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F7B4AFB2E41A369EFF6E3E81C04691 /* Foundation.framework */; };
-		672E5CEB2EE44A6065C17FE6F7241DEE /* FabricActionEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAEAC3451784CEA070F4A994C0AE00E /* FabricActionEvent.swift */; };
-		68DD72C691C3D78B083B6D19F78A18D7 /* FabricStateChangeEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424B0C22FBC3B0D14C197967E474DE55 /* FabricStateChangeEvent.swift */; };
+		6515C0B17E8C95ED01404040A630CE33 /* FabricSetupEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92EA45CDC7AF2280EC894F084D00980 /* FabricSetupEvent.swift */; };
+		6A59AA9534D0C89805A1A1CA0907B6F7 /* FabricSetupFailedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5ADEE0BC847BB60F0E0FC14552600F3 /* FabricSetupFailedEvent.swift */; };
+		6D7B3CE4F1DA7F2DA5D2348D2E3474F7 /* IceInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC46F8BFEDEC6F2FC576C3A6E8EC898 /* IceInterceptor.swift */; };
 		6E73B6614C826DF58C1452233D2AD7DE /* SocketEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0486F1262662A2EC96ADA292D800FD4 /* SocketEngine.swift */; };
-		7DF60B56856B61AACE8F9C6636046EAD /* CallstatsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD634DD093C7B4F076B0BED3336D8BE1 /* CallstatsConfig.swift */; };
+		70ECB7A763583AAF0512BBF102D9A214 /* CallstatsEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CF0FA03E6E60E6C50F6004DBF6363E /* CallstatsEvents.swift */; };
+		741425DFB09B4E073624BFA4C62498D1 /* EndpointInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8176C29348BB45D7FEA53BB1E24D2ABD /* EndpointInfo.swift */; };
+		75F781698BD22BF2FCA91895BFD0FAEE /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8144E903C15557070D2352E2B2427DC0 /* EventManager.swift */; };
+		794CA21502682EC08DF965C15EB98F93 /* SystemStatusStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC698C643E48A9986ADC55C1E844AA8 /* SystemStatusStats.swift */; };
+		79DE4C3C3749791CDCED05223EF4CA66 /* FabricTerminatedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07C436BE2CC5C6B5E46C799FCAEAC28 /* FabricTerminatedEvent.swift */; };
+		7D3271EA92977CA49EE9D706F54A2AA9 /* TokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E261CA1441B89FFC01D34587447504 /* TokenRequest.swift */; };
 		7E0D872307BB4E7AE2F65EB9225F1766 /* Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05E9951C0BF6BF9DE893438C0A47BC1 /* Compression.swift */; };
-		813F6E383530FFB3DB6892D32F939C75 /* EndpointInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E5C83F8F2DEB5FAED4F4F5185DBBD /* EndpointInfo.swift */; };
+		8061F08C564FDD309F50E3D0F953840E /* LogEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243C74717727D48ADFBF941283E8897C /* LogEvent.swift */; };
 		816696E20E99BBF3FF9332DC28A3ACDD /* SocketIOClientConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0097C447727368745C8DC8F798CE2C5B /* SocketIOClientConfiguration.swift */; };
-		83B0947E5ACF5AB249F38452C07B80AF /* FabricInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937D2A2808DEC8923DA542491D089793 /* FabricInterceptor.swift */; };
+		841A9944AD15D681D9B6BC70A4DCA47E /* IceRestartEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC75AE46210175A86E2633E7E74FD85 /* IceRestartEvent.swift */; };
+		853545D56705C638060A78EBE267D2EE /* ConferenceStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = A966F8466C619968C9E1A4EFF16701E8 /* ConferenceStats.swift */; };
+		87773A4AF7005D8E504FBB6D0B500ACC /* IceTerminatedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC0317EF41B0D349695A01E4F0A62DD /* IceTerminatedEvent.swift */; };
+		8934298C0E212EA543D3BACEA4A76252 /* RTCSessionDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FBB03DEDAB19048BDAF56E8B1D9C5D /* RTCSessionDescription.swift */; };
 		89366ED64F92E32934C9ADE1C961D24F /* Socket.IO-Client-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D0FD411727EF649F05DAEFA4CE62AE4B /* Socket.IO-Client-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		89BD4F0A84AC63C0ABB7A6651077C578 /* UserJoinEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86179D524CEF2AAC3C71198B35DB0FDB /* UserJoinEvent.swift */; };
-		906125F271632BEDD644CF26991121FC /* RTCPeerConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F231345018C8F9EF9A93B0140F7A440 /* RTCPeerConnection.swift */; };
 		90C4AA77D00EAEADFD6C39D53FD6B981 /* SocketIOClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9235A4159661B85A4442D885DEFEB51 /* SocketIOClientSpec.swift */; };
 		91BE73A444A73153F1717DB086BD17FD /* SocketEngineClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1212232D1EEABAB26AD1D3D7D08960E2 /* SocketEngineClient.swift */; };
-		95F838C38BD1EAE5D0277C933EE5784D /* EventSendingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80532E062B95771D7A0E55E0919CBA74 /* EventSendingOperation.swift */; };
-		9775A8CD2EB02446D9A91FC01645E3E6 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFDD832E7CF1C139A32FFD11E0F6079 /* Feedback.swift */; };
-		97DE6BD504E7880743902481BE8B30AD /* MediaEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91C5FD19FB3EF03E6B723E80B59478C /* MediaEvent.swift */; };
-		98DAF5CF615DFE968043884BC5AB1DAB /* FabricEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA9AFCCE61E4A62388B7D45B26B404E /* FabricEvent.swift */; };
-		A401BA40D6BD4569C8C33D06FBE949E1 /* IceConnectionDisruptEndEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB203D8E6BE9FA00EEBA8FA7A71F3C1 /* IceConnectionDisruptEndEvent.swift */; };
-		A5A905596C628E0AF6F0E3AD511ECAC6 /* MediaActionEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF440E2321C90B0F1B72D4210CDE7D9 /* MediaActionEvent.swift */; };
-		A6C40879FAA13675D0D6FC6A6A9F1BCF /* FabricSetupFailedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE827709A68D4B1452295F8DCCA5372D /* FabricSetupFailedEvent.swift */; };
-		A6CF07304846C3A0FB60F68DBD518839 /* IceConnectionDisruptStartEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336BD56416EA0BBA368F5CBACF114CAA /* IceConnectionDisruptStartEvent.swift */; };
+		9BC42C222C92CBEAF0C47B87BBBD6A2C /* DeviceEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8072ED5DF1362D26B60C865D969E7EE0 /* DeviceEvent.swift */; };
+		9CAA6DB57FE41B507759D56EDF349BE5 /* Callstats-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EE9535F2BC67D248EB78BFCDFDFA192 /* Callstats-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A2365557D02D0DCFE3CF2ACEC6A8D902 /* SdpEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E27EA4738715B2B5ACBF11490DC3666 /* SdpEvent.swift */; };
+		A8066B954FF8847A03476518FC0E5858 /* RTCStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEFF7D6557C8B8B950CC7962051AB78 /* RTCStats.swift */; };
+		A90BA619CC2FECC561724F5D825802D9 /* UserJoinEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A15FC30C7B044D72C278FA22A338040 /* UserJoinEvent.swift */; };
+		AACC45BAEE51183A1639CC3BCD9F84E9 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5151C9722B9335B2387DC9FFC1868627 /* HttpClient.swift */; };
+		AB8BFDD8C1A123ACF5018236F63D5644 /* FabricStateChangeEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86785D5DFFE468CBBADF4D4FA601F96E /* FabricStateChangeEvent.swift */; };
 		AC8AE4501EEF324E94AB5BDD5ED48195 /* SocketRawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B7B49F9A9B1E5AB825873BE6E3AA5C /* SocketRawView.swift */; };
 		AE31298B01CA4593F4E31AAB09136224 /* SocketParsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA1AA14D2426D89B6F39A451F05E26 /* SocketParsable.swift */; };
-		B538027C24B2A69FDD433262A21BAF61 /* FabricDroppedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36A366EA1FCD96D26CE8AC83B9C5711 /* FabricDroppedEvent.swift */; };
+		B0901D6963C6D6AC51916F1F12858E05 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904DF2CC3469108FCB2F3CAD4817220E /* Date.swift */; };
+		B479EE55354E7BA48319D0B85A9904C3 /* StatsInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C04E69DE7BE07BEB4F0C7682FB52F77 /* StatsInterceptor.swift */; };
+		B56A115CAF8A217F9343A51108215E8C /* IceCandidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66793BDB8926C3C96817EEBAB6867CD /* IceCandidate.swift */; };
 		B6619ED546D44F8575E43050368CE6F5 /* Pods-demo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3DB9EF45DB936397D49659BB169672 /* Pods-demo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BFBE08C3504B29E953F169A8D34E5F7D /* UserDetailsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF651BA6EEA58EE65603EDF5457A268 /* UserDetailsEvent.swift */; };
-		C14538CC7D0AD1787D9312FCE8D31CD8 /* SystemStatusStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = D854373FDACD6231F69901BDD4A6738A /* SystemStatusStats.swift */; };
-		C1C23111A2741DAAE8909EFE66560A69 /* DeviceEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674BFF801105FCBB3FA7825A547DA507 /* DeviceEvent.swift */; };
+		B74131BE64F390AEA9B175928915E17D /* MediaEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A88117B4D2754A097901E657F6E3533 /* MediaEvent.swift */; };
+		BB031D7CE3EBA5CF2D2C1340B1CD6E10 /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF8BA8EFB6FF5C8C7E033A8AACDA380 /* Interceptor.swift */; };
+		BC4289C31B6A13F30693E42E2D8E8C2B /* SsrcInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9E4509041D1433375194489FAD33F3 /* SsrcInterceptor.swift */; };
+		BDCAC66027226030F309384030721FA9 /* MediaDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4D1D1E0D078114AF4852B0C2741851 /* MediaDevice.swift */; };
+		BE8FC8321B99C93B89C9F4E673FA0F20 /* RTCPeerConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F231345018C8F9EF9A93B0140F7A440 /* RTCPeerConnection.swift */; };
+		C32B1D23EF9B2D80910E05AF457A911D /* FabricTransportChangeEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57274956CF67E6657D22CBA528FD94E /* FabricTransportChangeEvent.swift */; };
 		C4DA690946682DAB159D13C564ED8421 /* SSLSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB186FACDCB1B0F288E7E04209E5F742 /* SSLSecurity.swift */; };
 		C5AE0841A006E2DBB47D47A418448D49 /* Pods-Callstats-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D606A69A72E587EE3C1AAAD6797F5126 /* Pods-Callstats-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C723A51CA87F99C8AAC551779257A27A /* TokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BDAD7399EB86B9D584BC29CF592ED /* TokenRequest.swift */; };
 		C7448D10A636E00E5D068ED7CB3CF116 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F7B4AFB2E41A369EFF6E3E81C04691 /* Foundation.framework */; };
-		C819359FE321741BB22C936B5689A1AB /* SdpEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AAAC81954D2A9142835D0E4F9EF074 /* SdpEvent.swift */; };
-		CA3BE4B42E8CD828F3ED5531F1CE4EAF /* Callstats-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EE9535F2BC67D248EB78BFCDFDFA192 /* Callstats-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D1334FAABDCCACCC228FEE138E52A785 /* IceInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC46F8BFEDEC6F2FC576C3A6E8EC898 /* IceInterceptor.swift */; };
-		D24F002FAC2444FC85F266798CC38185 /* IceEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D3A77E0F9034FC2393766D8A884A39 /* IceEvent.swift */; };
+		CB8FC6BE3913D553D15260A8DA51DA5B /* IceConnectionDisruptEndEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1F4C80AC29E9DFAA7A984B62E74796 /* IceConnectionDisruptEndEvent.swift */; };
 		D2C207D48AF39B5F6C3A390DACF66525 /* SocketManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1BEEE95D8E8CFAE1019C7154F539E /* SocketManagerSpec.swift */; };
 		D65F0ECE880EF5073F6D543C361F9CBF /* Socket.IO-Client-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAA855666B263DC2384C2CB48BA43AC /* Socket.IO-Client-Swift-dummy.m */; };
 		D84054F5FCCD76C1EBA66CAB5628602A /* SocketEnginePacketType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E4D2A603877D3E29CFF76555D05C71 /* SocketEnginePacketType.swift */; };
 		DB7731935D37B07CDBA85617AEDE8FAB /* SocketLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FB36E7FD78759630A1EB643C4B347E /* SocketLogger.swift */; };
 		DD53491724F45B6E8A7B8710B6271C8F /* SocketAckManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA471221D771A5C08C43B87F6150095 /* SocketAckManager.swift */; };
-		DF06B704048E95AB7D2A919B01B485FC /* SdpInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2647853960A2573260B3E5FA91E7E697 /* SdpInterceptor.swift */; };
-		DF7475E7BE471CB99EDFEF01E13B4FE5 /* FabricTerminatedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E25E7903175E0E5124A645E1B8CBB13 /* FabricTerminatedEvent.swift */; };
-		E20C783A88C997CB566AAF6C2EBA63A8 /* IceDisruptStartEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0519D9004E3A3A29723AD80FF33E587B /* IceDisruptStartEvent.swift */; };
-		E271A305F0AF86E18EFCD50D3081DFF0 /* Ssrc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F05B674E4C12A5894CCD24F5C358E2C /* Ssrc.swift */; };
-		E602C675A2EB7D75F9A37E5765B9AACA /* StatsInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C04E69DE7BE07BEB4F0C7682FB52F77 /* StatsInterceptor.swift */; };
+		DE028FD0FDFC64E8480926DAE2D78242 /* MediaActionEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC6C4B1198C8313121D0D80B0FEF732 /* MediaActionEvent.swift */; };
 		EB7283E3076A491FB88F558445B955BE /* SSLSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13BDC380879510FE774BBF6322A67A9 /* SSLSecurity.swift */; };
-		EDCF0E7E9B07AE1EBB03B6DC93611949 /* RTCSessionDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FBB03DEDAB19048BDAF56E8B1D9C5D /* RTCSessionDescription.swift */; };
-		EF7601AC0D2B051CE8F8DA68EBF08338 /* UserAliveEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC655E3A4DD6BFA2BB94D0F7B349330 /* UserAliveEvent.swift */; };
-		F0F7B4408C61FB0CC8B4A593BBB04259 /* SystemStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479FCE359E59B6CDB1BD9602D5F6FE9F /* SystemStatus.swift */; };
-		F262696D15E159D6AFA171F39B5EBCF5 /* IceFailedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA48DF7F780BAD604E022D99BE38A06 /* IceFailedEvent.swift */; };
-		F6E0F27A677B1F917E992449EA29BE1B /* UserLeftEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626199408335E85CC9E5B188FCC2B869 /* UserLeftEvent.swift */; };
+		EF23D95AB27C8B967A9C706BB265282E /* SdpInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2647853960A2573260B3E5FA91E7E697 /* SdpInterceptor.swift */; };
 		F773505A4A72EAD9A911FF62C9065A2B /* Pods-demo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C615BC0EC7C67E295CC3085A9BE4707C /* Pods-demo-dummy.m */; };
 		F97DED8787ACF496B90910B9BA71C29F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F7B4AFB2E41A369EFF6E3E81C04691 /* Foundation.framework */; };
+		F9C6DC80FC8F6A57D50A287F49226C36 /* IceDisruptStartEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31523DA4D3A5845D3BCB65ACA63D5AF /* IceDisruptStartEvent.swift */; };
 		FBFBFE9A8B6A5E2EE067E52D13BB2937 /* Pods-CallstatsTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC666858DBC95BDC06FFF12C3FF89968 /* Pods-CallstatsTests-dummy.m */; };
 		FC160C83A6CDF6EE311B9025A06242C4 /* SocketEngineWebsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6424C0CD5F9D165F5B4521B324BACB5 /* SocketEngineWebsocket.swift */; };
-		FD200FA468B31B069760BD5F355BBAAC /* IceRestartEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C88FDA4A4C24CF7A288DE266591F791 /* IceRestartEvent.swift */; };
-		FE64464C10629362377A6FE46ED190AF /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226CEFB909CF852001499D9105C3C8BD /* Event.swift */; };
+		FD1E9FB8530304A91E1ABBB18AA9E5AA /* FabricDroppedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11A66D0D1E6C00B983880724736EA74 /* FabricDroppedEvent.swift */; };
+		FEDBA5CB676C3516DD10ABC2515668DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F7B4AFB2E41A369EFF6E3E81C04691 /* Foundation.framework */; };
+		FF112CE8B85F98D09C2B751B7ED723AA /* IceEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A10092A8BB9625FECA6EFF3C7CC905B /* IceEvent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,7 +135,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 23F254F13A27561D946956C4F32534AA;
+			remoteGlobalIDString = 1C8B4A7A151579F881025387439FBABF;
 			remoteInfo = Callstats;
 		};
 		6CD900EE473E81277A6445910D1E1F42 /* PBXContainerItemProxy */ = {
@@ -155,148 +156,149 @@
 
 /* Begin PBXFileReference section */
 		0097C447727368745C8DC8F798CE2C5B /* SocketIOClientConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketIOClientConfiguration.swift; path = Source/SocketIO/Client/SocketIOClientConfiguration.swift; sourceTree = "<group>"; };
+		0275B29887572957D5707F46FF6F6A2A /* FabricActionEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FabricActionEvent.swift; sourceTree = "<group>"; };
+		0359F21AAC1B6F97E1CECB47FD22186D /* IceCandidatePair.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IceCandidatePair.swift; sourceTree = "<group>"; };
 		039F4638AA2DE34FEB07E1C43A5FF170 /* SocketAnyEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketAnyEvent.swift; path = Source/SocketIO/Client/SocketAnyEvent.swift; sourceTree = "<group>"; };
-		0519D9004E3A3A29723AD80FF33E587B /* IceDisruptStartEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IceDisruptStartEvent.swift; sourceTree = "<group>"; };
 		053509D20608A90063DBC8EED580A1FF /* Starscream-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Starscream-dummy.m"; sourceTree = "<group>"; };
 		0F52249DD4D3DD3159B64A42F2E7349B /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F95C9DEB7055B915AEE24F3AF211B2E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11FD9D94841EF274C75EC7D7413350B1 /* Pods-Callstats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Callstats.release.xcconfig"; sourceTree = "<group>"; };
 		1212232D1EEABAB26AD1D3D7D08960E2 /* SocketEngineClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEngineClient.swift; path = Source/SocketIO/Engine/SocketEngineClient.swift; sourceTree = "<group>"; };
 		1259F5BB79D0E4500089EFFA3D894AFA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		12DF8372BF081C74F047E080E51C5A11 /* EventManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
-		154B307EED73F1F4C93B75EC290B83B2 /* IceCandidate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IceCandidate.swift; sourceTree = "<group>"; };
+		131956CA4D16C89E44FB3F95C5BF9257 /* FeedbackEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedbackEvent.swift; sourceTree = "<group>"; };
 		17B7B49F9A9B1E5AB825873BE6E3AA5C /* SocketRawView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketRawView.swift; path = Source/SocketIO/Client/SocketRawView.swift; sourceTree = "<group>"; };
 		181A64E2048B21D5F6263EF8E00BEFEC /* Pods-CallstatsTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CallstatsTests-umbrella.h"; sourceTree = "<group>"; };
 		19DD579B07A50930EC388E9385797F67 /* Callstats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Callstats.framework; path = Callstats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A93D8B3DD17C268A1DC3D56AC3231C7 /* Pods-CallstatsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CallstatsTests.debug.xcconfig"; sourceTree = "<group>"; };
-		1BA9AFCCE61E4A62388B7D45B26B404E /* FabricEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FabricEvent.swift; sourceTree = "<group>"; };
-		1BC655E3A4DD6BFA2BB94D0F7B349330 /* UserAliveEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserAliveEvent.swift; sourceTree = "<group>"; };
 		1C7CABD4ADBE30352930B676BD868692 /* Pods_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_demo.framework; path = "Pods-demo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D3DB9EF45DB936397D49659BB169672 /* Pods-demo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-demo-umbrella.h"; sourceTree = "<group>"; };
 		1F745A2785C317B95C5EF8EC2F212347 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		21D8D4B56650AA08BD11D5683571A40D /* FabricTransportChangeEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FabricTransportChangeEvent.swift; sourceTree = "<group>"; };
-		226CEFB909CF852001499D9105C3C8BD /* Event.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		243C74717727D48ADFBF941283E8897C /* LogEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LogEvent.swift; sourceTree = "<group>"; };
 		25094F4FB43A3DB241221C2868FA65E0 /* SocketEngineSpec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEngineSpec.swift; path = Source/SocketIO/Engine/SocketEngineSpec.swift; sourceTree = "<group>"; };
 		2647853960A2573260B3E5FA91E7E697 /* SdpInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SdpInterceptor.swift; sourceTree = "<group>"; };
 		2934D85B956317B00CA326879C42E5DA /* SocketAckEmitter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketAckEmitter.swift; path = Source/SocketIO/Ack/SocketAckEmitter.swift; sourceTree = "<group>"; };
-		2AFDD832E7CF1C139A32FFD11E0F6079 /* Feedback.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
 		2C04E69DE7BE07BEB4F0C7682FB52F77 /* StatsInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StatsInterceptor.swift; sourceTree = "<group>"; };
 		2CE97062FAE2B1C842EC0C52208CB776 /* Starscream-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Starscream-umbrella.h"; sourceTree = "<group>"; };
 		2D1F69F4BDBA082D097EC3BCF178F5A5 /* SocketManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketManager.swift; path = Source/SocketIO/Manager/SocketManager.swift; sourceTree = "<group>"; };
 		32FBB03DEDAB19048BDAF56E8B1D9C5D /* RTCSessionDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RTCSessionDescription.swift; sourceTree = "<group>"; };
-		336BD56416EA0BBA368F5CBACF114CAA /* IceConnectionDisruptStartEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IceConnectionDisruptStartEvent.swift; sourceTree = "<group>"; };
 		36F0828B627CF6EDD86D3A7302F7C478 /* Pods-Callstats.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Callstats.modulemap"; sourceTree = "<group>"; };
+		38E261CA1441B89FFC01D34587447504 /* TokenRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TokenRequest.swift; sourceTree = "<group>"; };
 		3BEFF7D6557C8B8B950CC7962051AB78 /* RTCStats.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RTCStats.swift; sourceTree = "<group>"; };
 		3E69EC281487AEC9604966E6CA8AAC22 /* Pods-demo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-demo.modulemap"; sourceTree = "<group>"; };
-		3FA48DF7F780BAD604E022D99BE38A06 /* IceFailedEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IceFailedEvent.swift; sourceTree = "<group>"; };
-		424B0C22FBC3B0D14C197967E474DE55 /* FabricStateChangeEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FabricStateChangeEvent.swift; sourceTree = "<group>"; };
+		3EC6C4B1198C8313121D0D80B0FEF732 /* MediaActionEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MediaActionEvent.swift; sourceTree = "<group>"; };
+		4606E28FD72894BCB81DE9311673E960 /* SsrcEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SsrcEvent.swift; sourceTree = "<group>"; };
+		46C34B8B9E149F66C949EEAA4FDE80C0 /* UserLeftEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserLeftEvent.swift; sourceTree = "<group>"; };
 		479FCE359E59B6CDB1BD9602D5F6FE9F /* SystemStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SystemStatus.swift; sourceTree = "<group>"; };
-		49637470C572DC26F282CDCBF168060B /* IceCandidatePair.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IceCandidatePair.swift; sourceTree = "<group>"; };
-		4C88FDA4A4C24CF7A288DE266591F791 /* IceRestartEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IceRestartEvent.swift; sourceTree = "<group>"; };
-		4E25E7903175E0E5124A645E1B8CBB13 /* FabricTerminatedEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FabricTerminatedEvent.swift; sourceTree = "<group>"; };
-		4E2BDAD7399EB86B9D584BC29CF592ED /* TokenRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TokenRequest.swift; sourceTree = "<group>"; };
+		4A15FC30C7B044D72C278FA22A338040 /* UserJoinEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserJoinEvent.swift; sourceTree = "<group>"; };
+		4A88117B4D2754A097901E657F6E3533 /* MediaEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MediaEvent.swift; sourceTree = "<group>"; };
+		4E27EA4738715B2B5ACBF11490DC3666 /* SdpEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SdpEvent.swift; sourceTree = "<group>"; };
 		4F523739BB04971AF16D4151BFB2B220 /* Pods-CallstatsTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CallstatsTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5151C9722B9335B2387DC9FFC1868627 /* HttpClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		5A89DEBC06647B42BBA146580248201E /* WebRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebRTC.framework; path = Frameworks/frameworks/WebRTC.framework; sourceTree = "<group>"; };
 		5C1F082E6560B8CA2089259764306BFE /* SocketPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketPacket.swift; path = Source/SocketIO/Parse/SocketPacket.swift; sourceTree = "<group>"; };
-		5D078071A5418865470E487E1A8E8006 /* MediaPlaybackEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MediaPlaybackEvent.swift; sourceTree = "<group>"; };
 		5DBBFF0315145F81038614D07439727C /* Pods-demo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-demo-resources.sh"; sourceTree = "<group>"; };
 		5FAB85513293B39DD29AEDF37C70A910 /* Pods-Callstats-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Callstats-acknowledgements.plist"; sourceTree = "<group>"; };
 		6179A5D7EB006F9F16996C141F620E8C /* Callstats-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Callstats-prefix.pch"; sourceTree = "<group>"; };
-		626199408335E85CC9E5B188FCC2B869 /* UserLeftEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserLeftEvent.swift; sourceTree = "<group>"; };
 		629EFBBA2E0310A19645B7C402D8549B /* CallstatsInjector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CallstatsInjector.swift; sourceTree = "<group>"; };
 		64C01AD19544F321989E41F6A9DBA640 /* Pods_Callstats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Callstats.framework; path = "Pods-Callstats.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		674BFF801105FCBB3FA7825A547DA507 /* DeviceEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DeviceEvent.swift; sourceTree = "<group>"; };
 		674FF870D30CC736602F0D981F6F4184 /* Callstats.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Callstats.swift; sourceTree = "<group>"; };
 		697837A647F61CE6BFA35E1C150E48FB /* Pods-Callstats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Callstats.debug.xcconfig"; sourceTree = "<group>"; };
+		6A10092A8BB9625FECA6EFF3C7CC905B /* IceEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IceEvent.swift; sourceTree = "<group>"; };
 		6A52892D329EF6D1475D813A1B875C85 /* SocketEnginePollable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEnginePollable.swift; path = Source/SocketIO/Engine/SocketEnginePollable.swift; sourceTree = "<group>"; };
-		6AF440E2321C90B0F1B72D4210CDE7D9 /* MediaActionEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MediaActionEvent.swift; sourceTree = "<group>"; };
 		6CA471221D771A5C08C43B87F6150095 /* SocketAckManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketAckManager.swift; path = Source/SocketIO/Ack/SocketAckManager.swift; sourceTree = "<group>"; };
 		6D10E50DF8E79C56F2D50D273B54D372 /* Callstats.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Callstats.modulemap; sourceTree = "<group>"; };
 		6E1CB3D4D579BB85034B136A26B2BF0A /* Callstats.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = Callstats.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		70A1BEEE95D8E8CFAE1019C7154F539E /* SocketManagerSpec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketManagerSpec.swift; path = Source/SocketIO/Manager/SocketManagerSpec.swift; sourceTree = "<group>"; };
-		738BE5C9382F43DC8EDFB2E607F21A1B /* ConferenceStats.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConferenceStats.swift; sourceTree = "<group>"; };
+		71BF05045C026974B74D8B467FCF4D96 /* Feedback.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
 		762D2457B998B9885162CF6FE4094716 /* Pods-Callstats-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Callstats-dummy.m"; sourceTree = "<group>"; };
+		796D7B9F68524C442E7B4E8A2B50A31C /* EventSendingOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EventSendingOperation.swift; sourceTree = "<group>"; };
+		7A95F9D02C13BD7E66A98C5BDB3A2CCD /* EventSender.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EventSender.swift; sourceTree = "<group>"; };
 		7C858B1F49AF8454EDC7AC051D806BA0 /* SocketIOClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketIOClient.swift; path = Source/SocketIO/Client/SocketIOClient.swift; sourceTree = "<group>"; };
 		7CFCB12BD4C5EAE0BCBBE77254B754D4 /* Pods-Callstats-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Callstats-resources.sh"; sourceTree = "<group>"; };
 		7D92C7F754BC0BA076391ADE2BC99F10 /* SocketExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketExtensions.swift; path = Source/SocketIO/Util/SocketExtensions.swift; sourceTree = "<group>"; };
 		7E95396D0892BA7271E1ABD6F2E8F4FF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FA88769CBF9494FCB5DE550D694DD87 /* Starscream-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Starscream-prefix.pch"; sourceTree = "<group>"; };
-		80532E062B95771D7A0E55E0919CBA74 /* EventSendingOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EventSendingOperation.swift; sourceTree = "<group>"; };
+		8072ED5DF1362D26B60C865D969E7EE0 /* DeviceEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DeviceEvent.swift; sourceTree = "<group>"; };
+		8144E903C15557070D2352E2B2427DC0 /* EventManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
+		8176C29348BB45D7FEA53BB1E24D2ABD /* EndpointInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EndpointInfo.swift; sourceTree = "<group>"; };
 		81C7B5E74983FB49A27ABACC7843606F /* Pods-Callstats-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Callstats-acknowledgements.markdown"; sourceTree = "<group>"; };
 		856B4FDEC08E7A3EB502C0781E7C175F /* Pods_CallstatsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CallstatsTests.framework; path = "Pods-CallstatsTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		86179D524CEF2AAC3C71198B35DB0FDB /* UserJoinEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserJoinEvent.swift; sourceTree = "<group>"; };
+		86785D5DFFE468CBBADF4D4FA601F96E /* FabricStateChangeEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FabricStateChangeEvent.swift; sourceTree = "<group>"; };
+		8687D3B9315C9D29B4784D160C4C2BFD /* IceConnectionDisruptStartEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IceConnectionDisruptStartEvent.swift; sourceTree = "<group>"; };
 		89397BF244FB133F97E6D6049666C580 /* Pods-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-demo.release.xcconfig"; sourceTree = "<group>"; };
 		8976B7ACC65F4E4A9306A12838BD86CE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8B70FA2D0B4D91CB773B050E8F4C097E /* SsrcEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SsrcEvent.swift; sourceTree = "<group>"; };
-		90420B1A25516710F83143C8FFA4095A /* FabricSetupEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FabricSetupEvent.swift; sourceTree = "<group>"; };
+		8CC0317EF41B0D349695A01E4F0A62DD /* IceTerminatedEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IceTerminatedEvent.swift; sourceTree = "<group>"; };
 		904DF2CC3469108FCB2F3CAD4817220E /* Date.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		920D9577C8A995BC19A2646B4815171B /* SocketStringReader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketStringReader.swift; path = Source/SocketIO/Util/SocketStringReader.swift; sourceTree = "<group>"; };
 		937D2A2808DEC8923DA542491D089793 /* FabricInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FabricInterceptor.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		94650C293678AF8103285C7D8DF843BA /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Starscream.framework; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9717D5000F8A7A91F8BB011D9358CFA8 /* Pods-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-demo.debug.xcconfig"; sourceTree = "<group>"; };
-		97AAAC81954D2A9142835D0E4F9EF074 /* SdpEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SdpEvent.swift; sourceTree = "<group>"; };
 		9805250E33D961E8BD07889C41281ABE /* Pods-CallstatsTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CallstatsTests-frameworks.sh"; sourceTree = "<group>"; };
+		9899FA5CD0279AC54645A80EC2EDA33A /* MediaPlaybackEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MediaPlaybackEvent.swift; sourceTree = "<group>"; };
+		98B61D9C07141C8DEF3DEF6CE535899B /* IceFailedEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IceFailedEvent.swift; sourceTree = "<group>"; };
 		9AC46F8BFEDEC6F2FC576C3A6E8EC898 /* IceInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IceInterceptor.swift; sourceTree = "<group>"; };
-		9B9E347F84E288D0241A25C3E7E009BA /* MediaDevice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MediaDevice.swift; sourceTree = "<group>"; };
+		9BC75AE46210175A86E2633E7E74FD85 /* IceRestartEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IceRestartEvent.swift; sourceTree = "<group>"; };
 		9CF8D850E8C860015400B595ABB789D6 /* Pods-demo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-demo-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9EE9535F2BC67D248EB78BFCDFDFA192 /* Callstats-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Callstats-umbrella.h"; sourceTree = "<group>"; };
-		9F05B674E4C12A5894CCD24F5C358E2C /* Ssrc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Ssrc.swift; sourceTree = "<group>"; };
 		9F231345018C8F9EF9A93B0140F7A440 /* RTCPeerConnection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RTCPeerConnection.swift; sourceTree = "<group>"; };
 		A05E9951C0BF6BF9DE893438C0A47BC1 /* Compression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Compression.swift; path = Sources/Compression.swift; sourceTree = "<group>"; };
 		A0B6D0B32DF399232F7014FF672586D5 /* SocketIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SocketIO.framework; path = "Socket.IO-Client-Swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A3DFB91D53F7FD04164882F0DFD98B93 /* EventSender.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EventSender.swift; sourceTree = "<group>"; };
+		A66793BDB8926C3C96817EEBAB6867CD /* IceCandidate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IceCandidate.swift; sourceTree = "<group>"; };
 		A67648D8D970AFAB5A9F8F0EB658DF46 /* Socket.IO-Client-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Socket.IO-Client-Swift.modulemap"; sourceTree = "<group>"; };
+		A966F8466C619968C9E1A4EFF16701E8 /* ConferenceStats.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConferenceStats.swift; sourceTree = "<group>"; };
+		AA4D1D1E0D078114AF4852B0C2741851 /* MediaDevice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MediaDevice.swift; sourceTree = "<group>"; };
 		AB186FACDCB1B0F288E7E04209E5F742 /* SSLSecurity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SSLSecurity.swift; path = Source/SocketIO/Util/SSLSecurity.swift; sourceTree = "<group>"; };
 		ABF1C2065B479E02A5BBB1F3D224C70F /* Pods-CallstatsTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CallstatsTests-resources.sh"; sourceTree = "<group>"; };
 		ACA43C286FFA0D6EDD8A9403E556169B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ACAEAC3451784CEA070F4A994C0AE00E /* FabricActionEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FabricActionEvent.swift; sourceTree = "<group>"; };
+		AD1F4C80AC29E9DFAA7A984B62E74796 /* IceConnectionDisruptEndEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IceConnectionDisruptEndEvent.swift; sourceTree = "<group>"; };
 		AD634DD093C7B4F076B0BED3336D8BE1 /* CallstatsConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CallstatsConfig.swift; sourceTree = "<group>"; };
-		AD6E5C83F8F2DEB5FAED4F4F5185DBBD /* EndpointInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EndpointInfo.swift; sourceTree = "<group>"; };
+		AD6EC225D7425CF8FE6011F049AB1EDD /* FabricEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FabricEvent.swift; sourceTree = "<group>"; };
 		AD9561D7F80047E2FE3E1FAB076ED724 /* Pods-demo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-demo-frameworks.sh"; sourceTree = "<group>"; };
-		AF07B7A9016F9910DC09F70040B1D392 /* DominantSpeakerEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DominantSpeakerEvent.swift; sourceTree = "<group>"; };
+		ADC698C643E48A9986ADC55C1E844AA8 /* SystemStatusStats.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SystemStatusStats.swift; sourceTree = "<group>"; };
+		AE40E2B1E9FF99AB7BC66698EED4F861 /* DominantSpeakerEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DominantSpeakerEvent.swift; sourceTree = "<group>"; };
+		AF722BB10BD9F2702FB7386E4F91ECBE /* UserAliveEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserAliveEvent.swift; sourceTree = "<group>"; };
 		AFDF5703938E1B0109A06B5F7A6AD88D /* SocketTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketTypes.swift; path = Source/SocketIO/Util/SocketTypes.swift; sourceTree = "<group>"; };
+		B11A66D0D1E6C00B983880724736EA74 /* FabricDroppedEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FabricDroppedEvent.swift; sourceTree = "<group>"; };
 		B1EA1AA14D2426D89B6F39A451F05E26 /* SocketParsable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketParsable.swift; path = Source/SocketIO/Parse/SocketParsable.swift; sourceTree = "<group>"; };
 		B2FB36E7FD78759630A1EB643C4B347E /* SocketLogger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketLogger.swift; path = Source/SocketIO/Util/SocketLogger.swift; sourceTree = "<group>"; };
 		B3E4D2A603877D3E29CFF76555D05C71 /* SocketEnginePacketType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEnginePacketType.swift; path = Source/SocketIO/Engine/SocketEnginePacketType.swift; sourceTree = "<group>"; };
 		B49E5CEAE818B96D3BC9E2556DF71E46 /* MediaInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MediaInterceptor.swift; sourceTree = "<group>"; };
-		BF9B9873B87FB7364F0B9BCBF41883E5 /* IceTerminatedEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IceTerminatedEvent.swift; sourceTree = "<group>"; };
+		B5ADEE0BC847BB60F0E0FC14552600F3 /* FabricSetupFailedEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FabricSetupFailedEvent.swift; sourceTree = "<group>"; };
+		BE9F22FB1D60CEF2046B14280157E071 /* IceAbortedEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IceAbortedEvent.swift; sourceTree = "<group>"; };
 		C03C83636ADE602A3221325B522A7B26 /* Callstats.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Callstats.xcconfig; sourceTree = "<group>"; };
 		C358B2E7AAC7F72EB06CC79CB69D7952 /* WebSocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebSocket.swift; path = Sources/WebSocket.swift; sourceTree = "<group>"; };
-		C3595C05A533387A6CE3609D55A53C48 /* IceDisruptEndEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IceDisruptEndEvent.swift; sourceTree = "<group>"; };
 		C4B4F9FE19ADF7823C0554ADCB208315 /* SocketIOStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketIOStatus.swift; path = Source/SocketIO/Client/SocketIOStatus.swift; sourceTree = "<group>"; };
 		C615BC0EC7C67E295CC3085A9BE4707C /* Pods-demo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-demo-dummy.m"; sourceTree = "<group>"; };
-		C91C5FD19FB3EF03E6B723E80B59478C /* MediaEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MediaEvent.swift; sourceTree = "<group>"; };
+		C92EA45CDC7AF2280EC894F084D00980 /* FabricSetupEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FabricSetupEvent.swift; sourceTree = "<group>"; };
 		CC76074636DBC04A144A69392F966979 /* Pods-CallstatsTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CallstatsTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		CC9E4509041D1433375194489FAD33F3 /* SsrcInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SsrcInterceptor.swift; sourceTree = "<group>"; };
-		CCF651BA6EEA58EE65603EDF5457A268 /* UserDetailsEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserDetailsEvent.swift; sourceTree = "<group>"; };
-		D01E3D8AB48FB4D2E7457BBBFE29F470 /* IceAbortedEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IceAbortedEvent.swift; sourceTree = "<group>"; };
+		CD601B735D06B1271A7E7C44B3DC9DE7 /* Event.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		D0486F1262662A2EC96ADA292D800FD4 /* SocketEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEngine.swift; path = Source/SocketIO/Engine/SocketEngine.swift; sourceTree = "<group>"; };
 		D0CF0FA03E6E60E6C50F6004DBF6363E /* CallstatsEvents.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CallstatsEvents.swift; sourceTree = "<group>"; };
 		D0FD411727EF649F05DAEFA4CE62AE4B /* Socket.IO-Client-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Socket.IO-Client-Swift-umbrella.h"; sourceTree = "<group>"; };
 		D13BDC380879510FE774BBF6322A67A9 /* SSLSecurity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SSLSecurity.swift; path = Sources/SSLSecurity.swift; sourceTree = "<group>"; };
-		D36A366EA1FCD96D26CE8AC83B9C5711 /* FabricDroppedEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FabricDroppedEvent.swift; sourceTree = "<group>"; };
+		D36F8FEC8EBA5510201A74AF12A4E2CC /* IceDisruptEndEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IceDisruptEndEvent.swift; sourceTree = "<group>"; };
 		D606A69A72E587EE3C1AAAD6797F5126 /* Pods-Callstats-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Callstats-umbrella.h"; sourceTree = "<group>"; };
 		D6D2F36E90C895350EEB321B55F95600 /* Socket.IO-Client-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Socket.IO-Client-Swift-prefix.pch"; sourceTree = "<group>"; };
-		D854373FDACD6231F69901BDD4A6738A /* SystemStatusStats.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SystemStatusStats.swift; sourceTree = "<group>"; };
+		D9ECBC1C4A98135B26A7EED2DE8A16B6 /* UserDetailsEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserDetailsEvent.swift; sourceTree = "<group>"; };
 		DBAA87CD50276CC227A06908030A410C /* Starscream.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Starscream.modulemap; sourceTree = "<group>"; };
 		DBDE55178ED07029011FF2CC28234B4C /* Starscream.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Starscream.xcconfig; sourceTree = "<group>"; };
 		DCAA855666B263DC2384C2CB48BA43AC /* Socket.IO-Client-Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Socket.IO-Client-Swift-dummy.m"; sourceTree = "<group>"; };
 		DEF8BA8EFB6FF5C8C7E033A8AACDA380 /* Interceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Interceptor.swift; sourceTree = "<group>"; };
+		E07C436BE2CC5C6B5E46C799FCAEAC28 /* FabricTerminatedEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FabricTerminatedEvent.swift; sourceTree = "<group>"; };
 		E3F2DE454A43B764B6E36C9B8A0AFC3C /* Callstats-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Callstats-dummy.m"; sourceTree = "<group>"; };
 		E7ABD7A2552E8CEED9FFAE53BBAC28F7 /* Socket.IO-Client-Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Socket.IO-Client-Swift.xcconfig"; sourceTree = "<group>"; };
 		E829FA70FB52039043D509FA55BF853C /* Pods-CallstatsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CallstatsTests.release.xcconfig"; sourceTree = "<group>"; };
 		EC666858DBC95BDC06FFF12C3FF89968 /* Pods-CallstatsTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CallstatsTests-dummy.m"; sourceTree = "<group>"; };
-		EDB203D8E6BE9FA00EEBA8FA7A71F3C1 /* IceConnectionDisruptEndEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IceConnectionDisruptEndEvent.swift; sourceTree = "<group>"; };
-		EE827709A68D4B1452295F8DCCA5372D /* FabricSetupFailedEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FabricSetupFailedEvent.swift; sourceTree = "<group>"; };
 		EEA7011E6B51149EC119D4118583FE8A /* Pods-demo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-demo-acknowledgements.plist"; sourceTree = "<group>"; };
 		F04949B454F9C5FACA5B0FBB195833B5 /* Pods-CallstatsTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CallstatsTests.modulemap"; sourceTree = "<group>"; };
 		F1F7B4AFB2E41A369EFF6E3E81C04691 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		F4019935ED492B292672AF589F3152B3 /* LogEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LogEvent.swift; sourceTree = "<group>"; };
+		F31523DA4D3A5845D3BCB65ACA63D5AF /* IceDisruptStartEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IceDisruptStartEvent.swift; sourceTree = "<group>"; };
+		F57274956CF67E6657D22CBA528FD94E /* FabricTransportChangeEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FabricTransportChangeEvent.swift; sourceTree = "<group>"; };
 		F6424C0CD5F9D165F5B4521B324BACB5 /* SocketEngineWebsocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEngineWebsocket.swift; path = Source/SocketIO/Engine/SocketEngineWebsocket.swift; sourceTree = "<group>"; };
-		F8D3A77E0F9034FC2393766D8A884A39 /* IceEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IceEvent.swift; sourceTree = "<group>"; };
 		F9235A4159661B85A4442D885DEFEB51 /* SocketIOClientSpec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketIOClientSpec.swift; path = Source/SocketIO/Client/SocketIOClientSpec.swift; sourceTree = "<group>"; };
+		F95509291553D19923A70E8CF940D0E8 /* Ssrc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Ssrc.swift; sourceTree = "<group>"; };
 		FC8C73FC3E7BE128CF07DFC9FFF860E9 /* SocketEventHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEventHandler.swift; path = Source/SocketIO/Client/SocketEventHandler.swift; sourceTree = "<group>"; };
 		FF73169F1624BBD971710205942C2D1E /* SocketIOClientOption.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketIOClientOption.swift; path = Source/SocketIO/Client/SocketIOClientOption.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -318,19 +320,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		27AE3A7B9CEB65BFBABFB30AD63EAB37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEDBA5CB676C3516DD10ABC2515668DF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B973B7FB800E79C1964D200435DC5B8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				295C621BA1BB5EBD0D4D58FA324ABE8D /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4C9F84C80CA9E1F8E02F93E534BE2C2D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				65F7C19DD928705092C0AFCBB86EE424 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,16 +356,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		08F21B1E54BF1AA6C5CF63CCFAC07AE8 /* Special */ = {
+		08B739804AB248828E8B1988B1E8DFEA /* Device */ = {
 			isa = PBXGroup;
 			children = (
-				AF07B7A9016F9910DC09F70040B1D392 /* DominantSpeakerEvent.swift */,
-				F4019935ED492B292672AF589F3152B3 /* LogEvent.swift */,
-				97AAAC81954D2A9142835D0E4F9EF074 /* SdpEvent.swift */,
-				8B70FA2D0B4D91CB773B050E8F4C097E /* SsrcEvent.swift */,
+				8072ED5DF1362D26B60C865D969E7EE0 /* DeviceEvent.swift */,
 			);
-			name = Special;
-			path = Special;
+			name = Device;
+			path = Device;
+			sourceTree = "<group>";
+		};
+		0AEB15460AE0613B99CE73AC8C966590 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				AF722BB10BD9F2702FB7386E4F91ECBE /* UserAliveEvent.swift */,
+				D9ECBC1C4A98135B26A7EED2DE8A16B6 /* UserDetailsEvent.swift */,
+				4A15FC30C7B044D72C278FA22A338040 /* UserJoinEvent.swift */,
+				46C34B8B9E149F66C949EEAA4FDE80C0 /* UserLeftEvent.swift */,
+			);
+			name = User;
+			path = User;
 			sourceTree = "<group>";
 		};
 		0C088E29124DCA129F7CCE5A12902140 /* Socket.IO-Client-Swift */ = {
@@ -400,14 +411,64 @@
 			path = "Socket.IO-Client-Swift";
 			sourceTree = "<group>";
 		};
-		193F5F460059658C7F17FA76318990BA /* Stats */ = {
+		121BA8CA084810F84B738CDF9AFF591C /* Info */ = {
 			isa = PBXGroup;
 			children = (
-				738BE5C9382F43DC8EDFB2E607F21A1B /* ConferenceStats.swift */,
-				D854373FDACD6231F69901BDD4A6738A /* SystemStatusStats.swift */,
+				8176C29348BB45D7FEA53BB1E24D2ABD /* EndpointInfo.swift */,
+				71BF05045C026974B74D8B467FCF4D96 /* Feedback.swift */,
+				A66793BDB8926C3C96817EEBAB6867CD /* IceCandidate.swift */,
+				0359F21AAC1B6F97E1CECB47FD22186D /* IceCandidatePair.swift */,
+				AA4D1D1E0D078114AF4852B0C2741851 /* MediaDevice.swift */,
+				F95509291553D19923A70E8CF940D0E8 /* Ssrc.swift */,
 			);
-			name = Stats;
-			path = Stats;
+			name = Info;
+			path = Info;
+			sourceTree = "<group>";
+		};
+		130A7952906CDB32AEAD26DF68DD46D3 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				38E261CA1441B89FFC01D34587447504 /* TokenRequest.swift */,
+			);
+			name = Auth;
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		16714D6E56E7197361C45CA9DD776078 /* Fabric */ = {
+			isa = PBXGroup;
+			children = (
+				0275B29887572957D5707F46FF6F6A2A /* FabricActionEvent.swift */,
+				B11A66D0D1E6C00B983880724736EA74 /* FabricDroppedEvent.swift */,
+				AD6EC225D7425CF8FE6011F049AB1EDD /* FabricEvent.swift */,
+				C92EA45CDC7AF2280EC894F084D00980 /* FabricSetupEvent.swift */,
+				B5ADEE0BC847BB60F0E0FC14552600F3 /* FabricSetupFailedEvent.swift */,
+				86785D5DFFE468CBBADF4D4FA601F96E /* FabricStateChangeEvent.swift */,
+				E07C436BE2CC5C6B5E46C799FCAEAC28 /* FabricTerminatedEvent.swift */,
+				F57274956CF67E6657D22CBA528FD94E /* FabricTransportChangeEvent.swift */,
+			);
+			name = Fabric;
+			path = Fabric;
+			sourceTree = "<group>";
+		};
+		1C5C95D2454D4540757C671CD6831912 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				CD601B735D06B1271A7E7C44B3DC9DE7 /* Event.swift */,
+				8144E903C15557070D2352E2B2427DC0 /* EventManager.swift */,
+				7A95F9D02C13BD7E66A98C5BDB3A2CCD /* EventSender.swift */,
+				796D7B9F68524C442E7B4E8A2B50A31C /* EventSendingOperation.swift */,
+				130A7952906CDB32AEAD26DF68DD46D3 /* Auth */,
+				08B739804AB248828E8B1988B1E8DFEA /* Device */,
+				16714D6E56E7197361C45CA9DD776078 /* Fabric */,
+				29D3C4F7C9CF67B7B158D68E6F9BB28C /* Ice */,
+				121BA8CA084810F84B738CDF9AFF591C /* Info */,
+				B7B6297A022B6A313F00A5B235DDCC81 /* Media */,
+				C44CA6128147B497240FCFAFA92EF99D /* Special */,
+				22ACC1D1C9EFF89CC2418C43860AF1E9 /* Stats */,
+				0AEB15460AE0613B99CE73AC8C966590 /* User */,
+			);
+			name = Event;
+			path = Event;
 			sourceTree = "<group>";
 		};
 		1D800655AB9CE3581F0CEECA0186D4E9 /* Products */ = {
@@ -423,20 +484,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		22FFDD5C97619AF97B4C8A2800428EDD /* Fabric */ = {
+		22ACC1D1C9EFF89CC2418C43860AF1E9 /* Stats */ = {
 			isa = PBXGroup;
 			children = (
-				ACAEAC3451784CEA070F4A994C0AE00E /* FabricActionEvent.swift */,
-				D36A366EA1FCD96D26CE8AC83B9C5711 /* FabricDroppedEvent.swift */,
-				1BA9AFCCE61E4A62388B7D45B26B404E /* FabricEvent.swift */,
-				90420B1A25516710F83143C8FFA4095A /* FabricSetupEvent.swift */,
-				EE827709A68D4B1452295F8DCCA5372D /* FabricSetupFailedEvent.swift */,
-				424B0C22FBC3B0D14C197967E474DE55 /* FabricStateChangeEvent.swift */,
-				4E25E7903175E0E5124A645E1B8CBB13 /* FabricTerminatedEvent.swift */,
-				21D8D4B56650AA08BD11D5683571A40D /* FabricTransportChangeEvent.swift */,
+				A966F8466C619968C9E1A4EFF16701E8 /* ConferenceStats.swift */,
+				ADC698C643E48A9986ADC55C1E844AA8 /* SystemStatusStats.swift */,
 			);
-			name = Fabric;
-			path = Fabric;
+			name = Stats;
+			path = Stats;
 			sourceTree = "<group>";
 		};
 		27A291BE6DAE952944C392A42E4DE76B /* Utils */ = {
@@ -453,29 +508,18 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		2DFF7655A337E1C43509DFABA308A35F /* Media */ = {
+		29D3C4F7C9CF67B7B158D68E6F9BB28C /* Ice */ = {
 			isa = PBXGroup;
 			children = (
-				6AF440E2321C90B0F1B72D4210CDE7D9 /* MediaActionEvent.swift */,
-				C91C5FD19FB3EF03E6B723E80B59478C /* MediaEvent.swift */,
-				5D078071A5418865470E487E1A8E8006 /* MediaPlaybackEvent.swift */,
-			);
-			name = Media;
-			path = Media;
-			sourceTree = "<group>";
-		};
-		3084C3E54B58BEB764DD1E1303E5C4C7 /* Ice */ = {
-			isa = PBXGroup;
-			children = (
-				D01E3D8AB48FB4D2E7457BBBFE29F470 /* IceAbortedEvent.swift */,
-				EDB203D8E6BE9FA00EEBA8FA7A71F3C1 /* IceConnectionDisruptEndEvent.swift */,
-				336BD56416EA0BBA368F5CBACF114CAA /* IceConnectionDisruptStartEvent.swift */,
-				C3595C05A533387A6CE3609D55A53C48 /* IceDisruptEndEvent.swift */,
-				0519D9004E3A3A29723AD80FF33E587B /* IceDisruptStartEvent.swift */,
-				F8D3A77E0F9034FC2393766D8A884A39 /* IceEvent.swift */,
-				3FA48DF7F780BAD604E022D99BE38A06 /* IceFailedEvent.swift */,
-				4C88FDA4A4C24CF7A288DE266591F791 /* IceRestartEvent.swift */,
-				BF9B9873B87FB7364F0B9BCBF41883E5 /* IceTerminatedEvent.swift */,
+				BE9F22FB1D60CEF2046B14280157E071 /* IceAbortedEvent.swift */,
+				AD1F4C80AC29E9DFAA7A984B62E74796 /* IceConnectionDisruptEndEvent.swift */,
+				8687D3B9315C9D29B4784D160C4C2BFD /* IceConnectionDisruptStartEvent.swift */,
+				D36F8FEC8EBA5510201A74AF12A4E2CC /* IceDisruptEndEvent.swift */,
+				F31523DA4D3A5845D3BCB65ACA63D5AF /* IceDisruptStartEvent.swift */,
+				6A10092A8BB9625FECA6EFF3C7CC905B /* IceEvent.swift */,
+				98B61D9C07141C8DEF3DEF6CE535899B /* IceFailedEvent.swift */,
+				9BC75AE46210175A86E2633E7E74FD85 /* IceRestartEvent.swift */,
+				8CC0317EF41B0D349695A01E4F0A62DD /* IceTerminatedEvent.swift */,
 			);
 			name = Ice;
 			path = Ice;
@@ -493,20 +537,6 @@
 			path = Starscream;
 			sourceTree = "<group>";
 		};
-		49D8B78335D464AA1D133E5E59208D3D /* Info */ = {
-			isa = PBXGroup;
-			children = (
-				AD6E5C83F8F2DEB5FAED4F4F5185DBBD /* EndpointInfo.swift */,
-				2AFDD832E7CF1C139A32FFD11E0F6079 /* Feedback.swift */,
-				154B307EED73F1F4C93B75EC290B83B2 /* IceCandidate.swift */,
-				49637470C572DC26F282CDCBF168060B /* IceCandidatePair.swift */,
-				9B9E347F84E288D0241A25C3E7E009BA /* MediaDevice.swift */,
-				9F05B674E4C12A5894CCD24F5C358E2C /* Ssrc.swift */,
-			);
-			name = Info;
-			path = Info;
-			sourceTree = "<group>";
-		};
 		5D5507C7771504028AFD7CAE9109E7E6 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -522,7 +552,7 @@
 				AD634DD093C7B4F076B0BED3336D8BE1 /* CallstatsConfig.swift */,
 				D0CF0FA03E6E60E6C50F6004DBF6363E /* CallstatsEvents.swift */,
 				629EFBBA2E0310A19645B7C402D8549B /* CallstatsInjector.swift */,
-				9CD52577842C0A54B5418F5C965B6417 /* Event */,
+				1C5C95D2454D4540757C671CD6831912 /* Event */,
 				B2E24A909D4FDCD85E7B6B68DE2EF71B /* Interceptor */,
 				E7F4501886D376B9F4D6DD9235000A6A /* Pod */,
 				6677CF97BD21551A6B49475B5A3613FB /* Support Files */,
@@ -530,15 +560,6 @@
 			);
 			name = Callstats;
 			path = ../Callstats;
-			sourceTree = "<group>";
-		};
-		5EF65AF8C3FEF21A780DB97922D92EF1 /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				4E2BDAD7399EB86B9D584BC29CF592ED /* TokenRequest.swift */,
-			);
-			name = Auth;
-			path = Auth;
 			sourceTree = "<group>";
 		};
 		637A9B9E5C63319FB62BB275665AAAF6 /* Frameworks */ = {
@@ -612,27 +633,6 @@
 			path = "Target Support Files/Pods-demo";
 			sourceTree = "<group>";
 		};
-		9CD52577842C0A54B5418F5C965B6417 /* Event */ = {
-			isa = PBXGroup;
-			children = (
-				226CEFB909CF852001499D9105C3C8BD /* Event.swift */,
-				12DF8372BF081C74F047E080E51C5A11 /* EventManager.swift */,
-				A3DFB91D53F7FD04164882F0DFD98B93 /* EventSender.swift */,
-				80532E062B95771D7A0E55E0919CBA74 /* EventSendingOperation.swift */,
-				5EF65AF8C3FEF21A780DB97922D92EF1 /* Auth */,
-				CCD7F49AE5971D710C4E8EC1CE48376C /* Device */,
-				22FFDD5C97619AF97B4C8A2800428EDD /* Fabric */,
-				3084C3E54B58BEB764DD1E1303E5C4C7 /* Ice */,
-				49D8B78335D464AA1D133E5E59208D3D /* Info */,
-				2DFF7655A337E1C43509DFABA308A35F /* Media */,
-				08F21B1E54BF1AA6C5CF63CCFAC07AE8 /* Special */,
-				193F5F460059658C7F17FA76318990BA /* Stats */,
-				B94255E2291555341C991155B97AA698 /* User */,
-			);
-			name = Event;
-			path = Event;
-			sourceTree = "<group>";
-		};
 		B2E24A909D4FDCD85E7B6B68DE2EF71B /* Interceptor */ = {
 			isa = PBXGroup;
 			children = (
@@ -648,16 +648,28 @@
 			path = Interceptor;
 			sourceTree = "<group>";
 		};
-		B94255E2291555341C991155B97AA698 /* User */ = {
+		B7B6297A022B6A313F00A5B235DDCC81 /* Media */ = {
 			isa = PBXGroup;
 			children = (
-				1BC655E3A4DD6BFA2BB94D0F7B349330 /* UserAliveEvent.swift */,
-				CCF651BA6EEA58EE65603EDF5457A268 /* UserDetailsEvent.swift */,
-				86179D524CEF2AAC3C71198B35DB0FDB /* UserJoinEvent.swift */,
-				626199408335E85CC9E5B188FCC2B869 /* UserLeftEvent.swift */,
+				3EC6C4B1198C8313121D0D80B0FEF732 /* MediaActionEvent.swift */,
+				4A88117B4D2754A097901E657F6E3533 /* MediaEvent.swift */,
+				9899FA5CD0279AC54645A80EC2EDA33A /* MediaPlaybackEvent.swift */,
 			);
-			name = User;
-			path = User;
+			name = Media;
+			path = Media;
+			sourceTree = "<group>";
+		};
+		C44CA6128147B497240FCFAFA92EF99D /* Special */ = {
+			isa = PBXGroup;
+			children = (
+				AE40E2B1E9FF99AB7BC66698EED4F861 /* DominantSpeakerEvent.swift */,
+				131956CA4D16C89E44FB3F95C5BF9257 /* FeedbackEvent.swift */,
+				243C74717727D48ADFBF941283E8897C /* LogEvent.swift */,
+				4E27EA4738715B2B5ACBF11490DC3666 /* SdpEvent.swift */,
+				4606E28FD72894BCB81DE9311673E960 /* SsrcEvent.swift */,
+			);
+			name = Special;
+			path = Special;
 			sourceTree = "<group>";
 		};
 		C6C6CF85326A60B112CC4A77BAD281D7 /* Frameworks */ = {
@@ -667,15 +679,6 @@
 				F73D217E75B288FCF69E835DC1DD524A /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CCD7F49AE5971D710C4E8EC1CE48376C /* Device */ = {
-			isa = PBXGroup;
-			children = (
-				674BFF801105FCBB3FA7825A547DA507 /* DeviceEvent.swift */,
-			);
-			name = Device;
-			path = Device;
 			sourceTree = "<group>";
 		};
 		D9853A19582F35BB8A5FDC60DE05766B /* Pods-Callstats */ = {
@@ -786,6 +789,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		68AED2A42AC1A5DE12AF630ED8EC0287 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CAA6DB57FE41B507759D56EDF349BE5 /* Callstats-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9820C09DA81E881298C234A4FFE63037 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -802,14 +813,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E29F6A2DD7DF3CD5960C87678196E1C7 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CA3BE4B42E8CD828F3ED5531F1CE4EAF /* Callstats-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F2116A6AB63EC187191970F32137F752 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -821,13 +824,13 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		23F254F13A27561D946956C4F32534AA /* Callstats */ = {
+		1C8B4A7A151579F881025387439FBABF /* Callstats */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6A13F566C7A9B72F06A6484F53F9E2A3 /* Build configuration list for PBXNativeTarget "Callstats" */;
+			buildConfigurationList = 78AEEBE686B995F94FB93B5F4BADA311 /* Build configuration list for PBXNativeTarget "Callstats" */;
 			buildPhases = (
-				D2BFF3D12F6C5DAAAE8B561CA1604D15 /* Sources */,
-				4C9F84C80CA9E1F8E02F93E534BE2C2D /* Frameworks */,
-				E29F6A2DD7DF3CD5960C87678196E1C7 /* Headers */,
+				833DEF89BF5970419DD5C24717B741DB /* Sources */,
+				27AE3A7B9CEB65BFBABFB30AD63EAB37 /* Frameworks */,
+				68AED2A42AC1A5DE12AF630ED8EC0287 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -949,7 +952,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				23F254F13A27561D946956C4F32534AA /* Callstats */,
+				1C8B4A7A151579F881025387439FBABF /* Callstats */,
 				AA0E22235ADCD75DE28D99812EE879FF /* Pods-Callstats */,
 				76747CE56EEF688CE6C5DCCA9B041D40 /* Pods-CallstatsTests */,
 				62EE65E60A6B1D248DB31E2A7371981B /* Pods-demo */,
@@ -1012,70 +1015,71 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D2BFF3D12F6C5DAAAE8B561CA1604D15 /* Sources */ = {
+		833DEF89BF5970419DD5C24717B741DB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FB9B5E49CDDA0E9C2C560C92B82C16A /* Callstats-dummy.m in Sources */,
-				383553FEBE181A760030ED7295C0C49B /* Callstats.swift in Sources */,
-				7DF60B56856B61AACE8F9C6636046EAD /* CallstatsConfig.swift in Sources */,
-				1DEDBE709C1D9EE8F3E74E33BE1C10AB /* CallstatsEvents.swift in Sources */,
-				0333DDBD307B8BAA1BC7E55BF9221873 /* CallstatsInjector.swift in Sources */,
-				0BAD115C2FF4049121F9823191E65A3D /* ConferenceStats.swift in Sources */,
-				300A0F7F109994B4C5DB7A9B2EDC5A3D /* Date.swift in Sources */,
-				C1C23111A2741DAAE8909EFE66560A69 /* DeviceEvent.swift in Sources */,
-				60E5696A34D9B6484006A65C1C5670B8 /* DominantSpeakerEvent.swift in Sources */,
-				813F6E383530FFB3DB6892D32F939C75 /* EndpointInfo.swift in Sources */,
-				FE64464C10629362377A6FE46ED190AF /* Event.swift in Sources */,
-				0DC7762B83A1477E2FC055C8A7668334 /* EventManager.swift in Sources */,
-				2D47D664D6337F01FB8C9CE095883862 /* EventSender.swift in Sources */,
-				95F838C38BD1EAE5D0277C933EE5784D /* EventSendingOperation.swift in Sources */,
-				672E5CEB2EE44A6065C17FE6F7241DEE /* FabricActionEvent.swift in Sources */,
-				B538027C24B2A69FDD433262A21BAF61 /* FabricDroppedEvent.swift in Sources */,
-				98DAF5CF615DFE968043884BC5AB1DAB /* FabricEvent.swift in Sources */,
-				83B0947E5ACF5AB249F38452C07B80AF /* FabricInterceptor.swift in Sources */,
-				4959212FB5D6E64C077BFB8977C7F239 /* FabricSetupEvent.swift in Sources */,
-				A6C40879FAA13675D0D6FC6A6A9F1BCF /* FabricSetupFailedEvent.swift in Sources */,
-				68DD72C691C3D78B083B6D19F78A18D7 /* FabricStateChangeEvent.swift in Sources */,
-				DF7475E7BE471CB99EDFEF01E13B4FE5 /* FabricTerminatedEvent.swift in Sources */,
-				3A8A3C7E03845CD51BB31BC58C3530CC /* FabricTransportChangeEvent.swift in Sources */,
-				9775A8CD2EB02446D9A91FC01645E3E6 /* Feedback.swift in Sources */,
-				287F0E1CC6538579A22EED1CCFA46F64 /* HttpClient.swift in Sources */,
-				43A189BA53083F3542975AA36D13AEAF /* IceAbortedEvent.swift in Sources */,
-				0CD7EAEFD19A5773A09B213BDD1D9F7D /* IceCandidate.swift in Sources */,
-				014E301977E1759BF6BF40C0B37B672F /* IceCandidatePair.swift in Sources */,
-				A401BA40D6BD4569C8C33D06FBE949E1 /* IceConnectionDisruptEndEvent.swift in Sources */,
-				A6CF07304846C3A0FB60F68DBD518839 /* IceConnectionDisruptStartEvent.swift in Sources */,
-				6136F2600629BFD045867BB670BE423B /* IceDisruptEndEvent.swift in Sources */,
-				E20C783A88C997CB566AAF6C2EBA63A8 /* IceDisruptStartEvent.swift in Sources */,
-				D24F002FAC2444FC85F266798CC38185 /* IceEvent.swift in Sources */,
-				F262696D15E159D6AFA171F39B5EBCF5 /* IceFailedEvent.swift in Sources */,
-				D1334FAABDCCACCC228FEE138E52A785 /* IceInterceptor.swift in Sources */,
-				FD200FA468B31B069760BD5F355BBAAC /* IceRestartEvent.swift in Sources */,
-				136D2C2D386AA2691309D98F656B800B /* IceTerminatedEvent.swift in Sources */,
-				02BD3DEC922917123EE177F571D24256 /* Interceptor.swift in Sources */,
-				00C0E1E463F397990D685959EA0525AE /* LogEvent.swift in Sources */,
-				A5A905596C628E0AF6F0E3AD511ECAC6 /* MediaActionEvent.swift in Sources */,
-				00F40612B5627380F12FAD6DA5E93D9F /* MediaDevice.swift in Sources */,
-				97DE6BD504E7880743902481BE8B30AD /* MediaEvent.swift in Sources */,
-				4F3B79BFEFCD3AF229656D585A94BDEE /* MediaInterceptor.swift in Sources */,
-				4947901876A5FD3F31700D34329A0D78 /* MediaPlaybackEvent.swift in Sources */,
-				906125F271632BEDD644CF26991121FC /* RTCPeerConnection.swift in Sources */,
-				EDCF0E7E9B07AE1EBB03B6DC93611949 /* RTCSessionDescription.swift in Sources */,
-				314F39F8B4BEAD6FE6AE1BF1CA20B36F /* RTCStats.swift in Sources */,
-				C819359FE321741BB22C936B5689A1AB /* SdpEvent.swift in Sources */,
-				DF06B704048E95AB7D2A919B01B485FC /* SdpInterceptor.swift in Sources */,
-				E271A305F0AF86E18EFCD50D3081DFF0 /* Ssrc.swift in Sources */,
-				5071B12EBDDDDAE2A7F8F6BA2987ED83 /* SsrcEvent.swift in Sources */,
-				18B74C719D61904C77996C907E22595E /* SsrcInterceptor.swift in Sources */,
-				E602C675A2EB7D75F9A37E5765B9AACA /* StatsInterceptor.swift in Sources */,
-				F0F7B4408C61FB0CC8B4A593BBB04259 /* SystemStatus.swift in Sources */,
-				C14538CC7D0AD1787D9312FCE8D31CD8 /* SystemStatusStats.swift in Sources */,
-				C723A51CA87F99C8AAC551779257A27A /* TokenRequest.swift in Sources */,
-				EF7601AC0D2B051CE8F8DA68EBF08338 /* UserAliveEvent.swift in Sources */,
-				BFBE08C3504B29E953F169A8D34E5F7D /* UserDetailsEvent.swift in Sources */,
-				89BD4F0A84AC63C0ABB7A6651077C578 /* UserJoinEvent.swift in Sources */,
-				F6E0F27A677B1F917E992449EA29BE1B /* UserLeftEvent.swift in Sources */,
+				1F4A66EE2884C9D43AD6F094E8E729C0 /* Callstats-dummy.m in Sources */,
+				014EFEF8090EA9983147EF421CB2E52A /* Callstats.swift in Sources */,
+				4D92DF1F6BFC64EB4F839DB442469139 /* CallstatsConfig.swift in Sources */,
+				70ECB7A763583AAF0512BBF102D9A214 /* CallstatsEvents.swift in Sources */,
+				0EBD50C9F1954D0B865E4FB16373D376 /* CallstatsInjector.swift in Sources */,
+				853545D56705C638060A78EBE267D2EE /* ConferenceStats.swift in Sources */,
+				B0901D6963C6D6AC51916F1F12858E05 /* Date.swift in Sources */,
+				9BC42C222C92CBEAF0C47B87BBBD6A2C /* DeviceEvent.swift in Sources */,
+				57A66CF46F6D42754E6A55DCC46D855A /* DominantSpeakerEvent.swift in Sources */,
+				741425DFB09B4E073624BFA4C62498D1 /* EndpointInfo.swift in Sources */,
+				0BD85B4EE188591268E1885E354D9611 /* Event.swift in Sources */,
+				75F781698BD22BF2FCA91895BFD0FAEE /* EventManager.swift in Sources */,
+				547A65EC66C5478A9A914CC6B6540CA7 /* EventSender.swift in Sources */,
+				518E05988248A987365CFA2AA729D568 /* EventSendingOperation.swift in Sources */,
+				535CF2964A0BAAAEEC030C564780A261 /* FabricActionEvent.swift in Sources */,
+				FD1E9FB8530304A91E1ABBB18AA9E5AA /* FabricDroppedEvent.swift in Sources */,
+				3133BFF0F6C6C17C38E368AF7875648B /* FabricEvent.swift in Sources */,
+				559C833AEDFC23E7A9E999BBCAA2C786 /* FabricInterceptor.swift in Sources */,
+				6515C0B17E8C95ED01404040A630CE33 /* FabricSetupEvent.swift in Sources */,
+				6A59AA9534D0C89805A1A1CA0907B6F7 /* FabricSetupFailedEvent.swift in Sources */,
+				AB8BFDD8C1A123ACF5018236F63D5644 /* FabricStateChangeEvent.swift in Sources */,
+				79DE4C3C3749791CDCED05223EF4CA66 /* FabricTerminatedEvent.swift in Sources */,
+				C32B1D23EF9B2D80910E05AF457A911D /* FabricTransportChangeEvent.swift in Sources */,
+				2AC49682D49C05E93A85673BC53DA71E /* Feedback.swift in Sources */,
+				3EA5BC3705BCCE5E04224F0236AA2845 /* FeedbackEvent.swift in Sources */,
+				AACC45BAEE51183A1639CC3BCD9F84E9 /* HttpClient.swift in Sources */,
+				0AD39BABD3D8AF7CF8AA9D08E1C9CFEE /* IceAbortedEvent.swift in Sources */,
+				B56A115CAF8A217F9343A51108215E8C /* IceCandidate.swift in Sources */,
+				1B90B0D7062EDF47734A482A8FF036B4 /* IceCandidatePair.swift in Sources */,
+				CB8FC6BE3913D553D15260A8DA51DA5B /* IceConnectionDisruptEndEvent.swift in Sources */,
+				375CCA7097B3D80DB6367641F471D930 /* IceConnectionDisruptStartEvent.swift in Sources */,
+				2D6595D460F05750B03078E95820E447 /* IceDisruptEndEvent.swift in Sources */,
+				F9C6DC80FC8F6A57D50A287F49226C36 /* IceDisruptStartEvent.swift in Sources */,
+				FF112CE8B85F98D09C2B751B7ED723AA /* IceEvent.swift in Sources */,
+				262BFC07C4A3ED17282F5733D66DD8F1 /* IceFailedEvent.swift in Sources */,
+				6D7B3CE4F1DA7F2DA5D2348D2E3474F7 /* IceInterceptor.swift in Sources */,
+				841A9944AD15D681D9B6BC70A4DCA47E /* IceRestartEvent.swift in Sources */,
+				87773A4AF7005D8E504FBB6D0B500ACC /* IceTerminatedEvent.swift in Sources */,
+				BB031D7CE3EBA5CF2D2C1340B1CD6E10 /* Interceptor.swift in Sources */,
+				8061F08C564FDD309F50E3D0F953840E /* LogEvent.swift in Sources */,
+				DE028FD0FDFC64E8480926DAE2D78242 /* MediaActionEvent.swift in Sources */,
+				BDCAC66027226030F309384030721FA9 /* MediaDevice.swift in Sources */,
+				B74131BE64F390AEA9B175928915E17D /* MediaEvent.swift in Sources */,
+				4F7006349318FAE7DCDB70CFF6A3385B /* MediaInterceptor.swift in Sources */,
+				1AE3788E7C2A055BA77A958F27067C1A /* MediaPlaybackEvent.swift in Sources */,
+				BE8FC8321B99C93B89C9F4E673FA0F20 /* RTCPeerConnection.swift in Sources */,
+				8934298C0E212EA543D3BACEA4A76252 /* RTCSessionDescription.swift in Sources */,
+				A8066B954FF8847A03476518FC0E5858 /* RTCStats.swift in Sources */,
+				A2365557D02D0DCFE3CF2ACEC6A8D902 /* SdpEvent.swift in Sources */,
+				EF23D95AB27C8B967A9C706BB265282E /* SdpInterceptor.swift in Sources */,
+				4D2077E9D761A55982A47F46F213BAE7 /* Ssrc.swift in Sources */,
+				4B3211CE6163EE1888F22FBB9A097FBC /* SsrcEvent.swift in Sources */,
+				BC4289C31B6A13F30693E42E2D8E8C2B /* SsrcInterceptor.swift in Sources */,
+				B479EE55354E7BA48319D0B85A9904C3 /* StatsInterceptor.swift in Sources */,
+				14999A5553C151352D3C322FBAAD679F /* SystemStatus.swift in Sources */,
+				794CA21502682EC08DF965C15EB98F93 /* SystemStatusStats.swift in Sources */,
+				7D3271EA92977CA49EE9D706F54A2AA9 /* TokenRequest.swift in Sources */,
+				25C10E7A16AB76F53EB4E2D79B9C15D0 /* UserAliveEvent.swift in Sources */,
+				2C972E13560F3DE7401F157742617D37 /* UserDetailsEvent.swift in Sources */,
+				A90BA619CC2FECC561724F5D825802D9 /* UserJoinEvent.swift in Sources */,
+				00E0C82B54D271BAD1853BCBAE4705FB /* UserLeftEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1119,7 +1123,7 @@
 		A8209D4713C7E7360305FF0CB30FDB5D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Callstats;
-			target = 23F254F13A27561D946956C4F32534AA /* Callstats */;
+			target = 1C8B4A7A151579F881025387439FBABF /* Callstats */;
 			targetProxy = 66F7E3242522EF84AD3A8B34AB5623B4 /* PBXContainerItemProxy */;
 		};
 		F18D7CA64E7336C483BFD72E50A9AB9F /* PBXTargetDependency */ = {
@@ -1131,7 +1135,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1232742D967136A55832C5EBE039A11C /* Release */ = {
+		26C5D74ACAD3AD422B70C087F2542988 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C03C83636ADE602A3221325B522A7B26 /* Callstats.xcconfig */;
 			buildSettings = {
@@ -1167,6 +1171,42 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		335E43CE29D8BC043EE9E34095772534 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C03C83636ADE602A3221325B522A7B26 /* Callstats.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Callstats/Callstats-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Callstats/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Callstats/Callstats.modulemap";
+				PRODUCT_MODULE_NAME = Callstats;
+				PRODUCT_NAME = Callstats;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		3596F97E760DC6405F96B5067AC3B083 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1519,42 +1559,6 @@
 			};
 			name = Release;
 		};
-		A25ED4132C2062A519C96A36EE40F84A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C03C83636ADE602A3221325B522A7B26 /* Callstats.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Callstats/Callstats-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Callstats/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Callstats/Callstats.modulemap";
-				PRODUCT_MODULE_NAME = Callstats;
-				PRODUCT_NAME = Callstats;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		AA08D5F276B155763E71F24419D7A404 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E7ABD7A2552E8CEED9FFAE53BBAC28F7 /* Socket.IO-Client-Swift.xcconfig */;
@@ -1715,20 +1719,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6A13F566C7A9B72F06A6484F53F9E2A3 /* Build configuration list for PBXNativeTarget "Callstats" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A25ED4132C2062A519C96A36EE40F84A /* Debug */,
-				1232742D967136A55832C5EBE039A11C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		6EDB390CFABE867009EA39A53F526A60 /* Build configuration list for PBXNativeTarget "Pods-demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				39C3A1B803731E9A84AB0ADC103AC81B /* Debug */,
 				65E13109444740A2AA67E86EC32A6FA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78AEEBE686B995F94FB93B5F4BADA311 /* Build configuration list for PBXNativeTarget "Callstats" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				335E43CE29D8BC043EE9E34095772534 /* Debug */,
+				26C5D74ACAD3AD422B70C087F2542988 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -65,6 +65,7 @@
 		DC1E67F22180C4BB00AE7E35 /* MediaInterceptorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67F12180C4BB00AE7E35 /* MediaInterceptorTests.swift */; };
 		DC1E67F4218217BD00AE7E35 /* LogEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67F3218217BD00AE7E35 /* LogEvent.swift */; };
 		DC1E67F6218224EC00AE7E35 /* DominantSpeakerEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67F5218224EC00AE7E35 /* DominantSpeakerEvent.swift */; };
+		DC1E67F821843A0300AE7E35 /* FeedbackEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E67F721843A0300AE7E35 /* FeedbackEvent.swift */; };
 		DC3BA41420A86305004C2F77 /* CsioUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3BA41320A86305004C2F77 /* CsioUtils.swift */; };
 		DC3BA41620AFE087004C2F77 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3BA41520AFE087004C2F77 /* CallViewController.swift */; };
 		DC3BA41720B01093004C2F77 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D4E0220A7E83600EDD5D7 /* MainViewController.swift */; };
@@ -187,6 +188,7 @@
 		DC1E67F12180C4BB00AE7E35 /* MediaInterceptorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaInterceptorTests.swift; sourceTree = "<group>"; };
 		DC1E67F3218217BD00AE7E35 /* LogEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEvent.swift; sourceTree = "<group>"; };
 		DC1E67F5218224EC00AE7E35 /* DominantSpeakerEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DominantSpeakerEvent.swift; sourceTree = "<group>"; };
+		DC1E67F721843A0300AE7E35 /* FeedbackEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackEvent.swift; sourceTree = "<group>"; };
 		DC3BA41320A86305004C2F77 /* CsioUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsioUtils.swift; sourceTree = "<group>"; };
 		DC3BA41520AFE087004C2F77 /* CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
 		DC5D4DFD20A7E83600EDD5D7 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -349,6 +351,7 @@
 				DC1E67E2217EFF8000AE7E35 /* SsrcEvent.swift */,
 				DC1E67F3218217BD00AE7E35 /* LogEvent.swift */,
 				DC1E67F5218224EC00AE7E35 /* DominantSpeakerEvent.swift */,
+				DC1E67F721843A0300AE7E35 /* FeedbackEvent.swift */,
 			);
 			path = Special;
 			sourceTree = "<group>";
@@ -902,6 +905,7 @@
 				DC1E67A02168C49F00AE7E35 /* RTCStats.swift in Sources */,
 				DC1E67A7216A628200AE7E35 /* EventManager.swift in Sources */,
 				DC1E679621651FB700AE7E35 /* FabricActionEvent.swift in Sources */,
+				DC1E67F821843A0300AE7E35 /* FeedbackEvent.swift in Sources */,
 				DC1E6780215E5DA600AE7E35 /* FabricEvent.swift in Sources */,
 				DC1E678E2165185900AE7E35 /* IceCandidatePair.swift in Sources */,
 				DC1E6782215E5E1900AE7E35 /* IceCandidate.swift in Sources */,

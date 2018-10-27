@@ -139,6 +139,31 @@ public class Callstats: NSObject {
         sender.send(event: LogEvent(level: level, message: message, messageType: type))
     }
     
+    /**
+     Give feedback on this conference call
+     - Parameter rating: Rating from 1 to 5
+     - Parameter comment: comment from participant
+     - Parameter audioQuality: Rating from 1 to 5
+     - Parameter videoQuality: Raring from 1 to 5
+     - Parameter remoteUserID: Non-empty remoteID means that the feedback was given explicitly
+     about the connection between these two parties. Otherwise it is regarded as general conference feedback.
+     */
+    public func sendUserFeedback(
+        rating: Int,
+        comment: String? = nil,
+        audioQuality: Int? = nil,
+        videoQuality: Int? = nil,
+        remoteUserID: String? = nil)
+    {
+        let info = Feedback(
+            overallRating: rating,
+            remoteID: remoteUserID,
+            videoQualityRating: videoQuality,
+            audioQualityRating: audioQuality,
+            comments: comment)
+        sender.send(event: FeedbackEvent(feedback: info))
+    }
+    
     // MARK:- Timers
     
     private func startKeepAlive() {
