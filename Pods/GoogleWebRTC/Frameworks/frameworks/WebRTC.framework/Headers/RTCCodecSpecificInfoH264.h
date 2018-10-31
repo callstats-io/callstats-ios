@@ -10,8 +10,8 @@
 
 #import <Foundation/Foundation.h>
 
-#import <WebRTC/RTCMacros.h>
-#import <WebRTC/RTCVideoCodecFactory.h>
+#import "RTCCodecSpecificInfo.h"
+#import "RTCMacros.h"
 
 /** Class for H264 specific config. */
 typedef NS_ENUM(NSUInteger, RTCH264PacketizationMode) {
@@ -24,27 +24,4 @@ RTC_EXPORT
 
 @property(nonatomic, assign) RTCH264PacketizationMode packetizationMode;
 
-@end
-
-/** Encoder. */
-RTC_EXPORT
-@interface RTCVideoEncoderH264 : NSObject<RTCVideoEncoder>
-
-- (instancetype)initWithCodecInfo:(RTCVideoCodecInfo *)codecInfo;
-
-@end
-
-/** Decoder. */
-RTC_EXPORT
-@interface RTCVideoDecoderH264 : NSObject<RTCVideoDecoder>
-@end
-
-/** Encoder factory. */
-RTC_EXPORT
-@interface RTCVideoEncoderFactoryH264 : NSObject<RTCVideoEncoderFactory>
-@end
-
-/** Decoder factory. */
-RTC_EXPORT
-@interface RTCVideoDecoderFactoryH264 : NSObject<RTCVideoDecoderFactory>
 @end

@@ -169,6 +169,9 @@ open class SocketManager : NSObject, SocketManagerSpec, SocketParsable, SocketDa
 
         engine?.engineQueue.sync {
             self.engine?.client = nil
+
+            // Close old engine so it will not leak because of URLSession if in polling mode
+            self.engine?.disconnect(reason: "Adding new engine")
         }
 
         engine = SocketEngine(client: self, url: socketURL, config: config)
@@ -389,7 +392,7 @@ open class SocketManager : NSObject, SocketManagerSpec, SocketParsable, SocketDa
 
     private func _parseEngineMessage(_ msg: String) {
         guard let packet = parseSocketMessage(msg) else { return }
-        guard packet.type != .binaryAck && packet.type != .binaryEvent else {
+        guard !packet.type.isBinary else {
             waitingPackets.append(packet)
 
             return

@@ -8,6 +8,7 @@
 
 import Foundation
 import WebRTC
+import Callstats
 
 private let kMessageIceKey = "ice"
 private let kMessageOfferKey = "offer"
@@ -35,41 +36,43 @@ class CsioRTC: NSObject, CsioSignalingDelegate {
     private var peerVideoTracks: [String: RTCVideoTrack] = [:]
     private var peerDataChannels: [String: RTCDataChannel] = [:]
     
+    private let room: String
     private let alias: String?
     
+    private var callstats: Callstats?
+    
     init(room: String, alias: String? = nil) {
+        self.room = room
         self.alias = alias
         signaling = CsioSignaling(room: room)
         super.init()
-        signaling.delegate = self        
+        signaling.delegate = self
+        initCallstats()
     }
     
     func join() {
+        startCallstats(room: room)
         localMediaStream = peerConnectionFactory.mediaStream(withStreamId: localMediaLabel)
-        
         // audio
         localAudioTrack = peerConnectionFactory.audioTrack(withTrackId: localAudioTrackLabel)
         localMediaStream?.addAudioTrack(localAudioTrack!)
-        
         // video
         let source = peerConnectionFactory.videoSource()
         localVideoCapturer = CsioRTCCameraCapturer(delegate: source)
         localVideoTrack = peerConnectionFactory.videoTrack(with: source, trackId: localVideoTrackLabel)
         localMediaStream?.addVideoTrack(localVideoTrack!)
-        
         signaling.start()
     }
     
     func leave() {
         signaling.stop()
         localVideoCapturer?.stopCapture()
-        
         peerConnections.keys.forEach { disconnectPeer(peerId: $0) }
-        
         localVideoCapturer = nil
         localVideoTrack = nil
         localAudioTrack = nil
         localMediaStream = nil
+        stopCallstats()
     }
     
     func setMute(_ mute: Bool) {
@@ -121,13 +124,29 @@ class CsioRTC: NSObject, CsioSignalingDelegate {
     
     // MARK:- Peer Connection
     
+    private func createConnection(delegate: PeerDelegate) -> RTCPeerConnection {
+        let iceServers = [
+            RTCIceServer(
+                urlStrings: [
+                    "turn:turn-server-1.dialogue.io:3478",
+                    "turn:turn-server-1.dialogue.io:5349"
+                ],
+                username: "test",
+                credential: "1234"
+            )
+        ]
+        let config = RTCConfiguration()
+        config.iceServers = iceServers
+        return peerConnectionFactory.peerConnection(
+            with: config,
+            constraints: RTCMediaConstraints(mandatoryConstraints: nil, optionalConstraints: nil),
+            delegate: delegate)
+    }
+    
     private func offer(peerId: String) {
         let peerDelegate = PeerDelegate(peerId: peerId, outer: self)
-        let connection = peerConnectionFactory.peerConnection(
-            with: RTCConfiguration(),
-            constraints: RTCMediaConstraints(mandatoryConstraints: nil, optionalConstraints: nil),
-            delegate: peerDelegate)
-        
+        let connection = createConnection(delegate: peerDelegate)
+        callstats?.addNewFabric(connection: connection, remoteUserID: peerId)
         connection.add(localMediaStream!)
         connection.offer(for: RTCMediaConstraints(mandatoryConstraints: nil, optionalConstraints: nil)) { sdp, err in
             guard let localSdp = sdp else { return }
@@ -155,11 +174,8 @@ class CsioRTC: NSObject, CsioSignalingDelegate {
     
     private func answer(peerId: String, offerSdp: RTCSessionDescription) {
         let peerDelegate = PeerDelegate(peerId: peerId, outer: self)
-        let connection = peerConnectionFactory.peerConnection(
-            with: RTCConfiguration(),
-            constraints: RTCMediaConstraints(mandatoryConstraints: nil, optionalConstraints: nil),
-            delegate: peerDelegate)
-        
+        let connection = createConnection(delegate: peerDelegate)
+        callstats?.addNewFabric(connection: connection, remoteUserID: peerId)
         connection.add(localMediaStream!)
         connection.setRemoteDescription(offerSdp) { err in print(err ?? "set remote success") }
         connection.answer(for: RTCMediaConstraints(mandatoryConstraints: nil, optionalConstraints: nil)) { sdp, err in
@@ -221,6 +237,7 @@ class CsioRTC: NSObject, CsioSignalingDelegate {
                 outer?.peerVideoTracks[peerId] = track
                 outer?.delegate?.onCsioRTCPeerVideoAvailable()
             }
+            outer?.callstats?.reportEvent(remoteUserID: peerId, event: CSAddStreamEvent())
         }
         
         func peerConnection(_ peerConnection: RTCPeerConnection, didOpen dataChannel: RTCDataChannel) {
@@ -228,12 +245,21 @@ class CsioRTC: NSObject, CsioSignalingDelegate {
             outer?.peerDataChannels[peerId] = dataChannel
         }
         
+        func peerConnection(_ peerConnection: RTCPeerConnection, didChange newState: RTCIceGatheringState) {
+            outer?.callstats?.reportEvent(remoteUserID: peerId, event: CSIceGatheringChangeEvent(state: newState))
+        }
+        
+        func peerConnection(_ peerConnection: RTCPeerConnection, didChange newState: RTCIceConnectionState) {
+            outer?.callstats?.reportEvent(remoteUserID: peerId, event: CSIceConnectionChangeEvent(state: newState))
+        }
+        
+        func peerConnection(_ peerConnection: RTCPeerConnection, didChange stateChanged: RTCSignalingState) {
+            outer?.callstats?.reportEvent(remoteUserID: peerId, event: CSSignalingChangeEvent(state: stateChanged))
+        }
+        
         func peerConnectionShouldNegotiate(_ peerConnection: RTCPeerConnection) {}
         func peerConnection(_ peerConnection: RTCPeerConnection, didRemove stream: RTCMediaStream) {}
         func peerConnection(_ peerConnection: RTCPeerConnection, didRemove candidates: [RTCIceCandidate]) {}
-        func peerConnection(_ peerConnection: RTCPeerConnection, didChange newState: RTCIceGatheringState) {}
-        func peerConnection(_ peerConnection: RTCPeerConnection, didChange newState: RTCIceConnectionState) {}
-        func peerConnection(_ peerConnection: RTCPeerConnection, didChange stateChanged: RTCSignalingState) {}
     }
     
     // MARK:- Signaling delegate
@@ -292,5 +318,48 @@ extension CsioRTC: RTCDataChannelDelegate {
                 peerId: json[kDataChannelNameKey] ?? p,
                 message: json[kDataChannelMessageKey] ?? "")
         }
+    }
+}
+
+
+extension CsioRTC {
+    
+    private func initCallstats() {
+        // all of this Jwt creation should be done at server for security
+        // this is just for demo only
+        let appID = "710194177"
+        let localID = String(Int64(Date().timeIntervalSince1970 * 1000))
+        let keyID = "e70cfbfaa67a60ad50"
+        let key = """
+        MIIDGgIBAzCCAuAGCSqGSIb3DQEHAaCCAtEEggLNMIICyTCCAb8GCSqGSIb3DQEHBqCCAbAwggGsAgEAMIIBpQY
+        JKoZIhvcNAQcBMBwGCiqGSIb3DQEMAQYwDgQIaK0+NouBI2MCAggAgIIBeAtdFqr57xSHuMhf/50fIQJvJlRVa8
+        G2EPPjIiHu8V3BLClqXhimajgaBvIZ76hDOrpZ1jGjrQKhnjRnCHYe32041odlUqCdCE4ap0Zvxw1rvSJFzcyLf
+        bRWZc92bSEhDZA7Q3oy45InOFXqJQxQqejwilveqEgvSBeIC3Qq/A8W4ivlVQn7rHvWMwqu2xDKI73ZHVLKNzqo
+        wKgG4qL7uxiB7yF3fBUuo14OQb/xD8ZZ+opBmu0yP2N/5hQrzVFU+fe8EL7yikTKZaIH0YDvGtdGTflTlPgwkmI
+        7uoho8p1qO6z0sl8/BUUk+LkERGHP84gqaUU1SA0BgvbmwoJoDwbHQTtzMxscyp8E+9cAxXOAWIBkN78nykj1SU
+        NEzm074Dz+1SXDin0O9tzdPXsQepJpXplPdeqWc8eyMJ+FOeNvlQCN8Qet+P7Jnq3v6x5T8XxeaKlOQOvRp/Pgb
+        A7RnJ4KYjTpKr1vheOYwep28b5OetfFngELQOkwggECBgkqhkiG9w0BBwGggfQEgfEwge4wgesGCyqGSIb3DQEM
+        CgECoIG0MIGxMBwGCiqGSIb3DQEMAQMwDgQIj/ksNjB2EFMCAggABIGQHjS8LNOZdAKrTkdLGyJ827077PUATTw
+        /z0p5Lhy51a32HuF+SxPzthvdGVKsqy4FgoutWzpyKoIHxwoKtFQCalzExZuGR9iRi28NPbk2TVyISOmTEbBvBh
+        5qkueA2Eh6U5YfdIXkxl8Qjvdd5J7KUgf8rwh0DEhb3E3HRX+r9euFGJVjOrP/GXM7mDXagogAMSUwIwYJKoZIh
+        vcNAQkVMRYEFH1AwBvLJbVCpjtqCylFLmnDQN3NMDEwITAJBgUrDgMCGgUABBSkYIdojEK/zEMpbMT8r1g4+xlS
+        MwQIgxxKgkNKr4oCAggA
+        """
+        let claims = [
+            "userID": localID,
+            "appID": appID,
+            "keyID": keyID
+        ]
+        guard let jwt = createJwt(dict: claims, key: key, password: "") else { return }
+        let deviceID = UIDevice.current.identifierForVendor!.uuidString
+        callstats = Callstats(appID: appID, localID: localID, deviceID: deviceID, jwt: jwt)
+    }
+    
+    private func startCallstats(room: String) {
+        callstats?.startSession(confID: room)
+    }
+    
+    private func stopCallstats() {
+        callstats?.stopSession()
     }
 }

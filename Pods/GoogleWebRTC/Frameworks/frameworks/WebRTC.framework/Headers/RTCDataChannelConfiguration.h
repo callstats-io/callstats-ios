@@ -11,7 +11,7 @@
 #import <AvailabilityMacros.h>
 #import <Foundation/Foundation.h>
 
-#import <WebRTC/RTCMacros.h>
+#import "RTCMacros.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -45,7 +45,7 @@ RTC_EXPORT
 @property(nonatomic, assign) int channelId;
 
 /** Set by the application and opaque to the WebRTC implementation. */
-@property(nonatomic) NSString *protocol;
+@property(nonatomic) NSString* protocol;
 
 @end
 

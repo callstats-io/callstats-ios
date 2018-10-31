@@ -9,7 +9,8 @@
  */
 
 #import <Foundation/Foundation.h>
-#import <WebRTC/RTCVideoCapturer.h>
+
+#import "RTCVideoCapturer.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
