@@ -1,10 +1,13 @@
-CallStats for iOS (WIP)
+CallStats for iOS
 ===========================
 
 [Callstats](https://www.callstats.io/) WebRTC analytic library for iOS.
 
 ## Getting started
 ### Cocoapods
+```
+pod 'Callstats'
+```
 
 ### Create Callstats object
 ```swift
